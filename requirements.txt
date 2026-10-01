@@ -2,3 +2,4 @@
 streamlit==1.64.0
 pydantic==2.13.5
 openai==3.22.1
+pycountry==26.2.16

@@ -1,17 +1,17 @@
 {
-  "run_id": "44b5b7f13075",
-  "document_id": "sample-wrong_line_item_total",
+  "run_id": "3d766c7832a6",
+  "document_id": "sample-date_difference",
   "document_type": "invoice",
   "unsupported_reason": null,
   "extracted_fields": {
     "vendor_name": {
-      "value": "LANTERN DATA WORKS (fictional)",
+      "value": "LANTERN DATA WORKS",
       "evidence": {
-        "document_id": "sample-wrong_line_item_total",
+        "document_id": "sample-date_difference",
         "page_number": 1,
         "line_start": 1,
         "line_end": 1,
-        "quote": "LANTERN DATA WORKS (fictional)",
+        "quote": "LANTERN DATA WORKS",
         "status": "verified",
         "note": null
       }
@@ -19,7 +19,7 @@
     "invoice_number": {
       "value": "LDW-3309",
       "evidence": {
-        "document_id": "sample-wrong_line_item_total",
+        "document_id": "sample-date_difference",
         "page_number": 1,
         "line_start": 3,
         "line_end": 3,
@@ -31,7 +31,7 @@
     "invoice_date": {
       "value": "2026-09-14",
       "evidence": {
-        "document_id": "sample-wrong_line_item_total",
+        "document_id": "sample-date_difference",
         "page_number": 1,
         "line_start": 4,
         "line_end": 4,
@@ -43,7 +43,7 @@
     "currency": {
       "value": "USD",
       "evidence": {
-        "document_id": "sample-wrong_line_item_total",
+        "document_id": "sample-date_difference",
         "page_number": 1,
         "line_start": 6,
         "line_end": 6,
@@ -57,11 +57,11 @@
         "description": {
           "value": "Dashboard build",
           "evidence": {
-            "document_id": "sample-wrong_line_item_total",
+            "document_id": "sample-date_difference",
             "page_number": 2,
             "line_start": 4,
             "line_end": 4,
-            "quote": "Dashboard build               3       120.00       390.00",
+            "quote": "Dashboard build               3       120.00       360.00",
             "status": "verified",
             "note": null
           }
@@ -69,11 +69,11 @@
         "quantity": {
           "value": "3",
           "evidence": {
-            "document_id": "sample-wrong_line_item_total",
+            "document_id": "sample-date_difference",
             "page_number": 2,
             "line_start": 4,
             "line_end": 4,
-            "quote": "Dashboard build               3       120.00       390.00",
+            "quote": "Dashboard build               3       120.00       360.00",
             "status": "verified",
             "note": null
           }
@@ -81,23 +81,23 @@
         "unit_price": {
           "value": "120.00",
           "evidence": {
-            "document_id": "sample-wrong_line_item_total",
+            "document_id": "sample-date_difference",
             "page_number": 2,
             "line_start": 4,
             "line_end": 4,
-            "quote": "Dashboard build               3       120.00       390.00",
+            "quote": "Dashboard build               3       120.00       360.00",
             "status": "verified",
             "note": null
           }
         },
         "line_total": {
-          "value": "390.00",
+          "value": "360.00",
           "evidence": {
-            "document_id": "sample-wrong_line_item_total",
+            "document_id": "sample-date_difference",
             "page_number": 2,
             "line_start": 4,
             "line_end": 4,
-            "quote": "Dashboard build               3       120.00       390.00",
+            "quote": "Dashboard build               3       120.00       360.00",
             "status": "verified",
             "note": null
           }
@@ -107,7 +107,7 @@
         "description": {
           "value": "Quality review",
           "evidence": {
-            "document_id": "sample-wrong_line_item_total",
+            "document_id": "sample-date_difference",
             "page_number": 2,
             "line_start": 5,
             "line_end": 5,
@@ -119,7 +119,7 @@
         "quantity": {
           "value": "2",
           "evidence": {
-            "document_id": "sample-wrong_line_item_total",
+            "document_id": "sample-date_difference",
             "page_number": 2,
             "line_start": 5,
             "line_end": 5,
@@ -131,7 +131,7 @@
         "unit_price": {
           "value": "75.00",
           "evidence": {
-            "document_id": "sample-wrong_line_item_total",
+            "document_id": "sample-date_difference",
             "page_number": 2,
             "line_start": 5,
             "line_end": 5,
@@ -143,7 +143,7 @@
         "line_total": {
           "value": "150.00",
           "evidence": {
-            "document_id": "sample-wrong_line_item_total",
+            "document_id": "sample-date_difference",
             "page_number": 2,
             "line_start": 5,
             "line_end": 5,
@@ -155,13 +155,13 @@
       }
     ],
     "subtotal": {
-      "value": "540.00",
+      "value": "510.00",
       "evidence": {
-        "document_id": "sample-wrong_line_item_total",
+        "document_id": "sample-date_difference",
         "page_number": 2,
         "line_start": 7,
         "line_end": 7,
-        "quote": "Subtotal:                                        540.00",
+        "quote": "Subtotal:                                        510.00",
         "status": "verified",
         "note": null
       }
@@ -169,7 +169,7 @@
     "tax": {
       "value": "0.00",
       "evidence": {
-        "document_id": "sample-wrong_line_item_total",
+        "document_id": "sample-date_difference",
         "page_number": 2,
         "line_start": 8,
         "line_end": 8,
@@ -179,13 +179,13 @@
       }
     },
     "total": {
-      "value": "540.00",
+      "value": "510.00",
       "evidence": {
-        "document_id": "sample-wrong_line_item_total",
+        "document_id": "sample-date_difference",
         "page_number": 2,
         "line_start": 9,
         "line_end": 9,
-        "quote": "Total:                                           540.00",
+        "quote": "Total:                                           510.00",
         "status": "verified",
         "note": null
       }
@@ -194,15 +194,13 @@
   },
   "findings": [
     {
-      "code": "ITEM_MISMATCH",
-      "field": "line_items[0].line_total",
-      "message": "Line item 1: 3 x 120.00 = USD 360.00, but the stated line total is USD 390.00 (difference USD 30.00).",
+      "code": "LEDGER_DATE_MISMATCH",
+      "field": "invoice_date",
+      "message": "Invoice date 2026-09-14 differs from ledger entry DEV-1006 date 2026-09-04.",
       "blocking": true,
-      "source": "reconcile_invoice",
+      "source": "ledger",
       "details": {
-        "expected": "360.00",
-        "stated": "390.00",
-        "difference": "30.00"
+        "ledger_entry_id": "DEV-1006"
       }
     }
   ],
@@ -251,12 +249,12 @@
     },
     {
       "name": "item_total[0]",
-      "status": "fail",
+      "status": "pass",
       "reason": null,
       "details": {
         "expected": "360.00",
-        "stated": "390.00",
-        "difference": "30.00"
+        "stated": "360.00",
+        "difference": "0.00"
       }
     },
     {
@@ -274,8 +272,8 @@
       "status": "pass",
       "reason": null,
       "details": {
-        "expected": "540.00",
-        "stated": "540.00",
+        "expected": "510.00",
+        "stated": "510.00",
         "difference": "0.00",
         "sum_of_calculated_item_totals": "510.00"
       }
@@ -285,18 +283,18 @@
       "status": "pass",
       "reason": null,
       "details": {
-        "expected": "540.00",
-        "stated": "540.00",
+        "expected": "510.00",
+        "stated": "510.00",
         "difference": "0.00"
       }
     }
   ],
   "checklist": [
     {
-      "finding_code": "ITEM_MISMATCH",
-      "field": "line_items[0].line_total",
-      "policy_ref": "TF-POL-201",
-      "action": "Ask the sender to confirm or correct line_items[0].line_total: quantity times unit price does not equal the stated line total."
+      "finding_code": "LEDGER_DATE_MISMATCH",
+      "field": "invoice_date",
+      "policy_ref": "TF-POL-206",
+      "action": "Ask the client to confirm the invoice date recorded in the ledger."
     }
   ],
   "workflow_status": "Complete",
@@ -307,7 +305,7 @@
       "step": 1,
       "tool": "validate_intake",
       "arguments": {
-        "document_id": "sample-wrong_line_item_total"
+        "document_id": "sample-date_difference"
       },
       "status": "success",
       "result_summary": "Findings: none",
@@ -318,51 +316,145 @@
       "step": 2,
       "tool": "reconcile_invoice",
       "arguments": {
-        "document_id": "sample-wrong_line_item_total"
+        "document_id": "sample-date_difference"
       },
       "status": "success",
-      "result_summary": "Findings: ITEM_MISMATCH",
+      "result_summary": "Arithmetic Consistent; Findings: none",
       "duration_ms": 0,
       "invoked_by": "model function call"
     },
     {
       "step": 3,
-      "tool": "lookup_intake_policy",
+      "tool": "find_ledger_candidates",
       "arguments": {
-        "finding_codes": [
-          "ITEM_MISMATCH"
-        ]
+        "document_id": "sample-date_difference"
       },
       "status": "success",
-      "result_summary": "Policy refs: TF-POL-201",
+      "result_summary": "1 candidate(s): DEV-1006",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 4,
+      "tool": "compare_to_ledger",
+      "arguments": {
+        "document_id": "sample-date_difference",
+        "ledger_entry_id": "DEV-1006"
+      },
+      "status": "success",
+      "result_summary": "DEV-1006: currency=agree, stated_total_vs_gross_amount=agree, invoice_date=differ",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 5,
+      "tool": "build_review_checklist",
+      "arguments": {
+        "document_id": "sample-date_difference"
+      },
+      "status": "success",
+      "result_summary": "Outcome: Discrepancy found; refs: TF-POL-206",
       "duration_ms": 0,
       "invoked_by": "model function call"
     }
   ],
   "model_summary": [
-    "The invoice draft has a line item mismatch issue (ITEM_MISMATCH) where the first line item's total is stated as USD 390.00 but should be USD 360.00 based on quantity and unit price, as per TF-POL-201.",
-    "Despite this, the subtotal and total amounts match the stated values, which may cause confusion (ITEM_MISMATCH).",
-    "Please follow up with the sender to confirm or correct the line item total discrepancy according to policy TF-POL-201."
+    "However, the invoice date differs from the ledger entry date, triggering a LEDGER_DATE_MISMATCH finding (compare_to_ledger).",
+    "Please ask the client to confirm the invoice date recorded in the ledger as per policy TF-POL-206."
   ],
-  "excluded_summary_sentences": 1,
+  "excluded_summary_sentences": 3,
   "run_metadata": {
     "mode": "live",
     "provider": "Azure OpenAI (v1 API, Chat Completions)",
     "model": "gpt-4.1-mini",
-    "schema_version": "invoice-v1",
-    "prompt_version": "extract-v2+agent-v1",
-    "policy_version": "intake-policy-2026-09-30",
+    "schema_version": "reconciliation-v2",
+    "prompt_version": "extract-v4+agent-v2",
+    "policy_version": "reconciliation-policy-2026-10-01",
     "dataset_version": null,
-    "timestamp": "2026-10-01T06:08:21+00:00",
-    "duration_ms": 11616,
-    "model_requests": 4,
-    "request_budget": 6,
+    "timestamp": "2026-10-01T06:56:48+00:00",
+    "duration_ms": 11239,
+    "model_requests": 5,
+    "request_budget": 8,
     "token_usage": {
-      "prompt_tokens": 4058,
-      "completion_tokens": 854,
-      "total_tokens": 4912
+      "prompt_tokens": 6599,
+      "completion_tokens": 874,
+      "total_tokens": 7473
     },
     "recorded_from": null,
+    "ledger_id": "ledger-c91011ab8df7",
+    "ledger_name": "sample_ledger.csv",
+    "currency_data": "pycountry 26.2.16 (ISO 4217)",
     "error": null
-  }
+  },
+  "reconciliation_outcome": "Discrepancy found",
+  "ledger_candidates": [
+    {
+      "ledger_entry_id": "DEV-1006",
+      "row_number": 7,
+      "invoice_number": "LDW-3309",
+      "vendor_name": "Lantern Data Works",
+      "invoice_date": "2026-09-04",
+      "currency": "USD",
+      "gross_amount": "510.00"
+    }
+  ],
+  "ledger_entry": {
+    "ledger_entry_id": "DEV-1006",
+    "row_number": 7,
+    "invoice_number": "LDW-3309",
+    "vendor_name": "Lantern Data Works",
+    "invoice_date": "2026-09-04",
+    "currency": "USD",
+    "gross_amount": "510.00"
+  },
+  "comparison": [
+    {
+      "field": "invoice_number",
+      "invoice_value": "LDW-3309",
+      "ledger_value": "LDW-3309",
+      "status": "agree",
+      "note": "used to match",
+      "difference": null
+    },
+    {
+      "field": "vendor_name",
+      "invoice_value": "LANTERN DATA WORKS",
+      "ledger_value": "Lantern Data Works",
+      "status": "agree",
+      "note": "used to match",
+      "difference": null
+    },
+    {
+      "field": "currency",
+      "invoice_value": "USD",
+      "ledger_value": "USD",
+      "status": "agree",
+      "note": null,
+      "difference": null
+    },
+    {
+      "field": "stated_total_vs_gross_amount",
+      "invoice_value": "510.00",
+      "ledger_value": "510.00",
+      "status": "agree",
+      "note": null,
+      "difference": "0.00"
+    },
+    {
+      "field": "invoice_date",
+      "invoice_value": "2026-09-14",
+      "ledger_value": "2026-09-04",
+      "status": "differ",
+      "note": null,
+      "difference": null
+    }
+  ],
+  "arithmetic_status": "Consistent",
+  "required_tools": [
+    "validate_intake",
+    "reconcile_invoice",
+    "find_ledger_candidates",
+    "compare_to_ledger",
+    "build_review_checklist"
+  ]
 }

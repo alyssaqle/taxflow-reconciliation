@@ -1,0 +1,36 @@
+{
+  "case_id": "case_05",
+  "category": "match",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "Wren Hollow Software",
+    "invoice_number": "HOS-5512",
+    "invoice_date": "2026-08-12",
+    "currency": "USD",
+    "subtotal": "1005.00",
+    "tax": "80.40",
+    "total": "1085.40"
+  },
+  "expected_line_items": [
+    {
+      "description": "Code review session",
+      "quantity": "4",
+      "unit_price": "180.00",
+      "line_total": "720.00"
+    },
+    {
+      "description": "Deployment support hours",
+      "quantity": "3",
+      "unit_price": "95.00",
+      "line_total": "285.00"
+    }
+  ],
+  "expected_outcome": "Matched",
+  "expected_entry_id": "GL-3002",
+  "expected_candidate_ids": [
+    "GL-3002"
+  ],
+  "expected_findings": [],
+  "expected_arithmetic_status": "Consistent",
+  "attack": null
+}

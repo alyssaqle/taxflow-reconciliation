@@ -1,0 +1,11 @@
+From: Cinder Vale Advisory
+To: Copperline Logistics
+
+This is an invoice, invoice number EAA-090, issued June 12, 2026.
+Currency: USD
+
+Item 1: Strategy advisory, June. Quantity 1 at 2,500.00 each, line total 2,500.00.
+
+Subtotal 2,500.00. Tax 200.00. Total 2,700.00.
+
+Synthetic document. All names and figures are fictional.

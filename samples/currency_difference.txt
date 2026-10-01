@@ -1,0 +1,16 @@
+ALDER & FINCH TRANSLATIONS
+Keizersgracht 120, Amsterdam
+
+INVOICE
+Invoice Number: AFT-3381
+Invoice Date: 10 Sep 2026
+Currency: EUR
+
+Description                 Qty   Unit Price   Line Total
+Contract translation          8        95.00       760.00
+
+Subtotal: 760.00
+VAT: 159.60
+Total: 919.60
+
+Synthetic sample document. All names and figures are fictional.

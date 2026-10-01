@@ -1,0 +1,15 @@
+WESTBROOK COURIER CO
+Business park, Suite 100
+
+INVOICE
+Invoice Date: September 5, 2026
+Currency: USD
+
+Description                      Qty   Unit Price   Line Total
+Same-day courier runs              7        50.00       350.00
+
+Subtotal: 350.00
+Tax: 28.00
+Total: 378.00
+
+Synthetic document. All names and figures are fictional.

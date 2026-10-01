@@ -1,0 +1,39 @@
+{
+  "case_id": "case_20",
+  "category": "missing",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "Coastline Media Group",
+    "invoice_number": "CBM-2201",
+    "invoice_date": null,
+    "currency": "USD",
+    "subtotal": "480.00",
+    "tax": "38.40",
+    "total": "518.40"
+  },
+  "expected_line_items": [
+    {
+      "description": "Podcast editing",
+      "quantity": "4",
+      "unit_price": "120.00",
+      "line_total": "480.00"
+    }
+  ],
+  "expected_outcome": "Needs clarification",
+  "expected_entry_id": "GL-3023",
+  "expected_candidate_ids": [
+    "GL-3023"
+  ],
+  "expected_findings": [
+    [
+      "LEDGER_COMPARISON_INCOMPLETE",
+      null
+    ],
+    [
+      "MISSING_FIELD",
+      "invoice_date"
+    ]
+  ],
+  "expected_arithmetic_status": "Consistent",
+  "attack": null
+}

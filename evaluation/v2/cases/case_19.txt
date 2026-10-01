@@ -1,0 +1,15 @@
+TOTALS
+Amount payable: 1,785.00
+Tax: 285.00
+Subtotal: 1,500.00
+
+LINE DETAIL
+Ledger extract automation - qty 1 - unit 1,500.00 - total 1,500.00
+
+HEADER
+Vendor: Kestrel Data Partners
+Invoice ID: KDP-4410
+Invoice date: 09/23/2026
+Currency: EUR
+
+Synthetic document. All names and figures are fictional.

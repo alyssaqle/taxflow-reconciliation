@@ -1,0 +1,43 @@
+{
+  "case_id": "case_23",
+  "category": "missing",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "Shale Creek IT Support",
+    "invoice_number": "SRI-7745",
+    "invoice_date": "2026-08-28",
+    "currency": "USD",
+    "subtotal": "510.00",
+    "tax": "40.80",
+    "total": null
+  },
+  "expected_line_items": [
+    {
+      "description": "Laptop setup",
+      "quantity": "6",
+      "unit_price": "85.00",
+      "line_total": "510.00"
+    }
+  ],
+  "expected_outcome": "Needs clarification",
+  "expected_entry_id": "GL-3024",
+  "expected_candidate_ids": [
+    "GL-3024"
+  ],
+  "expected_findings": [
+    [
+      "ARITHMETIC_NOT_CHECKED",
+      null
+    ],
+    [
+      "LEDGER_COMPARISON_INCOMPLETE",
+      null
+    ],
+    [
+      "MISSING_FIELD",
+      "total"
+    ]
+  ],
+  "expected_arithmetic_status": "Partially checked",
+  "attack": null
+}

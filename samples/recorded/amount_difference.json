@@ -1,0 +1,401 @@
+{
+  "run_id": "a9c05a89ae96",
+  "document_id": "sample-amount_difference",
+  "document_type": "invoice",
+  "unsupported_reason": null,
+  "extracted_fields": {
+    "vendor_name": {
+      "value": "WESTGATE SURVEY WORKS",
+      "evidence": {
+        "document_id": "sample-amount_difference",
+        "page_number": 1,
+        "line_start": 1,
+        "line_end": 1,
+        "quote": "WESTGATE SURVEY WORKS",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "invoice_number": {
+      "value": "WSW-6620",
+      "evidence": {
+        "document_id": "sample-amount_difference",
+        "page_number": 1,
+        "line_start": 5,
+        "line_end": 5,
+        "quote": "Invoice No.: WSW-6620",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "invoice_date": {
+      "value": "2026-09-03",
+      "evidence": {
+        "document_id": "sample-amount_difference",
+        "page_number": 1,
+        "line_start": 6,
+        "line_end": 6,
+        "quote": "Date: 2026-09-03",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "currency": {
+      "value": "USD",
+      "evidence": {
+        "document_id": "sample-amount_difference",
+        "page_number": 1,
+        "line_start": 7,
+        "line_end": 7,
+        "quote": "Currency: USD",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Boundary survey",
+          "evidence": {
+            "document_id": "sample-amount_difference",
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Boundary survey            1     1,400.00     1,400.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "quantity": {
+          "value": "1",
+          "evidence": {
+            "document_id": "sample-amount_difference",
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Boundary survey            1     1,400.00     1,400.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "unit_price": {
+          "value": "1400.00",
+          "evidence": {
+            "document_id": "sample-amount_difference",
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Boundary survey            1     1,400.00     1,400.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "line_total": {
+          "value": "1400.00",
+          "evidence": {
+            "document_id": "sample-amount_difference",
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Boundary survey            1     1,400.00     1,400.00",
+            "status": "verified",
+            "note": null
+          }
+        }
+      }
+    ],
+    "subtotal": {
+      "value": "1400.00",
+      "evidence": {
+        "document_id": "sample-amount_difference",
+        "page_number": 1,
+        "line_start": 12,
+        "line_end": 12,
+        "quote": "Subtotal: 1,400.00",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "tax": {
+      "value": "112.00",
+      "evidence": {
+        "document_id": "sample-amount_difference",
+        "page_number": 1,
+        "line_start": 13,
+        "line_end": 13,
+        "quote": "Tax: 112.00",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "total": {
+      "value": "1512.00",
+      "evidence": {
+        "document_id": "sample-amount_difference",
+        "page_number": 1,
+        "line_start": 14,
+        "line_end": 14,
+        "quote": "Total: 1,512.00",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "unsupported_structures": []
+  },
+  "findings": [
+    {
+      "code": "LEDGER_AMOUNT_MISMATCH",
+      "field": "total",
+      "message": "Invoice stated total USD 1512.00 is USD 9.00 lower than ledger entry DEV-1002 gross amount USD 1521.00.",
+      "blocking": true,
+      "source": "ledger",
+      "details": {
+        "ledger_entry_id": "DEV-1002",
+        "difference": "-9.00"
+      }
+    }
+  ],
+  "check_results": [
+    {
+      "name": "required_fields",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "missing": []
+      }
+    },
+    {
+      "name": "amount_validity",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "invalid": []
+      }
+    },
+    {
+      "name": "invoice_date",
+      "status": "pass",
+      "reason": null,
+      "details": {}
+    },
+    {
+      "name": "currency",
+      "status": "pass",
+      "reason": null,
+      "details": {}
+    },
+    {
+      "name": "supported_structure",
+      "status": "pass",
+      "reason": null,
+      "details": {}
+    },
+    {
+      "name": "source_evidence",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "unverified": []
+      }
+    },
+    {
+      "name": "item_total[0]",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "expected": "1400.00",
+        "stated": "1400.00",
+        "difference": "0.00"
+      }
+    },
+    {
+      "name": "subtotal",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "expected": "1400.00",
+        "stated": "1400.00",
+        "difference": "0.00",
+        "sum_of_calculated_item_totals": "1400.00"
+      }
+    },
+    {
+      "name": "total",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "expected": "1512.00",
+        "stated": "1512.00",
+        "difference": "0.00"
+      }
+    }
+  ],
+  "checklist": [
+    {
+      "finding_code": "LEDGER_AMOUNT_MISMATCH",
+      "field": "total",
+      "policy_ref": "TF-POL-205",
+      "action": "Ask the client to confirm the recorded gross amount against the invoice's stated total."
+    }
+  ],
+  "workflow_status": "Complete",
+  "review_status": "Unreviewed",
+  "review_note": "",
+  "tool_trace": [
+    {
+      "step": 1,
+      "tool": "validate_intake",
+      "arguments": {
+        "document_id": "sample-amount_difference"
+      },
+      "status": "success",
+      "result_summary": "Findings: none",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 2,
+      "tool": "reconcile_invoice",
+      "arguments": {
+        "document_id": "sample-amount_difference"
+      },
+      "status": "success",
+      "result_summary": "Arithmetic Consistent; Findings: none",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 3,
+      "tool": "find_ledger_candidates",
+      "arguments": {
+        "document_id": "sample-amount_difference"
+      },
+      "status": "success",
+      "result_summary": "1 candidate(s): DEV-1002",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 4,
+      "tool": "compare_to_ledger",
+      "arguments": {
+        "document_id": "sample-amount_difference",
+        "ledger_entry_id": "DEV-1002"
+      },
+      "status": "success",
+      "result_summary": "DEV-1002: currency=agree, stated_total_vs_gross_amount=differ, invoice_date=agree",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 5,
+      "tool": "build_review_checklist",
+      "arguments": {
+        "document_id": "sample-amount_difference"
+      },
+      "status": "success",
+      "result_summary": "Outcome: Discrepancy found; refs: TF-POL-205",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    }
+  ],
+  "model_summary": [
+    "However, the invoice stated total of USD 1512.00 is USD 9.00 lower than the ledger entry gross amount of USD 1521.00, indicating a ledger amount mismatch (compare_to_ledger, LEDGER_AMOUNT_MISMATCH).",
+    "Please ask the client to confirm the recorded gross amount against the invoice's stated total as per policy TF-POL-205."
+  ],
+  "excluded_summary_sentences": 3,
+  "run_metadata": {
+    "mode": "live",
+    "provider": "Azure OpenAI (v1 API, Chat Completions)",
+    "model": "gpt-4.1-mini",
+    "schema_version": "reconciliation-v2",
+    "prompt_version": "extract-v4+agent-v2",
+    "policy_version": "reconciliation-policy-2026-10-01",
+    "dataset_version": null,
+    "timestamp": "2026-10-01T06:56:27+00:00",
+    "duration_ms": 10245,
+    "model_requests": 5,
+    "request_budget": 8,
+    "token_usage": {
+      "prompt_tokens": 6459,
+      "completion_tokens": 739,
+      "total_tokens": 7198
+    },
+    "recorded_from": null,
+    "ledger_id": "ledger-c91011ab8df7",
+    "ledger_name": "sample_ledger.csv",
+    "currency_data": "pycountry 26.2.16 (ISO 4217)",
+    "error": null
+  },
+  "reconciliation_outcome": "Discrepancy found",
+  "ledger_candidates": [
+    {
+      "ledger_entry_id": "DEV-1002",
+      "row_number": 3,
+      "invoice_number": "WSW-6620",
+      "vendor_name": "Westgate Survey Works",
+      "invoice_date": "2026-09-03",
+      "currency": "USD",
+      "gross_amount": "1521.00"
+    }
+  ],
+  "ledger_entry": {
+    "ledger_entry_id": "DEV-1002",
+    "row_number": 3,
+    "invoice_number": "WSW-6620",
+    "vendor_name": "Westgate Survey Works",
+    "invoice_date": "2026-09-03",
+    "currency": "USD",
+    "gross_amount": "1521.00"
+  },
+  "comparison": [
+    {
+      "field": "invoice_number",
+      "invoice_value": "WSW-6620",
+      "ledger_value": "WSW-6620",
+      "status": "agree",
+      "note": "used to match",
+      "difference": null
+    },
+    {
+      "field": "vendor_name",
+      "invoice_value": "WESTGATE SURVEY WORKS",
+      "ledger_value": "Westgate Survey Works",
+      "status": "agree",
+      "note": "used to match",
+      "difference": null
+    },
+    {
+      "field": "currency",
+      "invoice_value": "USD",
+      "ledger_value": "USD",
+      "status": "agree",
+      "note": null,
+      "difference": null
+    },
+    {
+      "field": "stated_total_vs_gross_amount",
+      "invoice_value": "1512.00",
+      "ledger_value": "1521.00",
+      "status": "differ",
+      "note": null,
+      "difference": "-9.00"
+    },
+    {
+      "field": "invoice_date",
+      "invoice_value": "2026-09-03",
+      "ledger_value": "2026-09-03",
+      "status": "agree",
+      "note": null,
+      "difference": null
+    }
+  ],
+  "arithmetic_status": "Consistent",
+  "required_tools": [
+    "validate_intake",
+    "reconcile_invoice",
+    "find_ledger_candidates",
+    "compare_to_ledger",
+    "build_review_checklist"
+  ]
+}

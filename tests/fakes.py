@@ -59,13 +59,19 @@ class ScriptedProvider:
         return ModelReply(content=None, tool_calls=calls, finish_reason="tool_calls", raw_message=raw)
 
     def _default_script(self, messages):
-        codes = []
-        for m in messages:
-            if m.get("role") == "tool":
-                codes += json.loads(m["content"]).get("finding_codes", [])
+        """A well-behaved agent: validate+reconcile+find in one response, compare only with one candidate,
+        then the checklist, then a summary."""
         d = {"document_id": self.document_id}
-        return [
-            [("validate_intake", d), ("reconcile_invoice", d)],
-            [("lookup_intake_policy", {"finding_codes": sorted(set(codes))})],
-            "text",
-        ]
+        results = [json.loads(m["content"]) for m in messages if m.get("role") == "tool"]
+        find = next((r for r in results if "candidates" in r), None)
+        compared = any("comparison" in r for r in results)
+        checklisted = any("reconciliation_outcome" in r for r in results)
+        if find is None:
+            step = [("validate_intake", d), ("reconcile_invoice", d), ("find_ledger_candidates", d)]
+        elif len(find["candidates"]) == 1 and not compared:
+            step = [("compare_to_ledger", {**d, "ledger_entry_id": find["candidates"][0]["ledger_entry_id"]})]
+        elif not checklisted:
+            step = [("build_review_checklist", d)]
+        else:
+            step = "text"
+        return [step] * (self.tool_round + 1)

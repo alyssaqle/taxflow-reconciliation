@@ -1,12 +1,10 @@
-NORTHWIND ANALYTICS LLC (fictional)
-410 Harbor Street, Suite 2
-Portland, OR 97201
+NORTHWIND ANALYTICS LLC
+410 Harbor Street, Suite 2, Portland, OR 97201
 
 INVOICE
-
 Invoice Number: NWA-2026-0412
 Invoice Date: September 15, 2026
-Bill To: Cedar Ridge Consulting (fictional)
+Bill To: Cedar Ridge Consulting
 Currency: USD
 
 Description                    Qty   Unit Price   Line Total
@@ -17,4 +15,4 @@ Subtotal:                                          800.00
 Tax:                                                80.00
 Total due:                                         880.00
 
-Payment terms: Net 30. All amounts in USD.
+Synthetic sample document. All names and figures are fictional.

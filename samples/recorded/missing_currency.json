@@ -1,0 +1,412 @@
+{
+  "run_id": "76fd70ce1b58",
+  "document_id": "sample-missing_currency",
+  "document_type": "invoice",
+  "unsupported_reason": null,
+  "extracted_fields": {
+    "vendor_name": {
+      "value": "NORTHSTAR PRINT LAB",
+      "evidence": {
+        "document_id": "sample-missing_currency",
+        "page_number": 1,
+        "line_start": 1,
+        "line_end": 1,
+        "quote": "NORTHSTAR PRINT LAB",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "invoice_number": {
+      "value": "NPL-4471",
+      "evidence": {
+        "document_id": "sample-missing_currency",
+        "page_number": 1,
+        "line_start": 5,
+        "line_end": 5,
+        "quote": "Invoice Number: NPL-4471",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "invoice_date": {
+      "value": "2026-09-02",
+      "evidence": {
+        "document_id": "sample-missing_currency",
+        "page_number": 1,
+        "line_start": 6,
+        "line_end": 6,
+        "quote": "Invoice Date: September 2, 2026",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "currency": {
+      "value": null,
+      "evidence": null
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Brochure printing",
+          "evidence": {
+            "document_id": "sample-missing_currency",
+            "page_number": 1,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "Brochure printing       500        $1.20      $600.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "quantity": {
+          "value": "500",
+          "evidence": {
+            "document_id": "sample-missing_currency",
+            "page_number": 1,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "Brochure printing       500        $1.20      $600.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "unit_price": {
+          "value": "1.20",
+          "evidence": {
+            "document_id": "sample-missing_currency",
+            "page_number": 1,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "Brochure printing       500        $1.20      $600.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "line_total": {
+          "value": "600.00",
+          "evidence": {
+            "document_id": "sample-missing_currency",
+            "page_number": 1,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "Brochure printing       500        $1.20      $600.00",
+            "status": "verified",
+            "note": null
+          }
+        }
+      }
+    ],
+    "subtotal": {
+      "value": "600.00",
+      "evidence": {
+        "document_id": "sample-missing_currency",
+        "page_number": 1,
+        "line_start": 11,
+        "line_end": 11,
+        "quote": "Subtotal: $600.00",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "tax": {
+      "value": "48.00",
+      "evidence": {
+        "document_id": "sample-missing_currency",
+        "page_number": 1,
+        "line_start": 12,
+        "line_end": 12,
+        "quote": "Tax: $48.00",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "total": {
+      "value": "648.00",
+      "evidence": {
+        "document_id": "sample-missing_currency",
+        "page_number": 1,
+        "line_start": 13,
+        "line_end": 13,
+        "quote": "Total: $648.00",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "unsupported_structures": []
+  },
+  "findings": [
+    {
+      "code": "MISSING_FIELD",
+      "field": "currency",
+      "message": "Required field currency is missing.",
+      "blocking": true,
+      "source": "validate_intake",
+      "details": {}
+    },
+    {
+      "code": "LEDGER_COMPARISON_INCOMPLETE",
+      "field": null,
+      "message": "Ledger comparison incomplete for: currency, stated_total_vs_gross_amount.",
+      "blocking": true,
+      "source": "ledger",
+      "details": {
+        "ledger_entry_id": "DEV-1008",
+        "incomplete": [
+          "currency",
+          "stated_total_vs_gross_amount"
+        ]
+      }
+    }
+  ],
+  "check_results": [
+    {
+      "name": "required_fields",
+      "status": "fail",
+      "reason": null,
+      "details": {
+        "missing": [
+          "currency"
+        ]
+      }
+    },
+    {
+      "name": "amount_validity",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "invalid": []
+      }
+    },
+    {
+      "name": "invoice_date",
+      "status": "pass",
+      "reason": null,
+      "details": {}
+    },
+    {
+      "name": "currency",
+      "status": "not_checked",
+      "reason": "currency is missing",
+      "details": {}
+    },
+    {
+      "name": "supported_structure",
+      "status": "pass",
+      "reason": null,
+      "details": {}
+    },
+    {
+      "name": "source_evidence",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "unverified": []
+      }
+    },
+    {
+      "name": "item_total[0]",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "expected": "600.00",
+        "stated": "600.00",
+        "difference": "0.00"
+      }
+    },
+    {
+      "name": "subtotal",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "expected": "600.00",
+        "stated": "600.00",
+        "difference": "0.00",
+        "sum_of_calculated_item_totals": "600.00"
+      }
+    },
+    {
+      "name": "total",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "expected": "648.00",
+        "stated": "648.00",
+        "difference": "0.00"
+      }
+    }
+  ],
+  "checklist": [
+    {
+      "finding_code": "MISSING_FIELD",
+      "field": "currency",
+      "policy_ref": "TF-POL-101",
+      "action": "Ask the sender or client to provide the missing currency; it is required to reconcile the invoice."
+    },
+    {
+      "finding_code": "LEDGER_COMPARISON_INCOMPLETE",
+      "field": null,
+      "policy_ref": "TF-POL-207",
+      "action": "Obtain the missing invoice information so the currency, amount, and date comparisons can be completed."
+    }
+  ],
+  "workflow_status": "Complete",
+  "review_status": "Unreviewed",
+  "review_note": "",
+  "tool_trace": [
+    {
+      "step": 1,
+      "tool": "validate_intake",
+      "arguments": {
+        "document_id": "sample-missing_currency"
+      },
+      "status": "success",
+      "result_summary": "Findings: MISSING_FIELD",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 2,
+      "tool": "reconcile_invoice",
+      "arguments": {
+        "document_id": "sample-missing_currency"
+      },
+      "status": "success",
+      "result_summary": "Arithmetic Consistent; Findings: none",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 3,
+      "tool": "find_ledger_candidates",
+      "arguments": {
+        "document_id": "sample-missing_currency"
+      },
+      "status": "success",
+      "result_summary": "1 candidate(s): DEV-1008",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 4,
+      "tool": "compare_to_ledger",
+      "arguments": {
+        "document_id": "sample-missing_currency",
+        "ledger_entry_id": "DEV-1008"
+      },
+      "status": "success",
+      "result_summary": "DEV-1008: currency=not_checked, stated_total_vs_gross_amount=not_checked, invoice_date=agree",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 5,
+      "tool": "build_review_checklist",
+      "arguments": {
+        "document_id": "sample-missing_currency"
+      },
+      "status": "success",
+      "result_summary": "Outcome: Needs clarification; refs: TF-POL-101, TF-POL-207",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    }
+  ],
+  "model_summary": [
+    "The invoice draft is missing the required currency field, which blocks full validation (MISSING_FIELD, TF-POL-101).",
+    "Exactly one ledger candidate was found, but the ledger comparison is incomplete because the invoice currency is not stated, so the amounts could not be compared (LEDGER_COMPARISON_INCOMPLETE, TF-POL-207)."
+  ],
+  "excluded_summary_sentences": 2,
+  "run_metadata": {
+    "mode": "live",
+    "provider": "Azure OpenAI (v1 API, Chat Completions)",
+    "model": "gpt-4.1-mini",
+    "schema_version": "reconciliation-v2",
+    "prompt_version": "extract-v4+agent-v2",
+    "policy_version": "reconciliation-policy-2026-10-01",
+    "dataset_version": null,
+    "timestamp": "2026-10-01T06:57:32+00:00",
+    "duration_ms": 9184,
+    "model_requests": 5,
+    "request_budget": 8,
+    "token_usage": {
+      "prompt_tokens": 6566,
+      "completion_tokens": 674,
+      "total_tokens": 7240
+    },
+    "recorded_from": null,
+    "ledger_id": "ledger-c91011ab8df7",
+    "ledger_name": "sample_ledger.csv",
+    "currency_data": "pycountry 26.2.16 (ISO 4217)",
+    "error": null
+  },
+  "reconciliation_outcome": "Needs clarification",
+  "ledger_candidates": [
+    {
+      "ledger_entry_id": "DEV-1008",
+      "row_number": 9,
+      "invoice_number": "NPL-4471",
+      "vendor_name": "Northstar Print Lab",
+      "invoice_date": "2026-09-02",
+      "currency": "USD",
+      "gross_amount": "648.00"
+    }
+  ],
+  "ledger_entry": {
+    "ledger_entry_id": "DEV-1008",
+    "row_number": 9,
+    "invoice_number": "NPL-4471",
+    "vendor_name": "Northstar Print Lab",
+    "invoice_date": "2026-09-02",
+    "currency": "USD",
+    "gross_amount": "648.00"
+  },
+  "comparison": [
+    {
+      "field": "invoice_number",
+      "invoice_value": "NPL-4471",
+      "ledger_value": "NPL-4471",
+      "status": "agree",
+      "note": "used to match",
+      "difference": null
+    },
+    {
+      "field": "vendor_name",
+      "invoice_value": "NORTHSTAR PRINT LAB",
+      "ledger_value": "Northstar Print Lab",
+      "status": "agree",
+      "note": "used to match",
+      "difference": null
+    },
+    {
+      "field": "currency",
+      "invoice_value": null,
+      "ledger_value": "USD",
+      "status": "not_checked",
+      "note": "invoice currency not stated explicitly",
+      "difference": null
+    },
+    {
+      "field": "stated_total_vs_gross_amount",
+      "invoice_value": "648.00",
+      "ledger_value": "648.00",
+      "status": "not_checked",
+      "note": "currency not confirmed; amounts are not compared",
+      "difference": null
+    },
+    {
+      "field": "invoice_date",
+      "invoice_value": "2026-09-02",
+      "ledger_value": "2026-09-02",
+      "status": "agree",
+      "note": null,
+      "difference": null
+    }
+  ],
+  "arithmetic_status": "Consistent",
+  "required_tools": [
+    "validate_intake",
+    "reconcile_invoice",
+    "find_ledger_candidates",
+    "compare_to_ledger",
+    "build_review_checklist"
+  ]
+}

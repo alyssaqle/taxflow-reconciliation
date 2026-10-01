@@ -1,0 +1,47 @@
+{
+  "case_id": "case_29",
+  "category": "amount",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "Beacon Yard Facilities",
+    "invoice_number": "AFG-20260815",
+    "invoice_date": "2026-08-15",
+    "currency": "USD",
+    "subtotal": "4269.00",
+    "tax": "341.52",
+    "total": "4610.52"
+  },
+  "expected_line_items": [
+    {
+      "description": "Quarterly HVAC inspection",
+      "quantity": "3",
+      "unit_price": "1150.00",
+      "line_total": "3450.00"
+    },
+    {
+      "description": "Air filter replacement",
+      "quantity": "24",
+      "unit_price": "18.50",
+      "line_total": "444.00"
+    },
+    {
+      "description": "Emergency call-out",
+      "quantity": "1",
+      "unit_price": "375.00",
+      "line_total": "375.00"
+    }
+  ],
+  "expected_outcome": "Discrepancy found",
+  "expected_entry_id": "GL-3008",
+  "expected_candidate_ids": [
+    "GL-3008"
+  ],
+  "expected_findings": [
+    [
+      "LEDGER_AMOUNT_MISMATCH",
+      "total"
+    ]
+  ],
+  "expected_arithmetic_status": "Consistent",
+  "attack": null
+}

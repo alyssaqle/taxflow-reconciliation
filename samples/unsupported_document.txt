@@ -1,12 +1,14 @@
-PURCHASE ORDER (fictional)
+PURCHASE ORDER
 
 PO Number: PO-55120
 Date: September 10, 2026
-Buyer: Cedar Ridge Consulting (fictional)
-Supplier: Northwind Analytics LLC (fictional)
+Buyer: Cedar Ridge Consulting
+Supplier: Northwind Analytics LLC
 
 Requested services:
 - Quarterly market research report (estimated USD 2,400.00)
 
 This purchase order authorizes work. It is not a request for payment.
 Authorized by: Operations Manager
+
+Synthetic sample document. All names and figures are fictional.

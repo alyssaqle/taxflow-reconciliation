@@ -1,0 +1,462 @@
+{
+  "run_id": "326f3c94ee60",
+  "document_id": "sample-arithmetic_wrong_ledger_agrees",
+  "document_type": "invoice",
+  "unsupported_reason": null,
+  "extracted_fields": {
+    "vendor_name": {
+      "value": "SUMMIT LEDGER SERVICES",
+      "evidence": {
+        "document_id": "sample-arithmetic_wrong_ledger_agrees",
+        "page_number": 1,
+        "line_start": 1,
+        "line_end": 1,
+        "quote": "SUMMIT LEDGER SERVICES",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "invoice_number": {
+      "value": "SLS-7781",
+      "evidence": {
+        "document_id": "sample-arithmetic_wrong_ledger_agrees",
+        "page_number": 1,
+        "line_start": 4,
+        "line_end": 4,
+        "quote": "INVOICE #SLS-7781",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "invoice_date": {
+      "value": "2026-09-20",
+      "evidence": {
+        "document_id": "sample-arithmetic_wrong_ledger_agrees",
+        "page_number": 1,
+        "line_start": 5,
+        "line_end": 5,
+        "quote": "Issued: September 20, 2026",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "currency": {
+      "value": "USD",
+      "evidence": {
+        "document_id": "sample-arithmetic_wrong_ledger_agrees",
+        "page_number": 1,
+        "line_start": 7,
+        "line_end": 7,
+        "quote": "Currency: USD",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Research service",
+          "evidence": {
+            "document_id": "sample-arithmetic_wrong_ledger_agrees",
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Research service                 1       500.00   500.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "quantity": {
+          "value": "1",
+          "evidence": {
+            "document_id": "sample-arithmetic_wrong_ledger_agrees",
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Research service                 1       500.00   500.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "unit_price": {
+          "value": "500.00",
+          "evidence": {
+            "document_id": "sample-arithmetic_wrong_ledger_agrees",
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Research service                 1       500.00   500.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "line_total": {
+          "value": "500.00",
+          "evidence": {
+            "document_id": "sample-arithmetic_wrong_ledger_agrees",
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Research service                 1       500.00   500.00",
+            "status": "verified",
+            "note": null
+          }
+        }
+      },
+      {
+        "description": {
+          "value": "Data preparation service",
+          "evidence": {
+            "document_id": "sample-arithmetic_wrong_ledger_agrees",
+            "page_number": 1,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "Data preparation service         1       300.00   300.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "quantity": {
+          "value": "1",
+          "evidence": {
+            "document_id": "sample-arithmetic_wrong_ledger_agrees",
+            "page_number": 1,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "Data preparation service         1       300.00   300.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "unit_price": {
+          "value": "300.00",
+          "evidence": {
+            "document_id": "sample-arithmetic_wrong_ledger_agrees",
+            "page_number": 1,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "Data preparation service         1       300.00   300.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "line_total": {
+          "value": "300.00",
+          "evidence": {
+            "document_id": "sample-arithmetic_wrong_ledger_agrees",
+            "page_number": 1,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "Data preparation service         1       300.00   300.00",
+            "status": "verified",
+            "note": null
+          }
+        }
+      }
+    ],
+    "subtotal": {
+      "value": "800.00",
+      "evidence": {
+        "document_id": "sample-arithmetic_wrong_ledger_agrees",
+        "page_number": 1,
+        "line_start": 13,
+        "line_end": 13,
+        "quote": "Stated subtotal: USD 800.00",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "tax": {
+      "value": "80.00",
+      "evidence": {
+        "document_id": "sample-arithmetic_wrong_ledger_agrees",
+        "page_number": 1,
+        "line_start": 14,
+        "line_end": 14,
+        "quote": "Stated tax amount: USD 80.00",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "total": {
+      "value": "950.00",
+      "evidence": {
+        "document_id": "sample-arithmetic_wrong_ledger_agrees",
+        "page_number": 1,
+        "line_start": 15,
+        "line_end": 15,
+        "quote": "Stated total: USD 950.00",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "unsupported_structures": []
+  },
+  "findings": [
+    {
+      "code": "TOTAL_MISMATCH",
+      "field": "total",
+      "message": "USD 800.00 + USD 80.00 = USD 880.00; the stated total USD 950.00 is USD 70.00 higher.",
+      "blocking": true,
+      "source": "reconcile_invoice",
+      "details": {
+        "expected": "880.00",
+        "stated": "950.00",
+        "difference": "70.00"
+      }
+    }
+  ],
+  "check_results": [
+    {
+      "name": "required_fields",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "missing": []
+      }
+    },
+    {
+      "name": "amount_validity",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "invalid": []
+      }
+    },
+    {
+      "name": "invoice_date",
+      "status": "pass",
+      "reason": null,
+      "details": {}
+    },
+    {
+      "name": "currency",
+      "status": "pass",
+      "reason": null,
+      "details": {}
+    },
+    {
+      "name": "supported_structure",
+      "status": "pass",
+      "reason": null,
+      "details": {}
+    },
+    {
+      "name": "source_evidence",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "unverified": []
+      }
+    },
+    {
+      "name": "item_total[0]",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "expected": "500.00",
+        "stated": "500.00",
+        "difference": "0.00"
+      }
+    },
+    {
+      "name": "item_total[1]",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "expected": "300.00",
+        "stated": "300.00",
+        "difference": "0.00"
+      }
+    },
+    {
+      "name": "subtotal",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "expected": "800.00",
+        "stated": "800.00",
+        "difference": "0.00",
+        "sum_of_calculated_item_totals": "800.00"
+      }
+    },
+    {
+      "name": "total",
+      "status": "fail",
+      "reason": null,
+      "details": {
+        "expected": "880.00",
+        "stated": "950.00",
+        "difference": "70.00"
+      }
+    }
+  ],
+  "checklist": [
+    {
+      "finding_code": "TOTAL_MISMATCH",
+      "field": "total",
+      "policy_ref": "TF-POL-303",
+      "action": "Ask the vendor to confirm or correct the invoice total; it does not equal subtotal plus stated tax. The ledger comparison still uses the stated total."
+    }
+  ],
+  "workflow_status": "Complete",
+  "review_status": "Unreviewed",
+  "review_note": "",
+  "tool_trace": [
+    {
+      "step": 1,
+      "tool": "validate_intake",
+      "arguments": {
+        "document_id": "sample-arithmetic_wrong_ledger_agrees"
+      },
+      "status": "success",
+      "result_summary": "Findings: none",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 2,
+      "tool": "reconcile_invoice",
+      "arguments": {
+        "document_id": "sample-arithmetic_wrong_ledger_agrees"
+      },
+      "status": "success",
+      "result_summary": "Arithmetic Inconsistent; Findings: TOTAL_MISMATCH",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 3,
+      "tool": "find_ledger_candidates",
+      "arguments": {
+        "document_id": "sample-arithmetic_wrong_ledger_agrees"
+      },
+      "status": "success",
+      "result_summary": "1 candidate(s): DEV-1007",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 4,
+      "tool": "compare_to_ledger",
+      "arguments": {
+        "document_id": "sample-arithmetic_wrong_ledger_agrees",
+        "ledger_entry_id": "DEV-1007"
+      },
+      "status": "success",
+      "result_summary": "DEV-1007: currency=agree, stated_total_vs_gross_amount=agree, invoice_date=agree",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 5,
+      "tool": "build_review_checklist",
+      "arguments": {
+        "document_id": "sample-arithmetic_wrong_ledger_agrees"
+      },
+      "status": "success",
+      "result_summary": "Outcome: Matched; refs: TF-POL-303",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    }
+  ],
+  "model_summary": [
+    "However, the invoice arithmetic is inconsistent due to a total mismatch: the stated total is USD 950.00, but the sum of subtotal and tax is USD 880.00 (TOTAL_MISMATCH).",
+    "Despite the ledger agreement, the arithmetic inconsistency requires asking the vendor to confirm or correct the invoice total as per policy TF-POL-303."
+  ],
+  "excluded_summary_sentences": 3,
+  "run_metadata": {
+    "mode": "live",
+    "provider": "Azure OpenAI (v1 API, Chat Completions)",
+    "model": "gpt-4.1-mini",
+    "schema_version": "reconciliation-v2",
+    "prompt_version": "extract-v4+agent-v2",
+    "policy_version": "reconciliation-policy-2026-10-01",
+    "dataset_version": null,
+    "timestamp": "2026-10-01T06:56:12+00:00",
+    "duration_ms": 15199,
+    "model_requests": 5,
+    "request_budget": 8,
+    "token_usage": {
+      "prompt_tokens": 6846,
+      "completion_tokens": 933,
+      "total_tokens": 7779
+    },
+    "recorded_from": null,
+    "ledger_id": "ledger-c91011ab8df7",
+    "ledger_name": "sample_ledger.csv",
+    "currency_data": "pycountry 26.2.16 (ISO 4217)",
+    "error": null
+  },
+  "reconciliation_outcome": "Matched",
+  "ledger_candidates": [
+    {
+      "ledger_entry_id": "DEV-1007",
+      "row_number": 8,
+      "invoice_number": "SLS-7781",
+      "vendor_name": "Summit Ledger Services",
+      "invoice_date": "2026-09-20",
+      "currency": "USD",
+      "gross_amount": "950.00"
+    }
+  ],
+  "ledger_entry": {
+    "ledger_entry_id": "DEV-1007",
+    "row_number": 8,
+    "invoice_number": "SLS-7781",
+    "vendor_name": "Summit Ledger Services",
+    "invoice_date": "2026-09-20",
+    "currency": "USD",
+    "gross_amount": "950.00"
+  },
+  "comparison": [
+    {
+      "field": "invoice_number",
+      "invoice_value": "SLS-7781",
+      "ledger_value": "SLS-7781",
+      "status": "agree",
+      "note": "used to match",
+      "difference": null
+    },
+    {
+      "field": "vendor_name",
+      "invoice_value": "SUMMIT LEDGER SERVICES",
+      "ledger_value": "Summit Ledger Services",
+      "status": "agree",
+      "note": "used to match",
+      "difference": null
+    },
+    {
+      "field": "currency",
+      "invoice_value": "USD",
+      "ledger_value": "USD",
+      "status": "agree",
+      "note": null,
+      "difference": null
+    },
+    {
+      "field": "stated_total_vs_gross_amount",
+      "invoice_value": "950.00",
+      "ledger_value": "950.00",
+      "status": "agree",
+      "note": null,
+      "difference": "0.00"
+    },
+    {
+      "field": "invoice_date",
+      "invoice_value": "2026-09-20",
+      "ledger_value": "2026-09-20",
+      "status": "agree",
+      "note": null,
+      "difference": null
+    }
+  ],
+  "arithmetic_status": "Inconsistent",
+  "required_tools": [
+    "validate_intake",
+    "reconcile_invoice",
+    "find_ledger_candidates",
+    "compare_to_ledger",
+    "build_review_checklist"
+  ]
+}

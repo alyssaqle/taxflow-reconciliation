@@ -1,0 +1,33 @@
+ledger_entry_id,invoice_number,vendor_name,invoice_date,currency,gross_amount
+GL-3029,NPW-4471,Polaris Print Works,2026-08-03,USD,648.00
+GL-3010,TT-88-2025,Saltmarsh Translation Co,2026-07-29,USD,445.00
+GL-3020,TOP-2210,Thistle & Oak Partners,2026-09-09,USD,1440.00
+GL-3011,RGW-262,Sequoia Grants LLC,2026-09-03,USD,1944.00
+GL-3030,CPA-5150,Copperline Analytics,2026-09-11,USD,1026.00
+GL-3006,SBA-0907,Aspen Vale Analytics,2026-04-23,USD,2200.00
+GL-3008,AFG-20260815,Beacon Yard Facilities,2026-08-15,USD,4710.52
+GL-3023,CBM-2201,Coastline Media Group,2026-08-20,USD,518.40
+GL-3001,GPC-1043,Basalt Ridge Consulting,2026-08-04,USD,1890.00
+GL-3015,MLS-5031,Fernbrook Legal Support,2026-07-21,USD,999.00
+GL-3009,FLS-2207,Clover Lane Bookkeeping,2026-07-07,USD,990.05
+GL-3016,MLS-5031,Fernbrook Legal Support,2026-07-21,USD,999.00
+GL-3024,SRI-7745,Shale Creek IT Support,2026-08-28,USD,550.80
+GL-3025,VLD-7310,Spiral Fern Design,2026-08-25,USD,1100.00
+GL-3022,WCC-3150,Westbrook Courier Co,2026-09-05,USD,378.00
+GL-3014,MLS-5031,Fernbrook Legal Support,2026-07-21,USD,500.00
+GL-3026,HLC-1550,Quayside Cleaning,2026-09-08,USD,773.60
+GL-3028,JHC-301,Hearthstone Catering,2026-06-18,USD,712.80
+GL-3007,QES-414,Inkwell Bay Editorial,2026-09-01,USD,1349.98
+GL-3017,CPL-9902,Gravelpath Logistics,2026-08-11,USD,628.40
+GL-3027,OKS-3007,Basilisk Key Security,2026-07-30,USD,1404.00
+GL-3019,LRS-7781,Lantana Ridge Studios,2026-08-01,USD,5760.00
+GL-3012,BWE-1188,Clearwater Events Co,2026-08-09,USD,810.00
+GL-3004,PFR-2026-031,Larkspur Field Research LLC,2026-06-30,USD,1620.00
+GL-3018,CPL-9902,Gravelpath Logistics,2026-08-14,USD,120.00
+GL-3003,MFA-0077,Maple & Frost Advisory,2026-07-14,CAD,2260.00
+GL-3002,HOS-5512,Wren Hollow Software,2026-08-12,USD,1085.41
+GL-3032,RAT-8820,Riverstone Audit Tools,2026-09-14,USD,669.60
+GL-3013,BWE-1188,Clearwater Events Co,2026-08-09,USD,810.00
+GL-3005,KDP-4410,Kestrel Data Partners,2026-09-23,EUR,1785.00
+GL-3031,CPA-0001,Copperline Analytics,2026-01-01,USD,0.00
+GL-3021,NPS-6604,Northgate Payroll Services,2026-08-30,CAD,672.00

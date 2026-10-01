@@ -1,0 +1,400 @@
+{
+  "run_id": "38aa32017620",
+  "document_id": "sample-currency_difference",
+  "document_type": "invoice",
+  "unsupported_reason": null,
+  "extracted_fields": {
+    "vendor_name": {
+      "value": "ALDER & FINCH TRANSLATIONS",
+      "evidence": {
+        "document_id": "sample-currency_difference",
+        "page_number": 1,
+        "line_start": 1,
+        "line_end": 1,
+        "quote": "ALDER & FINCH TRANSLATIONS",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "invoice_number": {
+      "value": "AFT-3381",
+      "evidence": {
+        "document_id": "sample-currency_difference",
+        "page_number": 1,
+        "line_start": 5,
+        "line_end": 5,
+        "quote": "Invoice Number: AFT-3381",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "invoice_date": {
+      "value": "2026-09-10",
+      "evidence": {
+        "document_id": "sample-currency_difference",
+        "page_number": 1,
+        "line_start": 6,
+        "line_end": 6,
+        "quote": "Invoice Date: 10 Sep 2026",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "currency": {
+      "value": "EUR",
+      "evidence": {
+        "document_id": "sample-currency_difference",
+        "page_number": 1,
+        "line_start": 7,
+        "line_end": 7,
+        "quote": "Currency: EUR",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Contract translation",
+          "evidence": {
+            "document_id": "sample-currency_difference",
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Contract translation          8        95.00       760.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "quantity": {
+          "value": "8",
+          "evidence": {
+            "document_id": "sample-currency_difference",
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Contract translation          8        95.00       760.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "unit_price": {
+          "value": "95.00",
+          "evidence": {
+            "document_id": "sample-currency_difference",
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Contract translation          8        95.00       760.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "line_total": {
+          "value": "760.00",
+          "evidence": {
+            "document_id": "sample-currency_difference",
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Contract translation          8        95.00       760.00",
+            "status": "verified",
+            "note": null
+          }
+        }
+      }
+    ],
+    "subtotal": {
+      "value": "760.00",
+      "evidence": {
+        "document_id": "sample-currency_difference",
+        "page_number": 1,
+        "line_start": 12,
+        "line_end": 12,
+        "quote": "Subtotal: 760.00",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "tax": {
+      "value": "159.60",
+      "evidence": {
+        "document_id": "sample-currency_difference",
+        "page_number": 1,
+        "line_start": 13,
+        "line_end": 13,
+        "quote": "VAT: 159.60",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "total": {
+      "value": "919.60",
+      "evidence": {
+        "document_id": "sample-currency_difference",
+        "page_number": 1,
+        "line_start": 14,
+        "line_end": 14,
+        "quote": "Total: 919.60",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "unsupported_structures": []
+  },
+  "findings": [
+    {
+      "code": "LEDGER_CURRENCY_MISMATCH",
+      "field": "currency",
+      "message": "Invoice currency EUR differs from ledger entry DEV-1005 currency USD. Amounts were not compared.",
+      "blocking": true,
+      "source": "ledger",
+      "details": {
+        "ledger_entry_id": "DEV-1005"
+      }
+    }
+  ],
+  "check_results": [
+    {
+      "name": "required_fields",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "missing": []
+      }
+    },
+    {
+      "name": "amount_validity",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "invalid": []
+      }
+    },
+    {
+      "name": "invoice_date",
+      "status": "pass",
+      "reason": null,
+      "details": {}
+    },
+    {
+      "name": "currency",
+      "status": "pass",
+      "reason": null,
+      "details": {}
+    },
+    {
+      "name": "supported_structure",
+      "status": "pass",
+      "reason": null,
+      "details": {}
+    },
+    {
+      "name": "source_evidence",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "unverified": []
+      }
+    },
+    {
+      "name": "item_total[0]",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "expected": "760.00",
+        "stated": "760.00",
+        "difference": "0.00"
+      }
+    },
+    {
+      "name": "subtotal",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "expected": "760.00",
+        "stated": "760.00",
+        "difference": "0.00",
+        "sum_of_calculated_item_totals": "760.00"
+      }
+    },
+    {
+      "name": "total",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "expected": "919.60",
+        "stated": "919.60",
+        "difference": "0.00"
+      }
+    }
+  ],
+  "checklist": [
+    {
+      "finding_code": "LEDGER_CURRENCY_MISMATCH",
+      "field": "currency",
+      "policy_ref": "TF-POL-204",
+      "action": "Ask the client to confirm the currency recorded for this invoice. No conversion is performed."
+    }
+  ],
+  "workflow_status": "Complete",
+  "review_status": "Unreviewed",
+  "review_note": "",
+  "tool_trace": [
+    {
+      "step": 1,
+      "tool": "validate_intake",
+      "arguments": {
+        "document_id": "sample-currency_difference"
+      },
+      "status": "success",
+      "result_summary": "Findings: none",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 2,
+      "tool": "reconcile_invoice",
+      "arguments": {
+        "document_id": "sample-currency_difference"
+      },
+      "status": "success",
+      "result_summary": "Arithmetic Consistent; Findings: none",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 3,
+      "tool": "find_ledger_candidates",
+      "arguments": {
+        "document_id": "sample-currency_difference"
+      },
+      "status": "success",
+      "result_summary": "1 candidate(s): DEV-1005",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 4,
+      "tool": "compare_to_ledger",
+      "arguments": {
+        "document_id": "sample-currency_difference",
+        "ledger_entry_id": "DEV-1005"
+      },
+      "status": "success",
+      "result_summary": "DEV-1005: currency=differ, stated_total_vs_gross_amount=not_checked, invoice_date=agree",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 5,
+      "tool": "build_review_checklist",
+      "arguments": {
+        "document_id": "sample-currency_difference"
+      },
+      "status": "success",
+      "result_summary": "Outcome: Discrepancy found; refs: TF-POL-204",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    }
+  ],
+  "model_summary": [
+    "However, the invoice currency EUR differs from the ledger entry currency USD, and amounts were not compared due to this mismatch (LEDGER_CURRENCY_MISMATCH).",
+    "Please ask the client to confirm the currency recorded for this invoice as per policy TF-POL-204 before proceeding."
+  ],
+  "excluded_summary_sentences": 3,
+  "run_metadata": {
+    "mode": "live",
+    "provider": "Azure OpenAI (v1 API, Chat Completions)",
+    "model": "gpt-4.1-mini",
+    "schema_version": "reconciliation-v2",
+    "prompt_version": "extract-v4+agent-v2",
+    "policy_version": "reconciliation-policy-2026-10-01",
+    "dataset_version": null,
+    "timestamp": "2026-10-01T06:56:37+00:00",
+    "duration_ms": 10990,
+    "model_requests": 5,
+    "request_budget": 8,
+    "token_usage": {
+      "prompt_tokens": 6439,
+      "completion_tokens": 704,
+      "total_tokens": 7143
+    },
+    "recorded_from": null,
+    "ledger_id": "ledger-c91011ab8df7",
+    "ledger_name": "sample_ledger.csv",
+    "currency_data": "pycountry 26.2.16 (ISO 4217)",
+    "error": null
+  },
+  "reconciliation_outcome": "Discrepancy found",
+  "ledger_candidates": [
+    {
+      "ledger_entry_id": "DEV-1005",
+      "row_number": 6,
+      "invoice_number": "AFT-3381",
+      "vendor_name": "Alder & Finch Translations",
+      "invoice_date": "2026-09-10",
+      "currency": "USD",
+      "gross_amount": "919.60"
+    }
+  ],
+  "ledger_entry": {
+    "ledger_entry_id": "DEV-1005",
+    "row_number": 6,
+    "invoice_number": "AFT-3381",
+    "vendor_name": "Alder & Finch Translations",
+    "invoice_date": "2026-09-10",
+    "currency": "USD",
+    "gross_amount": "919.60"
+  },
+  "comparison": [
+    {
+      "field": "invoice_number",
+      "invoice_value": "AFT-3381",
+      "ledger_value": "AFT-3381",
+      "status": "agree",
+      "note": "used to match",
+      "difference": null
+    },
+    {
+      "field": "vendor_name",
+      "invoice_value": "ALDER & FINCH TRANSLATIONS",
+      "ledger_value": "Alder & Finch Translations",
+      "status": "agree",
+      "note": "used to match",
+      "difference": null
+    },
+    {
+      "field": "currency",
+      "invoice_value": "EUR",
+      "ledger_value": "USD",
+      "status": "differ",
+      "note": "no conversion is performed",
+      "difference": null
+    },
+    {
+      "field": "stated_total_vs_gross_amount",
+      "invoice_value": "919.60",
+      "ledger_value": "919.60",
+      "status": "not_checked",
+      "note": "currencies differ; amounts are not compared or converted",
+      "difference": null
+    },
+    {
+      "field": "invoice_date",
+      "invoice_value": "2026-09-10",
+      "ledger_value": "2026-09-10",
+      "status": "agree",
+      "note": null,
+      "difference": null
+    }
+  ],
+  "arithmetic_status": "Consistent",
+  "required_tools": [
+    "validate_intake",
+    "reconcile_invoice",
+    "find_ledger_candidates",
+    "compare_to_ledger",
+    "build_review_checklist"
+  ]
+}

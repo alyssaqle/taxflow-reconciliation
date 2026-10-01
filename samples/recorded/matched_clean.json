@@ -1,17 +1,17 @@
 {
-  "run_id": "066dc7d03f97",
-  "document_id": "sample-clean_invoice",
+  "run_id": "2d94efd6a4be",
+  "document_id": "sample-matched_clean",
   "document_type": "invoice",
   "unsupported_reason": null,
   "extracted_fields": {
     "vendor_name": {
-      "value": "NORTHWIND ANALYTICS LLC (fictional)",
+      "value": "NORTHWIND ANALYTICS LLC",
       "evidence": {
-        "document_id": "sample-clean_invoice",
+        "document_id": "sample-matched_clean",
         "page_number": 1,
         "line_start": 1,
         "line_end": 1,
-        "quote": "NORTHWIND ANALYTICS LLC (fictional)",
+        "quote": "NORTHWIND ANALYTICS LLC",
         "status": "verified",
         "note": null
       }
@@ -19,10 +19,10 @@
     "invoice_number": {
       "value": "NWA-2026-0412",
       "evidence": {
-        "document_id": "sample-clean_invoice",
+        "document_id": "sample-matched_clean",
         "page_number": 1,
-        "line_start": 7,
-        "line_end": 7,
+        "line_start": 5,
+        "line_end": 5,
         "quote": "Invoice Number: NWA-2026-0412",
         "status": "verified",
         "note": null
@@ -31,10 +31,10 @@
     "invoice_date": {
       "value": "2026-09-15",
       "evidence": {
-        "document_id": "sample-clean_invoice",
+        "document_id": "sample-matched_clean",
         "page_number": 1,
-        "line_start": 8,
-        "line_end": 8,
+        "line_start": 6,
+        "line_end": 6,
         "quote": "Invoice Date: September 15, 2026",
         "status": "verified",
         "note": null
@@ -43,10 +43,10 @@
     "currency": {
       "value": "USD",
       "evidence": {
-        "document_id": "sample-clean_invoice",
+        "document_id": "sample-matched_clean",
         "page_number": 1,
-        "line_start": 10,
-        "line_end": 10,
+        "line_start": 8,
+        "line_end": 8,
         "quote": "Currency: USD",
         "status": "verified",
         "note": null
@@ -57,10 +57,10 @@
         "description": {
           "value": "Research service",
           "evidence": {
-            "document_id": "sample-clean_invoice",
+            "document_id": "sample-matched_clean",
             "page_number": 1,
-            "line_start": 13,
-            "line_end": 13,
+            "line_start": 11,
+            "line_end": 11,
             "quote": "Research service                 1       500.00       500.00",
             "status": "verified",
             "note": null
@@ -69,10 +69,10 @@
         "quantity": {
           "value": "1",
           "evidence": {
-            "document_id": "sample-clean_invoice",
+            "document_id": "sample-matched_clean",
             "page_number": 1,
-            "line_start": 13,
-            "line_end": 13,
+            "line_start": 11,
+            "line_end": 11,
             "quote": "Research service                 1       500.00       500.00",
             "status": "verified",
             "note": null
@@ -81,10 +81,10 @@
         "unit_price": {
           "value": "500.00",
           "evidence": {
-            "document_id": "sample-clean_invoice",
+            "document_id": "sample-matched_clean",
             "page_number": 1,
-            "line_start": 13,
-            "line_end": 13,
+            "line_start": 11,
+            "line_end": 11,
             "quote": "Research service                 1       500.00       500.00",
             "status": "verified",
             "note": null
@@ -93,10 +93,10 @@
         "line_total": {
           "value": "500.00",
           "evidence": {
-            "document_id": "sample-clean_invoice",
+            "document_id": "sample-matched_clean",
             "page_number": 1,
-            "line_start": 13,
-            "line_end": 13,
+            "line_start": 11,
+            "line_end": 11,
             "quote": "Research service                 1       500.00       500.00",
             "status": "verified",
             "note": null
@@ -107,10 +107,10 @@
         "description": {
           "value": "Data preparation service",
           "evidence": {
-            "document_id": "sample-clean_invoice",
+            "document_id": "sample-matched_clean",
             "page_number": 1,
-            "line_start": 14,
-            "line_end": 14,
+            "line_start": 12,
+            "line_end": 12,
             "quote": "Data preparation service         2       150.00       300.00",
             "status": "verified",
             "note": null
@@ -119,10 +119,10 @@
         "quantity": {
           "value": "2",
           "evidence": {
-            "document_id": "sample-clean_invoice",
+            "document_id": "sample-matched_clean",
             "page_number": 1,
-            "line_start": 14,
-            "line_end": 14,
+            "line_start": 12,
+            "line_end": 12,
             "quote": "Data preparation service         2       150.00       300.00",
             "status": "verified",
             "note": null
@@ -131,10 +131,10 @@
         "unit_price": {
           "value": "150.00",
           "evidence": {
-            "document_id": "sample-clean_invoice",
+            "document_id": "sample-matched_clean",
             "page_number": 1,
-            "line_start": 14,
-            "line_end": 14,
+            "line_start": 12,
+            "line_end": 12,
             "quote": "Data preparation service         2       150.00       300.00",
             "status": "verified",
             "note": null
@@ -143,10 +143,10 @@
         "line_total": {
           "value": "300.00",
           "evidence": {
-            "document_id": "sample-clean_invoice",
+            "document_id": "sample-matched_clean",
             "page_number": 1,
-            "line_start": 14,
-            "line_end": 14,
+            "line_start": 12,
+            "line_end": 12,
             "quote": "Data preparation service         2       150.00       300.00",
             "status": "verified",
             "note": null
@@ -157,10 +157,10 @@
     "subtotal": {
       "value": "800.00",
       "evidence": {
-        "document_id": "sample-clean_invoice",
+        "document_id": "sample-matched_clean",
         "page_number": 1,
-        "line_start": 16,
-        "line_end": 16,
+        "line_start": 14,
+        "line_end": 14,
         "quote": "Subtotal:                                          800.00",
         "status": "verified",
         "note": null
@@ -169,10 +169,10 @@
     "tax": {
       "value": "80.00",
       "evidence": {
-        "document_id": "sample-clean_invoice",
+        "document_id": "sample-matched_clean",
         "page_number": 1,
-        "line_start": 17,
-        "line_end": 17,
+        "line_start": 15,
+        "line_end": 15,
         "quote": "Tax:                                                80.00",
         "status": "verified",
         "note": null
@@ -181,10 +181,10 @@
     "total": {
       "value": "880.00",
       "evidence": {
-        "document_id": "sample-clean_invoice",
+        "document_id": "sample-matched_clean",
         "page_number": 1,
-        "line_start": 18,
-        "line_end": 18,
+        "line_start": 16,
+        "line_end": 16,
         "quote": "Total due:                                         880.00",
         "status": "verified",
         "note": null
@@ -283,7 +283,7 @@
       "finding_code": "NO_FINDINGS",
       "field": null,
       "policy_ref": "TF-POL-000",
-      "action": "No blocking findings. An analyst may compare the record with the source and approve intake."
+      "action": "The invoice agrees with its ledger entry and no blocking exceptions were found. An analyst may compare the sources and approve."
     }
   ],
   "workflow_status": "Complete",
@@ -294,7 +294,7 @@
       "step": 1,
       "tool": "validate_intake",
       "arguments": {
-        "document_id": "sample-clean_invoice"
+        "document_id": "sample-matched_clean"
       },
       "status": "success",
       "result_summary": "Findings: none",
@@ -305,48 +305,147 @@
       "step": 2,
       "tool": "reconcile_invoice",
       "arguments": {
-        "document_id": "sample-clean_invoice"
+        "document_id": "sample-matched_clean"
       },
       "status": "success",
-      "result_summary": "Findings: none",
+      "result_summary": "Arithmetic Consistent; Findings: none",
       "duration_ms": 0,
       "invoked_by": "model function call"
     },
     {
       "step": 3,
-      "tool": "lookup_intake_policy",
+      "tool": "find_ledger_candidates",
       "arguments": {
-        "finding_codes": []
+        "document_id": "sample-matched_clean"
       },
       "status": "success",
-      "result_summary": "Policy refs: TF-POL-000",
+      "result_summary": "1 candidate(s): DEV-1001",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 4,
+      "tool": "compare_to_ledger",
+      "arguments": {
+        "document_id": "sample-matched_clean",
+        "ledger_entry_id": "DEV-1001"
+      },
+      "status": "success",
+      "result_summary": "DEV-1001: currency=agree, stated_total_vs_gross_amount=agree, invoice_date=agree",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 5,
+      "tool": "build_review_checklist",
+      "arguments": {
+        "document_id": "sample-matched_clean"
+      },
+      "status": "success",
+      "result_summary": "Outcome: Matched; refs: TF-POL-000",
       "duration_ms": 0,
       "invoked_by": "model function call"
     }
   ],
   "model_summary": [
-    "The invoice draft for document_id \"sample-clean_invoice\" passed all validation checks with no findings codes (NO_FINDINGS) as per TF-POL-000.",
-    "According to policy TF-POL-000, this draft is ready for analyst review and potential approval."
+    "The invoice draft for document_id sample-matched_clean has passed all intake validations with no issues found (NO_FINDINGS, TF-POL-000).",
+    "The invoice arithmetic is consistent with no discrepancies in item totals, subtotal, or total (NO_FINDINGS, TF-POL-000).",
+    "Exactly one matching ledger entry was found and the invoice matches it perfectly in invoice number, vendor name, currency, total amount, and date (NO_FINDINGS, TF-POL-000).",
+    "There are no blocking exceptions, so an analyst may proceed to compare the source documents and approve if satisfied (NO_FINDINGS, TF-POL-000)."
   ],
-  "excluded_summary_sentences": 2,
+  "excluded_summary_sentences": 0,
   "run_metadata": {
     "mode": "live",
     "provider": "Azure OpenAI (v1 API, Chat Completions)",
     "model": "gpt-4.1-mini",
-    "schema_version": "invoice-v1",
-    "prompt_version": "extract-v2+agent-v1",
-    "policy_version": "intake-policy-2026-09-30",
+    "schema_version": "reconciliation-v2",
+    "prompt_version": "extract-v4+agent-v2",
+    "policy_version": "reconciliation-policy-2026-10-01",
     "dataset_version": null,
-    "timestamp": "2026-10-01T06:07:46+00:00",
-    "duration_ms": 11768,
-    "model_requests": 4,
-    "request_budget": 6,
+    "timestamp": "2026-10-01T06:55:59+00:00",
+    "duration_ms": 12978,
+    "model_requests": 5,
+    "request_budget": 8,
     "token_usage": {
-      "prompt_tokens": 3817,
-      "completion_tokens": 832,
-      "total_tokens": 4649
+      "prompt_tokens": 6510,
+      "completion_tokens": 914,
+      "total_tokens": 7424
     },
     "recorded_from": null,
+    "ledger_id": "ledger-c91011ab8df7",
+    "ledger_name": "sample_ledger.csv",
+    "currency_data": "pycountry 26.2.16 (ISO 4217)",
     "error": null
-  }
+  },
+  "reconciliation_outcome": "Matched",
+  "ledger_candidates": [
+    {
+      "ledger_entry_id": "DEV-1001",
+      "row_number": 2,
+      "invoice_number": "NWA-2026-0412",
+      "vendor_name": "Northwind Analytics LLC",
+      "invoice_date": "2026-09-15",
+      "currency": "USD",
+      "gross_amount": "880.00"
+    }
+  ],
+  "ledger_entry": {
+    "ledger_entry_id": "DEV-1001",
+    "row_number": 2,
+    "invoice_number": "NWA-2026-0412",
+    "vendor_name": "Northwind Analytics LLC",
+    "invoice_date": "2026-09-15",
+    "currency": "USD",
+    "gross_amount": "880.00"
+  },
+  "comparison": [
+    {
+      "field": "invoice_number",
+      "invoice_value": "NWA-2026-0412",
+      "ledger_value": "NWA-2026-0412",
+      "status": "agree",
+      "note": "used to match",
+      "difference": null
+    },
+    {
+      "field": "vendor_name",
+      "invoice_value": "NORTHWIND ANALYTICS LLC",
+      "ledger_value": "Northwind Analytics LLC",
+      "status": "agree",
+      "note": "used to match",
+      "difference": null
+    },
+    {
+      "field": "currency",
+      "invoice_value": "USD",
+      "ledger_value": "USD",
+      "status": "agree",
+      "note": null,
+      "difference": null
+    },
+    {
+      "field": "stated_total_vs_gross_amount",
+      "invoice_value": "880.00",
+      "ledger_value": "880.00",
+      "status": "agree",
+      "note": null,
+      "difference": "0.00"
+    },
+    {
+      "field": "invoice_date",
+      "invoice_value": "2026-09-15",
+      "ledger_value": "2026-09-15",
+      "status": "agree",
+      "note": null,
+      "difference": null
+    }
+  ],
+  "arithmetic_status": "Consistent",
+  "required_tools": [
+    "validate_intake",
+    "reconcile_invoice",
+    "find_ledger_candidates",
+    "compare_to_ledger",
+    "build_review_checklist"
+  ]
 }

@@ -1,0 +1,326 @@
+{
+  "run_id": "fbc395229f51",
+  "document_id": "sample-no_matching_entry",
+  "document_type": "invoice",
+  "unsupported_reason": null,
+  "extracted_fields": {
+    "vendor_name": {
+      "value": "CORAL BAY MEDIA",
+      "evidence": {
+        "document_id": "sample-no_matching_entry",
+        "page_number": 1,
+        "line_start": 1,
+        "line_end": 1,
+        "quote": "CORAL BAY MEDIA",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "invoice_number": {
+      "value": "CBM-0931",
+      "evidence": {
+        "document_id": "sample-no_matching_entry",
+        "page_number": 1,
+        "line_start": 5,
+        "line_end": 5,
+        "quote": "Invoice Number: CBM-0931",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "invoice_date": {
+      "value": "2026-09-08",
+      "evidence": {
+        "document_id": "sample-no_matching_entry",
+        "page_number": 1,
+        "line_start": 6,
+        "line_end": 6,
+        "quote": "Invoice Date: September 8, 2026",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "currency": {
+      "value": "USD",
+      "evidence": {
+        "document_id": "sample-no_matching_entry",
+        "page_number": 1,
+        "line_start": 7,
+        "line_end": 7,
+        "quote": "Currency: USD",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Podcast editing",
+          "evidence": {
+            "document_id": "sample-no_matching_entry",
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Podcast editing          4       120.00       480.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "quantity": {
+          "value": "4",
+          "evidence": {
+            "document_id": "sample-no_matching_entry",
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Podcast editing          4       120.00       480.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "unit_price": {
+          "value": "120.00",
+          "evidence": {
+            "document_id": "sample-no_matching_entry",
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Podcast editing          4       120.00       480.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "line_total": {
+          "value": "480.00",
+          "evidence": {
+            "document_id": "sample-no_matching_entry",
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Podcast editing          4       120.00       480.00",
+            "status": "verified",
+            "note": null
+          }
+        }
+      }
+    ],
+    "subtotal": {
+      "value": "480.00",
+      "evidence": {
+        "document_id": "sample-no_matching_entry",
+        "page_number": 1,
+        "line_start": 12,
+        "line_end": 12,
+        "quote": "Subtotal: 480.00",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "tax": {
+      "value": "38.40",
+      "evidence": {
+        "document_id": "sample-no_matching_entry",
+        "page_number": 1,
+        "line_start": 13,
+        "line_end": 13,
+        "quote": "Tax: 38.40",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "total": {
+      "value": "518.40",
+      "evidence": {
+        "document_id": "sample-no_matching_entry",
+        "page_number": 1,
+        "line_start": 14,
+        "line_end": 14,
+        "quote": "Total: 518.40",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "unsupported_structures": []
+  },
+  "findings": [
+    {
+      "code": "LEDGER_NO_MATCH",
+      "field": null,
+      "message": "No ledger entry has invoice number 'CBM-0931' and vendor 'CORAL BAY MEDIA'.",
+      "blocking": true,
+      "source": "ledger",
+      "details": {}
+    }
+  ],
+  "check_results": [
+    {
+      "name": "required_fields",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "missing": []
+      }
+    },
+    {
+      "name": "amount_validity",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "invalid": []
+      }
+    },
+    {
+      "name": "invoice_date",
+      "status": "pass",
+      "reason": null,
+      "details": {}
+    },
+    {
+      "name": "currency",
+      "status": "pass",
+      "reason": null,
+      "details": {}
+    },
+    {
+      "name": "supported_structure",
+      "status": "pass",
+      "reason": null,
+      "details": {}
+    },
+    {
+      "name": "source_evidence",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "unverified": []
+      }
+    },
+    {
+      "name": "item_total[0]",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "expected": "480.00",
+        "stated": "480.00",
+        "difference": "0.00"
+      }
+    },
+    {
+      "name": "subtotal",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "expected": "480.00",
+        "stated": "480.00",
+        "difference": "0.00",
+        "sum_of_calculated_item_totals": "480.00"
+      }
+    },
+    {
+      "name": "total",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "expected": "518.40",
+        "stated": "518.40",
+        "difference": "0.00"
+      }
+    }
+  ],
+  "checklist": [
+    {
+      "finding_code": "LEDGER_NO_MATCH",
+      "field": null,
+      "policy_ref": "TF-POL-202",
+      "action": "Ask the client whether this invoice was recorded and, if so, for the ledger entry ID."
+    }
+  ],
+  "workflow_status": "Complete",
+  "review_status": "Unreviewed",
+  "review_note": "",
+  "tool_trace": [
+    {
+      "step": 1,
+      "tool": "validate_intake",
+      "arguments": {
+        "document_id": "sample-no_matching_entry"
+      },
+      "status": "success",
+      "result_summary": "Findings: none",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 2,
+      "tool": "reconcile_invoice",
+      "arguments": {
+        "document_id": "sample-no_matching_entry"
+      },
+      "status": "success",
+      "result_summary": "Arithmetic Consistent; Findings: none",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 3,
+      "tool": "find_ledger_candidates",
+      "arguments": {
+        "document_id": "sample-no_matching_entry"
+      },
+      "status": "success",
+      "result_summary": "0 candidate(s)",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 4,
+      "tool": "build_review_checklist",
+      "arguments": {
+        "document_id": "sample-no_matching_entry"
+      },
+      "status": "success",
+      "result_summary": "Outcome: No matching entry; refs: TF-POL-202",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    }
+  ],
+  "model_summary": [
+    "However, no matching ledger entry was found for this invoice in the accounting ledger (LEDGER_NO_MATCH).",
+    "According to policy TF-POL-202, please ask the client whether this invoice was recorded in their ledger and, if so, request the ledger entry ID for further reconciliation."
+  ],
+  "excluded_summary_sentences": 2,
+  "run_metadata": {
+    "mode": "live",
+    "provider": "Azure OpenAI (v1 API, Chat Completions)",
+    "model": "gpt-4.1-mini",
+    "schema_version": "reconciliation-v2",
+    "prompt_version": "extract-v4+agent-v2",
+    "policy_version": "reconciliation-policy-2026-10-01",
+    "dataset_version": null,
+    "timestamp": "2026-10-01T06:57:12+00:00",
+    "duration_ms": 9851,
+    "model_requests": 4,
+    "request_budget": 8,
+    "token_usage": {
+      "prompt_tokens": 4547,
+      "completion_tokens": 654,
+      "total_tokens": 5201
+    },
+    "recorded_from": null,
+    "ledger_id": "ledger-c91011ab8df7",
+    "ledger_name": "sample_ledger.csv",
+    "currency_data": "pycountry 26.2.16 (ISO 4217)",
+    "error": null
+  },
+  "reconciliation_outcome": "No matching entry",
+  "ledger_candidates": [],
+  "ledger_entry": null,
+  "comparison": [],
+  "arithmetic_status": "Consistent",
+  "required_tools": [
+    "validate_intake",
+    "reconcile_invoice",
+    "find_ledger_candidates",
+    "build_review_checklist"
+  ]
+}

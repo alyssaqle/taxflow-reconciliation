@@ -1,0 +1,43 @@
+{
+  "case_id": "case_07",
+  "category": "duplicate",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "Fernbrook Legal Support",
+    "invoice_number": "MLS-5031",
+    "invoice_date": "2026-07-21",
+    "currency": "USD",
+    "subtotal": "925.00",
+    "tax": "74.00",
+    "total": "999.00"
+  },
+  "expected_line_items": [
+    {
+      "description": "Document review hours",
+      "quantity": "8",
+      "unit_price": "110.00",
+      "line_total": "880.00"
+    },
+    {
+      "description": "Courier",
+      "quantity": "1",
+      "unit_price": "45.00",
+      "line_total": "45.00"
+    }
+  ],
+  "expected_outcome": "Ambiguous match",
+  "expected_entry_id": null,
+  "expected_candidate_ids": [
+    "GL-3014",
+    "GL-3015",
+    "GL-3016"
+  ],
+  "expected_findings": [
+    [
+      "LEDGER_AMBIGUOUS",
+      null
+    ]
+  ],
+  "expected_arithmetic_status": "Consistent",
+  "attack": null
+}

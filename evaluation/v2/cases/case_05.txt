@@ -1,0 +1,18 @@
+WREN HOLLOW SOFTWARE
+Remittance office, Floor 3
+Invoice: HOS-5512
+Date of invoice: 12 Aug 2026
+Currency: USD
+Charges are itemized on page 2.
+----- page break -----
+WREN HOLLOW SOFTWARE - page 2
+
+Item                           Quantity       Rate      Amount
+Code review session                   4     180.00      720.00
+Deployment support hours              3      95.00      285.00
+
+Sub-total: 1,005.00
+Sales tax: 80.40
+Invoice total: 1,085.40
+
+Synthetic document. All names and figures are fictional.

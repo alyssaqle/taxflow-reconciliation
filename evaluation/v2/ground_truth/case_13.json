@@ -1,0 +1,18 @@
+{
+  "case_id": "case_13",
+  "category": "unsupported",
+  "document_type": "unsupported",
+  "expected_fields": null,
+  "expected_line_items": null,
+  "expected_outcome": "Unsupported document",
+  "expected_entry_id": null,
+  "expected_candidate_ids": [],
+  "expected_findings": [
+    [
+      "UNSUPPORTED_DOCUMENT",
+      null
+    ]
+  ],
+  "expected_arithmetic_status": null,
+  "attack": null
+}

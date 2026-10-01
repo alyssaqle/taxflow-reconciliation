@@ -16,8 +16,8 @@
       "value": "NWA-2026-0412",
       "evidence": {
         "page_number": 1,
-        "line_start": 7,
-        "line_end": 7,
+        "line_start": 5,
+        "line_end": 5,
         "quote": "NWA-2026-0412"
       }
     },
@@ -25,8 +25,8 @@
       "value": "2026-09-15",
       "evidence": {
         "page_number": 1,
-        "line_start": 8,
-        "line_end": 8,
+        "line_start": 6,
+        "line_end": 6,
         "quote": "Invoice Date: September 15, 2026"
       }
     },
@@ -34,8 +34,8 @@
       "value": "USD",
       "evidence": {
         "page_number": 1,
-        "line_start": 10,
-        "line_end": 10,
+        "line_start": 8,
+        "line_end": 8,
         "quote": "Currency: USD"
       }
     },
@@ -43,8 +43,8 @@
       "value": "800.00",
       "evidence": {
         "page_number": 1,
-        "line_start": 16,
-        "line_end": 16,
+        "line_start": 14,
+        "line_end": 14,
         "quote": "Subtotal: 800.00"
       }
     },
@@ -52,8 +52,8 @@
       "value": "80.00",
       "evidence": {
         "page_number": 1,
-        "line_start": 17,
-        "line_end": 17,
+        "line_start": 15,
+        "line_end": 15,
         "quote": "Tax: 80.00"
       }
     },
@@ -61,8 +61,8 @@
       "value": "880.00",
       "evidence": {
         "page_number": 1,
-        "line_start": 18,
-        "line_end": 18,
+        "line_start": 16,
+        "line_end": 16,
         "quote": "Total due: 880.00"
       }
     },
@@ -72,8 +72,8 @@
           "value": "Research service",
           "evidence": {
             "page_number": 1,
-            "line_start": 13,
-            "line_end": 13,
+            "line_start": 11,
+            "line_end": 11,
             "quote": "Research service"
           }
         },
@@ -81,8 +81,8 @@
           "value": "1",
           "evidence": {
             "page_number": 1,
-            "line_start": 13,
-            "line_end": 13,
+            "line_start": 11,
+            "line_end": 11,
             "quote": "Research service 1 500.00 500.00"
           }
         },
@@ -90,8 +90,8 @@
           "value": "500.00",
           "evidence": {
             "page_number": 1,
-            "line_start": 13,
-            "line_end": 13,
+            "line_start": 11,
+            "line_end": 11,
             "quote": "Research service 1 500.00 500.00"
           }
         },
@@ -99,8 +99,8 @@
           "value": "500.00",
           "evidence": {
             "page_number": 1,
-            "line_start": 13,
-            "line_end": 13,
+            "line_start": 11,
+            "line_end": 11,
             "quote": "Research service 1 500.00 500.00"
           }
         }
@@ -110,8 +110,8 @@
           "value": "Data preparation service",
           "evidence": {
             "page_number": 1,
-            "line_start": 14,
-            "line_end": 14,
+            "line_start": 12,
+            "line_end": 12,
             "quote": "Data preparation service"
           }
         },
@@ -119,8 +119,8 @@
           "value": "2",
           "evidence": {
             "page_number": 1,
-            "line_start": 14,
-            "line_end": 14,
+            "line_start": 12,
+            "line_end": 12,
             "quote": "Data preparation service 2 150.00 300.00"
           }
         },
@@ -128,8 +128,8 @@
           "value": "150.00",
           "evidence": {
             "page_number": 1,
-            "line_start": 14,
-            "line_end": 14,
+            "line_start": 12,
+            "line_end": 12,
             "quote": "Data preparation service 2 150.00 300.00"
           }
         },
@@ -137,8 +137,8 @@
           "value": "300.00",
           "evidence": {
             "page_number": 1,
-            "line_start": 14,
-            "line_end": 14,
+            "line_start": 12,
+            "line_end": 12,
             "quote": "Data preparation service 2 150.00 300.00"
           }
         }

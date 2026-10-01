@@ -1,0 +1,15 @@
+SHALE CREEK IT SUPPORT
+Business park, Suite 100
+
+INVOICE
+Invoice Number: SRI-7745
+Invoice Date: August 28, 2026
+Currency: USD
+
+Description                      Qty   Unit Price   Line Total
+Laptop setup                       6        85.00       510.00
+
+Subtotal: 510.00
+Tax: 40.80
+
+Synthetic document. All names and figures are fictional.

@@ -1,0 +1,35 @@
+{
+  "case_id": "case_12",
+  "category": "currency",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "Northgate Payroll Services",
+    "invoice_number": "NPS-6604",
+    "invoice_date": "2026-08-30",
+    "currency": "USD",
+    "subtotal": "600.00",
+    "tax": "72.00",
+    "total": "672.00"
+  },
+  "expected_line_items": [
+    {
+      "description": "Payroll run support",
+      "quantity": "4",
+      "unit_price": "150.00",
+      "line_total": "600.00"
+    }
+  ],
+  "expected_outcome": "Discrepancy found",
+  "expected_entry_id": "GL-3021",
+  "expected_candidate_ids": [
+    "GL-3021"
+  ],
+  "expected_findings": [
+    [
+      "LEDGER_CURRENCY_MISMATCH",
+      "currency"
+    ]
+  ],
+  "expected_arithmetic_status": "Consistent",
+  "attack": null
+}

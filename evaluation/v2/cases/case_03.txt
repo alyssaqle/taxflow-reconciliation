@@ -1,0 +1,13 @@
+Gravelpath Logistics | Invoice
+Inv. No. CPL-9902   Dated August 11, 2026
+Prepared for: Riverbend Partners
+Currency: USD
+
+1) Pallet storage (weeks)   qty 4 @ 125.00 = 500.00
+2) Handling fee   qty 1 @ 80.00 = 80.00
+
+Subtotal 580.00
+Tax 48.40
+Amount due 628.40
+
+Synthetic document. All names and figures are fictional.

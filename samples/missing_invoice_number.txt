@@ -1,17 +1,15 @@
-BLUE HERON DESIGN STUDIO (fictional)
-88 Willow Lane, Asheville, NC 28801
+JUNIPER LANE CATERING
+41 Orchard Street, Madison, WI 53703
 
-Invoice
-Date: 2026-09-02
-Client: Cedar Ridge Consulting (fictional)
-All amounts are in USD.
+INVOICE
+Date: September 12, 2026
+Currency: USD
 
-Item                         Hours   Rate      Amount
-Brand workshop facilitation      6   125.00    750.00
-Slide template design            4   110.00    440.00
+Description             Qty   Unit Price   Line Total
+Team lunch service        30        22.00       660.00
 
-Subtotal                                       1,190.00
-Sales tax                                         95.20
-Amount due                                     1,285.20
+Subtotal: 660.00
+Tax: 52.80
+Total: 712.80
 
-Thank you for your business.
+Synthetic sample document. All names and figures are fictional.

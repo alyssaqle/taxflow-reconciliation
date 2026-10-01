@@ -1,8 +1,8 @@
-LANTERN DATA WORKS (fictional)
+LANTERN DATA WORKS
 55 Mill Road, Burlington, VT 05401
 Invoice No.: LDW-3309
 Invoice date: 14 Sep 2026
-Billed to: Cedar Ridge Consulting (fictional)
+Billed to: Cedar Ridge Consulting
 Currency: USD (US dollars)
 
 Line items continue on page 2.
@@ -10,9 +10,11 @@ Line items continue on page 2.
 LANTERN DATA WORKS - Invoice LDW-3309 - page 2
 
 Description                 Qty   Unit Price   Line Total
-Dashboard build               3       120.00       390.00
+Dashboard build               3       120.00       360.00
 Quality review                2        75.00       150.00
 
-Subtotal:                                        540.00
+Subtotal:                                        510.00
 Tax:                                               0.00
-Total:                                           540.00
+Total:                                           510.00
+
+Synthetic sample document. All names and figures are fictional.

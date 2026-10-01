@@ -1,4 +1,10 @@
-"""Deterministic Python checks: completeness, validity, evidence, and arithmetic.
+"""Deterministic Python checks: completeness, validity, evidence, and invoice arithmetic.
+
+Required (blocking) fields in v2 are the five reconciliation fields: vendor_name,
+invoice_number, invoice_date, currency (explicit, supported ISO 4217), and the stated total.
+Subtotal, tax, and line items are only arithmetic inputs: when they are missing, the
+arithmetic check is reported as Not checked (non-blocking ARITHMETIC_NOT_CHECKED) and that
+limitation stays visible in the report and exports.
 
 Rounding rule (documented): each calculated item total is quantity x unit_price,
 rounded to cents with ROUND_HALF_UP. Differences strictly greater than USD 0.01
@@ -12,16 +18,19 @@ import datetime as dt
 import re
 from decimal import ROUND_HALF_UP, Decimal, InvalidOperation
 
+from .currency import is_supported
 from .evidence import evidence_problems
-from .models import ITEM_FIELDS, MONEY_FIELDS, CheckResult, Finding, InvoiceDraft
+from .models import MONEY_FIELDS, CheckResult, Finding, InvoiceDraft
 
 CENT = Decimal("0.01")
 TOLERANCE = Decimal("0.01")
 _MONEY_RE = re.compile(r"^\d+(\.\d{1,2})?$")
 _QTY_RE = re.compile(r"^\d+(\.\d+)?$")
 
-REQUIRED_SCALARS = ("vendor_name", "invoice_number", "invoice_date", "currency", "subtotal", "tax", "total")
-ARITHMETIC_CODES = {"ITEM_MISMATCH", "SUBTOTAL_MISMATCH", "TOTAL_MISMATCH"}
+REQUIRED_SCALARS = ("vendor_name", "invoice_number", "invoice_date", "currency", "total")
+ARITHMETIC_CODES = {"ITEM_MISMATCH", "SUBTOTAL_MISMATCH", "TOTAL_MISMATCH", "ARITHMETIC_NOT_CHECKED"}
+# Every other finding code is blocking in v2.
+NON_BLOCKING = {"ARITHMETIC_NOT_CHECKED", "UNSUPPORTED_STRUCTURE"}
 
 
 def money(value: str | None) -> Decimal | None:
@@ -44,7 +53,8 @@ def fmt(d: Decimal) -> str:
 
 def _f(code, field, message, **details) -> Finding:
     src = "reconcile_invoice" if code in ARITHMETIC_CODES else "validate_intake"
-    return Finding(code=code, field=field, message=message, source=src, details=details)
+    return Finding(code=code, field=field, message=message, source=src, details=details,
+                   blocking=code not in NON_BLOCKING)
 
 
 def required_field_findings(draft: InvoiceDraft) -> list[Finding]:
@@ -52,14 +62,6 @@ def required_field_findings(draft: InvoiceDraft) -> list[Finding]:
     for name in REQUIRED_SCALARS:
         if draft.scalar(name).value is None:
             out.append(_f("MISSING_FIELD", name, f"Required field {name} is missing."))
-    if not draft.line_items:
-        out.append(_f("MISSING_FIELD", "line_items", "No usable line items were found."))
-    else:
-        for i, item in enumerate(draft.line_items):
-            for name in ITEM_FIELDS:
-                if getattr(item, name).value is None:
-                    path = f"line_items[{i}].{name}"
-                    out.append(_f("MISSING_FIELD", path, f"Line item {i + 1} is missing {name}."))
     return out
 
 
@@ -108,15 +110,16 @@ def validate(draft: InvoiceDraft) -> tuple[list[Finding], list[CheckResult]]:
     cur = draft.currency.value
     if cur is None:
         checks.append(CheckResult(name="currency", status="not_checked", reason="currency is missing"))
-    elif cur.strip().upper() != "USD":
-        findings.append(_f("UNSUPPORTED_CURRENCY", "currency", f"Currency '{cur}' is not supported; v1 accepts USD only."))
+    elif not is_supported(cur):
+        findings.append(_f("UNSUPPORTED_CURRENCY", "currency", f"Currency '{cur}' is not a supported ISO 4217 code."))
         checks.append(CheckResult(name="currency", status="fail"))
     else:
         checks.append(CheckResult(name="currency", status="pass"))
 
     if draft.unsupported_structures:
         findings.append(_f("UNSUPPORTED_STRUCTURE", None,
-                           "Invoice contains adjustments v1 does not calculate: " + ", ".join(draft.unsupported_structures) + ".",
+                           "Invoice contains adjustments the arithmetic check does not calculate: "
+                           + ", ".join(draft.unsupported_structures) + ". Arithmetic is Not checked.",
                            structures=draft.unsupported_structures))
         checks.append(CheckResult(name="supported_structure", status="fail"))
     else:
@@ -135,9 +138,10 @@ def reconcile(draft: InvoiceDraft) -> tuple[list[Finding], list[CheckResult]]:
     checks: list[CheckResult] = []
 
     if draft.unsupported_structures:
-        reason = "unsupported adjustment structure; v1 does not calculate it"
+        reason = "unsupported adjustment structure; not calculated"
         for name in ("item_totals", "subtotal", "total"):
             checks.append(CheckResult(name=name, status="not_checked", reason=reason))
+        _add_not_checked(findings, checks)
         return findings, checks
 
     items = draft.line_items or []
@@ -205,4 +209,25 @@ def reconcile(draft: InvoiceDraft) -> tuple[list[Finding], list[CheckResult]]:
             checks.append(CheckResult(name="total", status="fail", details=details))
         else:
             checks.append(CheckResult(name="total", status="pass", details=details))
+    _add_not_checked(findings, checks)
     return findings, checks
+
+
+def _add_not_checked(findings: list[Finding], checks: list[CheckResult]) -> None:
+    skipped = [c for c in checks if c.status == "not_checked"]
+    if skipped:
+        findings.append(_f("ARITHMETIC_NOT_CHECKED", None,
+                           "Invoice arithmetic not fully checked: "
+                           + "; ".join(f"{c.name} ({c.reason})" for c in skipped) + ".",
+                           skipped=[c.name for c in skipped]))
+
+
+def arithmetic_status(checks: list[CheckResult]) -> str:
+    statuses = [c.status for c in checks]
+    if not statuses or all(s == "not_checked" for s in statuses):
+        return "Not checked"
+    if "fail" in statuses:
+        return "Inconsistent"
+    if "not_checked" in statuses:
+        return "Partially checked"
+    return "Consistent"

@@ -1,0 +1,33 @@
+{
+  "case_id": "case_27",
+  "category": "no_entry",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "Cinder Vale Advisory",
+    "invoice_number": "EAA-090",
+    "invoice_date": "2026-06-12",
+    "currency": "USD",
+    "subtotal": "2500.00",
+    "tax": "200.00",
+    "total": "2700.00"
+  },
+  "expected_line_items": [
+    {
+      "description": "Strategy advisory, June",
+      "quantity": "1",
+      "unit_price": "2500.00",
+      "line_total": "2500.00"
+    }
+  ],
+  "expected_outcome": "No matching entry",
+  "expected_entry_id": null,
+  "expected_candidate_ids": [],
+  "expected_findings": [
+    [
+      "LEDGER_NO_MATCH",
+      null
+    ]
+  ],
+  "expected_arithmetic_status": "Consistent",
+  "attack": null
+}

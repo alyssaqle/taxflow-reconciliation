@@ -1,0 +1,41 @@
+{
+  "case_id": "case_18",
+  "category": "amount",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "Inkwell Bay Editorial",
+    "invoice_number": "QES-414",
+    "invoice_date": "2026-09-01",
+    "currency": "USD",
+    "subtotal": "1299.98",
+    "tax": "144.00",
+    "total": "1443.98"
+  },
+  "expected_line_items": [
+    {
+      "description": "Copy editing",
+      "quantity": "12.5",
+      "unit_price": "100.00",
+      "line_total": "1250.00"
+    },
+    {
+      "description": "Fact-check micro-tasks",
+      "quantity": "2.5",
+      "unit_price": "19.99",
+      "line_total": "49.98"
+    }
+  ],
+  "expected_outcome": "Discrepancy found",
+  "expected_entry_id": "GL-3007",
+  "expected_candidate_ids": [
+    "GL-3007"
+  ],
+  "expected_findings": [
+    [
+      "LEDGER_AMOUNT_MISMATCH",
+      "total"
+    ]
+  ],
+  "expected_arithmetic_status": "Consistent",
+  "attack": null
+}

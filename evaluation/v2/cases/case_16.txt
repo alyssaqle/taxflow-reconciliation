@@ -1,0 +1,11 @@
+From: Hearthstone Catering
+To: Copperline Logistics
+
+This is an invoice, invoice number JHC-301, issued July 18, 2026.
+Currency: USD
+
+Item 1: Team lunch service. Quantity 30 at 22.00 each, line total 660.00.
+
+Subtotal 660.00. Tax 52.80. Total 712.80.
+
+Synthetic document. All names and figures are fictional.

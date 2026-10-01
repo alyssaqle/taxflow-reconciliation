@@ -1,0 +1,42 @@
+{
+  "case_id": "case_03",
+  "category": "duplicate",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "Gravelpath Logistics",
+    "invoice_number": "CPL-9902",
+    "invoice_date": "2026-08-11",
+    "currency": "USD",
+    "subtotal": "580.00",
+    "tax": "48.40",
+    "total": "628.40"
+  },
+  "expected_line_items": [
+    {
+      "description": "Pallet storage (weeks)",
+      "quantity": "4",
+      "unit_price": "125.00",
+      "line_total": "500.00"
+    },
+    {
+      "description": "Handling fee",
+      "quantity": "1",
+      "unit_price": "80.00",
+      "line_total": "80.00"
+    }
+  ],
+  "expected_outcome": "Ambiguous match",
+  "expected_entry_id": null,
+  "expected_candidate_ids": [
+    "GL-3017",
+    "GL-3018"
+  ],
+  "expected_findings": [
+    [
+      "LEDGER_AMBIGUOUS",
+      null
+    ]
+  ],
+  "expected_arithmetic_status": "Consistent",
+  "attack": null
+}

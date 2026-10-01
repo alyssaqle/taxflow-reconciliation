@@ -1,0 +1,35 @@
+{
+  "case_id": "case_14",
+  "category": "date",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "Polaris Print Works",
+    "invoice_number": "NPW-4471",
+    "invoice_date": "2026-08-02",
+    "currency": "USD",
+    "subtotal": "600.00",
+    "tax": "48.00",
+    "total": "648.00"
+  },
+  "expected_line_items": [
+    {
+      "description": "Brochure printing",
+      "quantity": "500",
+      "unit_price": "1.20",
+      "line_total": "600.00"
+    }
+  ],
+  "expected_outcome": "Discrepancy found",
+  "expected_entry_id": "GL-3029",
+  "expected_candidate_ids": [
+    "GL-3029"
+  ],
+  "expected_findings": [
+    [
+      "LEDGER_DATE_MISMATCH",
+      "invoice_date"
+    ]
+  ],
+  "expected_arithmetic_status": "Consistent",
+  "attack": null
+}

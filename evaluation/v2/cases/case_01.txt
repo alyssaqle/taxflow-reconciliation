@@ -1,0 +1,16 @@
+SPIRAL FERN DESIGN
+Business park, Suite 100
+
+INVOICE
+Invoice Number: VLD-7310
+Invoice Date: August 25, 2026
+Currency: USD
+
+Description                      Qty   Unit Price   Line Total
+UX audit                           1       950.00       950.00
+
+Subtotal: 950.00
+Tax: 76.00
+Total: 1,100.00
+
+Synthetic document. All names and figures are fictional.

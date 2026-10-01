@@ -1,0 +1,16 @@
+CORAL BAY MEDIA
+12 Seaside Way, Monterey, CA 93940
+
+INVOICE
+Invoice Number: CBM-0931
+Invoice Date: September 8, 2026
+Currency: USD
+
+Description            Qty   Unit Price   Line Total
+Podcast editing          4       120.00       480.00
+
+Subtotal: 480.00
+Tax: 38.40
+Total: 518.40
+
+Synthetic sample document. All names and figures are fictional.

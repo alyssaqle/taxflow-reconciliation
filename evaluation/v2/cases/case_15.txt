@@ -1,0 +1,17 @@
+BASALT RIDGE CONSULTING
+Business park, Suite 100
+
+INVOICE
+Invoice Number: GPC-1043
+Invoice Date: August 4, 2026
+Currency: USD
+
+Description                      Qty   Unit Price   Line Total
+Process mapping workshop           2       650.00     1,300.00
+Follow-up report                   1       450.00       450.00
+
+Subtotal: 1,750.00
+Tax: 140.00
+Total: 1,890.00
+
+Synthetic document. All names and figures are fictional.

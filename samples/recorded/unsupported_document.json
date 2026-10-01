@@ -1,5 +1,5 @@
 {
-  "run_id": "461064aa909c",
+  "run_id": "b35c89c236b8",
   "document_id": "sample-unsupported_document",
   "document_type": "unsupported",
   "unsupported_reason": "Document is a purchase order, not a vendor invoice requesting payment.",
@@ -19,8 +19,8 @@
     {
       "finding_code": "UNSUPPORTED_DOCUMENT",
       "field": null,
-      "policy_ref": "TF-POL-303",
-      "action": "Return the document to the requester. Only invoices are accepted for intake in version 1."
+      "policy_ref": "TF-POL-401",
+      "action": "Return the document to the requester. Only invoices are reconciled in this version."
     }
   ],
   "workflow_status": "Complete",
@@ -33,20 +33,29 @@
     "mode": "live",
     "provider": "Azure OpenAI (v1 API, Chat Completions)",
     "model": "gpt-4.1-mini",
-    "schema_version": "invoice-v1",
-    "prompt_version": "extract-v2+agent-v1",
-    "policy_version": "intake-policy-2026-09-30",
+    "schema_version": "reconciliation-v2",
+    "prompt_version": "extract-v4+agent-v2",
+    "policy_version": "reconciliation-policy-2026-10-01",
     "dataset_version": null,
-    "timestamp": "2026-10-01T06:08:43+00:00",
-    "duration_ms": 1525,
+    "timestamp": "2026-10-01T06:57:53+00:00",
+    "duration_ms": 1837,
     "model_requests": 1,
-    "request_budget": 6,
+    "request_budget": 8,
     "token_usage": {
-      "prompt_tokens": 1729,
+      "prompt_tokens": 1843,
       "completion_tokens": 115,
-      "total_tokens": 1844
+      "total_tokens": 1958
     },
     "recorded_from": null,
+    "ledger_id": "ledger-c91011ab8df7",
+    "ledger_name": "sample_ledger.csv",
+    "currency_data": "pycountry 26.2.16 (ISO 4217)",
     "error": null
-  }
+  },
+  "reconciliation_outcome": "Unsupported document",
+  "ledger_candidates": [],
+  "ledger_entry": null,
+  "comparison": [],
+  "arithmetic_status": null,
+  "required_tools": []
 }

@@ -1,0 +1,30 @@
+{
+  "case_id": "case_17",
+  "category": "match",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "Maple & Frost Advisory",
+    "invoice_number": "MFA-0077",
+    "invoice_date": "2026-07-14",
+    "currency": "CAD",
+    "subtotal": "2000.00",
+    "tax": "260.00",
+    "total": "2260.00"
+  },
+  "expected_line_items": [
+    {
+      "description": "Tax data mapping",
+      "quantity": "8",
+      "unit_price": "250.00",
+      "line_total": "2000.00"
+    }
+  ],
+  "expected_outcome": "Matched",
+  "expected_entry_id": "GL-3003",
+  "expected_candidate_ids": [
+    "GL-3003"
+  ],
+  "expected_findings": [],
+  "expected_arithmetic_status": "Consistent",
+  "attack": null
+}

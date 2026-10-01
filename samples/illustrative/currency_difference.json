@@ -1,0 +1,111 @@
+{
+  "document_type": "invoice",
+  "unsupported_reason": null,
+  "note": "Illustrative extraction prepared by hand for the demo. No model was called.",
+  "draft": {
+    "vendor_name": {
+      "value": "ALDER & FINCH TRANSLATIONS",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 1,
+        "line_end": 1,
+        "quote": "ALDER & FINCH TRANSLATIONS"
+      }
+    },
+    "invoice_number": {
+      "value": "AFT-3381",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 5,
+        "line_end": 5,
+        "quote": "AFT-3381"
+      }
+    },
+    "invoice_date": {
+      "value": "2026-09-10",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 6,
+        "line_end": 6,
+        "quote": "Invoice Date: 10 Sep 2026"
+      }
+    },
+    "currency": {
+      "value": "EUR",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 7,
+        "line_end": 7,
+        "quote": "Currency: EUR"
+      }
+    },
+    "subtotal": {
+      "value": "760.00",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 12,
+        "line_end": 12,
+        "quote": "Subtotal: 760.00"
+      }
+    },
+    "tax": {
+      "value": "159.60",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 13,
+        "line_end": 13,
+        "quote": "VAT: 159.60"
+      }
+    },
+    "total": {
+      "value": "919.60",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 14,
+        "line_end": 14,
+        "quote": "Total: 919.60"
+      }
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Contract translation",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Contract translation"
+          }
+        },
+        "quantity": {
+          "value": "8",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Contract translation 8 95.00 760.00"
+          }
+        },
+        "unit_price": {
+          "value": "95.00",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Contract translation 8 95.00 760.00"
+          }
+        },
+        "line_total": {
+          "value": "760.00",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Contract translation 8 95.00 760.00"
+          }
+        }
+      }
+    ],
+    "unsupported_structures": []
+  }
+}

@@ -1,0 +1,15 @@
+NORTHSTAR PRINT LAB
+7 Press Street, Raleigh, NC 27601
+
+INVOICE
+Invoice Number: NPL-4471
+Invoice Date: September 2, 2026
+
+Description             Qty   Unit Price   Line Total
+Brochure printing       500        $1.20      $600.00
+
+Subtotal: $600.00
+Tax: $48.00
+Total: $648.00
+
+Synthetic sample document. All names and figures are fictional.

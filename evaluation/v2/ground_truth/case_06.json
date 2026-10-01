@@ -1,0 +1,35 @@
+{
+  "case_id": "case_06",
+  "category": "amount",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "Clover Lane Bookkeeping",
+    "invoice_number": "FLS-2207",
+    "invoice_date": "2026-07-07",
+    "currency": "USD",
+    "subtotal": "900.00",
+    "tax": "90.00",
+    "total": "990.00"
+  },
+  "expected_line_items": [
+    {
+      "description": "Bookkeeping cleanup",
+      "quantity": "5",
+      "unit_price": "180.00",
+      "line_total": "900.00"
+    }
+  ],
+  "expected_outcome": "Discrepancy found",
+  "expected_entry_id": "GL-3009",
+  "expected_candidate_ids": [
+    "GL-3009"
+  ],
+  "expected_findings": [
+    [
+      "LEDGER_AMOUNT_MISMATCH",
+      "total"
+    ]
+  ],
+  "expected_arithmetic_status": "Consistent",
+  "attack": null
+}

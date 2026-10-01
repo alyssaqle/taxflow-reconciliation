@@ -14,7 +14,7 @@ from pathlib import Path
 
 from .pipeline import RECORDED_DIR, run_live
 from .providers import ProviderError, build_provider, read_settings
-from .samples import SAMPLES, load_sample
+from .samples import SAMPLES, load_sample, load_sample_ledger
 
 
 def main(argv: list[str]) -> int:
@@ -28,11 +28,12 @@ def main(argv: list[str]) -> int:
         return 2
     key = settings.get("AZURE_OPENAI_API_KEY", "")
     RECORDED_DIR.mkdir(parents=True, exist_ok=True)
+    ledger = load_sample_ledger()
     failures = 0
     for sid in argv or list(SAMPLES):
-        res = run_live(load_sample(sid), provider, on_status=lambda m: None)
+        res = run_live(load_sample(sid), ledger, provider, on_status=lambda m: None)
         tools = ", ".join(f"{t.tool}:{t.status}" for t in res.tool_trace) or "none"
-        print(f"{sid}: {res.workflow_status} · {res.document_type} · findings "
+        print(f"{sid}: {res.workflow_status} · {res.reconciliation_outcome} · arithmetic {res.arithmetic_status} · findings "
               f"{[f.code for f in res.findings]} · tools {tools} · {res.run_metadata.model_requests} requests")
         if res.workflow_status != "Complete":
             print(f"  not saved: {res.run_metadata.error}")

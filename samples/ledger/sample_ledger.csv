@@ -1,0 +1,13 @@
+ledger_entry_id,invoice_number,vendor_name,invoice_date,currency,gross_amount
+DEV-1001,NWA-2026-0412,Northwind Analytics LLC,2026-09-15,USD,880.00
+DEV-1002,WSW-6620,Westgate Survey Works,2026-09-03,USD,1521.00
+DEV-1003,BHD-2207,Blue Heron Design Studio,2026-09-02,USD,1285.20
+DEV-1004,BHD-2207,Blue Heron Design Studio,2026-09-02,USD,1285.20
+DEV-1005,AFT-3381,Alder & Finch Translations,2026-09-10,USD,919.60
+DEV-1006,LDW-3309,Lantern Data Works,2026-09-04,USD,510.00
+DEV-1007,SLS-7781,Summit Ledger Services,2026-09-20,USD,950.00
+DEV-1008,NPL-4471,Northstar Print Lab,2026-09-02,USD,648.00
+DEV-1009,ORP-2026-118,Oakmont Research Partners,2026-09-18,USD,1404.00
+DEV-1010,CBM-0391,Coral Bay Media,2026-08-08,USD,518.40
+DEV-1011,JLC-0277,Juniper Lane Catering,2026-08-12,USD,712.80
+DEV-1099,ORP-2026-999,Oakmont Research Partners,2026-07-01,USD,0.00

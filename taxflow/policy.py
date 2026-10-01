@@ -1,4 +1,4 @@
-"""Bundled fictional intake policy with stable reference IDs."""
+"""Bundled fictional reconciliation policy with stable reference IDs."""
 from __future__ import annotations
 
 import re
@@ -8,7 +8,7 @@ from pathlib import Path
 
 from .models import ChecklistItem, Finding
 
-POLICY_PATH = Path(__file__).resolve().parent.parent / "policies" / "intake_policy.md"
+POLICY_PATH = Path(__file__).resolve().parent.parent / "policies" / "reconciliation_policy.md"
 
 
 @dataclass(frozen=True)
@@ -17,6 +17,7 @@ class PolicyRule:
     title: str
     applies_to: str
     follow_up: str
+    blocking: bool
 
 
 @lru_cache(maxsize=1)
@@ -28,7 +29,8 @@ def load_policy() -> tuple[str, dict[str, PolicyRule]]:
         head, *body = block.strip().splitlines()
         ref, title = (s.strip() for s in head.split("|", 1))
         fields = dict(line.split(":", 1) for line in body if ":" in line)
-        rule = PolicyRule(ref, title, fields["Applies to"].strip(), fields["Follow-up"].strip())
+        rule = PolicyRule(ref, title, fields["Applies to"].strip(), fields["Follow-up"].strip(),
+                          fields["Blocking"].strip().lower() == "yes")
         rules[rule.applies_to] = rule
     return version, rules
 
@@ -48,10 +50,10 @@ def lookup(codes: list[str]) -> list[PolicyRule]:
 def build_checklist(findings: list[Finding]) -> list[ChecklistItem]:
     """Templated follow-up assembled from Python findings and policy references."""
     _, rules = load_policy()
-    if not findings:
-        r = rules["NO_FINDINGS"]
-        return [ChecklistItem(finding_code="NO_FINDINGS", policy_ref=r.ref, action=r.follow_up)]
     items = []
+    if not any(f.blocking for f in findings):
+        r = rules["NO_FINDINGS"]
+        items.append(ChecklistItem(finding_code="NO_FINDINGS", policy_ref=r.ref, action=r.follow_up))
     for f in findings:
         r = rules.get(f.code) or rules["INCOMPLETE_PROCESSING"]
         action = r.follow_up.replace("{field}", f.field or "the affected value")

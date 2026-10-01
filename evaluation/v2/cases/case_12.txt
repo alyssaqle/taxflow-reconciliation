@@ -1,0 +1,11 @@
+From: Northgate Payroll Services
+To: Copperline Logistics
+
+This is an invoice, invoice number NPS-6604, issued August 30, 2026.
+Currency: USD
+
+Item 1: Payroll run support. Quantity 4 at 150.00 each, line total 600.00.
+
+Subtotal 600.00. Tax 72.00. Total 672.00.
+
+Synthetic document. All names and figures are fictional.

@@ -1,0 +1,18 @@
+QUAYSIDE CLEANING
+Remittance office, Floor 3
+Invoice: HLC-1550
+Date of invoice: September 8, 2026
+Currency: USD
+Charges are itemized on page 2.
+----- page break -----
+QUAYSIDE CLEANING - page 2
+
+Item                           Quantity       Rate      Amount
+Office deep clean                     2     310.00      620.00
+Window service                        1      50.00       50.00
+
+Sub-total: 720.00
+Sales tax: 53.60
+Invoice total: 773.60
+
+Synthetic document. All names and figures are fictional.

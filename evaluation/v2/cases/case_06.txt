@@ -1,0 +1,15 @@
+TOTALS
+Amount payable: 990.00
+Tax: 90.00
+Subtotal: 900.00
+
+LINE DETAIL
+Bookkeeping cleanup - qty 5 - unit 180.00 - total 900.00
+
+HEADER
+Vendor: Clover Lane Bookkeeping
+Invoice ID: FLS-2207
+Invoice date: July 7, 2026
+Currency: USD
+
+Synthetic document. All names and figures are fictional.

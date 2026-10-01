@@ -1,0 +1,35 @@
+{
+  "case_id": "case_01",
+  "category": "arithmetic",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "Spiral Fern Design",
+    "invoice_number": "VLD-7310",
+    "invoice_date": "2026-08-25",
+    "currency": "USD",
+    "subtotal": "950.00",
+    "tax": "76.00",
+    "total": "1100.00"
+  },
+  "expected_line_items": [
+    {
+      "description": "UX audit",
+      "quantity": "1",
+      "unit_price": "950.00",
+      "line_total": "950.00"
+    }
+  ],
+  "expected_outcome": "Matched",
+  "expected_entry_id": "GL-3025",
+  "expected_candidate_ids": [
+    "GL-3025"
+  ],
+  "expected_findings": [
+    [
+      "TOTAL_MISMATCH",
+      "total"
+    ]
+  ],
+  "expected_arithmetic_status": "Inconsistent",
+  "attack": null
+}

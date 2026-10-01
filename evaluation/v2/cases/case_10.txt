@@ -1,0 +1,16 @@
+ASPEN VALE ANALYTICS
+Business park, Suite 100
+
+INVOICE
+Invoice Number: SBA-0907
+Invoice Date: April 23, 2026
+Amounts in US dollars
+
+Description                      Qty   Unit Price   Line Total
+Model validation audit             1     2,200.00     2,200.00
+
+Subtotal: 2,200.00
+Tax: 176.00
+Total: 2,376.00
+
+Synthetic document. All names and figures are fictional.

@@ -9,7 +9,7 @@ from typing import Any, Literal
 
 from pydantic import BaseModel, Field
 
-SCHEMA_VERSION = "invoice-v1"
+SCHEMA_VERSION = "reconciliation-v2"
 
 SCALAR_FIELDS = (
     "vendor_name",
@@ -24,7 +24,13 @@ ITEM_FIELDS = ("description", "quantity", "unit_price", "line_total")
 MONEY_FIELDS = ("subtotal", "tax", "total")
 
 WorkflowStatus = Literal["Ready", "Running", "Complete", "Failed", "Incomplete"]
-ReviewStatus = Literal["Unreviewed", "Approved intake", "Needs follow-up"]
+ReviewStatus = Literal["Unreviewed", "Approved", "Needs follow-up"]
+ReconciliationOutcome = Literal[
+    "Matched", "Discrepancy found", "No matching entry", "Ambiguous match",
+    "Needs clarification", "Unsupported document", "Incomplete",
+]
+ArithmeticStatus = Literal["Consistent", "Inconsistent", "Not checked", "Partially checked"]
+ComparisonStatus = Literal["agree", "differ", "not_checked"]
 EvidenceStatus = Literal["verified", "unsupported", "absent"]
 CheckStatus = Literal["pass", "fail", "not_checked"]
 
@@ -75,6 +81,25 @@ class InvoiceDraft(BaseModel):
                 yield f"line_items[{i}].{name}", getattr(item, name)
 
 
+class LedgerEntry(BaseModel):
+    ledger_entry_id: str
+    row_number: int  # spreadsheet row: header is row 1, first entry is row 2
+    invoice_number: str
+    vendor_name: str
+    invoice_date: str
+    currency: str
+    gross_amount: str
+
+
+class ComparisonRow(BaseModel):
+    field: str
+    invoice_value: str | None
+    ledger_value: str | None
+    status: ComparisonStatus
+    note: str | None = None
+    difference: str | None = None
+
+
 class Finding(BaseModel):
     code: str
     field: str | None = None
@@ -122,10 +147,16 @@ class RunMetadata(BaseModel):
     request_budget: int | None = None
     token_usage: dict[str, int] | None = None
     recorded_from: dict[str, Any] | None = None
+    ledger_id: str | None = None
+    ledger_name: str | None = None
+    currency_data: str | None = None
     error: str | None = None
 
 
 class RunResult(BaseModel):
+    """workflow_status = processing; reconciliation_outcome = ledger comparison;
+    arithmetic_status = invoice's own arithmetic; review_status = human decision."""
+
     run_id: str
     document_id: str
     document_type: Literal["invoice", "unsupported"] | None = None
@@ -141,6 +172,13 @@ class RunResult(BaseModel):
     model_summary: list[str] = Field(default_factory=list)
     excluded_summary_sentences: int = 0
     run_metadata: RunMetadata
+    # Ledger reconciliation (kept separate from invoice arithmetic and from the human decision)
+    reconciliation_outcome: ReconciliationOutcome | None = None
+    ledger_candidates: list[LedgerEntry] = Field(default_factory=list)
+    ledger_entry: LedgerEntry | None = None
+    comparison: list[ComparisonRow] = Field(default_factory=list)
+    arithmetic_status: ArithmeticStatus | None = None
+    required_tools: list[str] = Field(default_factory=list)
 
     @property
     def blocking_findings(self) -> list[Finding]:

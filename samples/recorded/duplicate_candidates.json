@@ -1,41 +1,41 @@
 {
-  "run_id": "aaf481ad9e4e",
-  "document_id": "sample-wrong_total",
+  "run_id": "07c3af0f4c31",
+  "document_id": "sample-duplicate_candidates",
   "document_type": "invoice",
   "unsupported_reason": null,
   "extracted_fields": {
     "vendor_name": {
-      "value": "SUMMIT LEDGER SERVICES (fictional)",
+      "value": "BLUE HERON DESIGN STUDIO",
       "evidence": {
-        "document_id": "sample-wrong_total",
+        "document_id": "sample-duplicate_candidates",
         "page_number": 1,
         "line_start": 1,
         "line_end": 1,
-        "quote": "SUMMIT LEDGER SERVICES (fictional)",
+        "quote": "BLUE HERON DESIGN STUDIO",
         "status": "verified",
         "note": null
       }
     },
     "invoice_number": {
-      "value": "SLS-7781",
+      "value": "BHD-2207",
       "evidence": {
-        "document_id": "sample-wrong_total",
+        "document_id": "sample-duplicate_candidates",
         "page_number": 1,
-        "line_start": 4,
-        "line_end": 4,
-        "quote": "INVOICE #SLS-7781",
+        "line_start": 5,
+        "line_end": 5,
+        "quote": "Invoice #: BHD-2207",
         "status": "verified",
         "note": null
       }
     },
     "invoice_date": {
-      "value": "2026-09-20",
+      "value": "2026-09-02",
       "evidence": {
-        "document_id": "sample-wrong_total",
+        "document_id": "sample-duplicate_candidates",
         "page_number": 1,
-        "line_start": 5,
-        "line_end": 5,
-        "quote": "Issued: September 20, 2026",
+        "line_start": 6,
+        "line_end": 6,
+        "quote": "Date: 2026-09-02",
         "status": "verified",
         "note": null
       }
@@ -43,11 +43,11 @@
     "currency": {
       "value": "USD",
       "evidence": {
-        "document_id": "sample-wrong_total",
+        "document_id": "sample-duplicate_candidates",
         "page_number": 1,
         "line_start": 7,
         "line_end": 7,
-        "quote": "Currency: USD",
+        "quote": "All amounts are in USD.",
         "status": "verified",
         "note": null
       }
@@ -55,49 +55,49 @@
     "line_items": [
       {
         "description": {
-          "value": "Research service",
+          "value": "Brand workshop facilitation",
           "evidence": {
-            "document_id": "sample-wrong_total",
+            "document_id": "sample-duplicate_candidates",
             "page_number": 1,
-            "line_start": 9,
+            "line_start": 10,
             "line_end": 10,
-            "quote": "Service                        Qty   Unit price   Amount\nResearch service                 1       500.00   500.00",
+            "quote": "Brand workshop facilitation      6   125.00    750.00",
             "status": "verified",
             "note": null
           }
         },
         "quantity": {
-          "value": "1",
+          "value": "6",
           "evidence": {
-            "document_id": "sample-wrong_total",
+            "document_id": "sample-duplicate_candidates",
             "page_number": 1,
             "line_start": 10,
             "line_end": 10,
-            "quote": "Research service                 1       500.00   500.00",
+            "quote": "Brand workshop facilitation      6   125.00    750.00",
             "status": "verified",
             "note": null
           }
         },
         "unit_price": {
-          "value": "500.00",
+          "value": "125.00",
           "evidence": {
-            "document_id": "sample-wrong_total",
+            "document_id": "sample-duplicate_candidates",
             "page_number": 1,
             "line_start": 10,
             "line_end": 10,
-            "quote": "Research service                 1       500.00   500.00",
+            "quote": "Brand workshop facilitation      6   125.00    750.00",
             "status": "verified",
             "note": null
           }
         },
         "line_total": {
-          "value": "500.00",
+          "value": "750.00",
           "evidence": {
-            "document_id": "sample-wrong_total",
+            "document_id": "sample-duplicate_candidates",
             "page_number": 1,
             "line_start": 10,
             "line_end": 10,
-            "quote": "Research service                 1       500.00   500.00",
+            "quote": "Brand workshop facilitation      6   125.00    750.00",
             "status": "verified",
             "note": null
           }
@@ -105,49 +105,49 @@
       },
       {
         "description": {
-          "value": "Data preparation service",
+          "value": "Slide template design",
           "evidence": {
-            "document_id": "sample-wrong_total",
+            "document_id": "sample-duplicate_candidates",
             "page_number": 1,
             "line_start": 11,
             "line_end": 11,
-            "quote": "Data preparation service         1       300.00   300.00",
+            "quote": "Slide template design            4   110.00    440.00",
             "status": "verified",
             "note": null
           }
         },
         "quantity": {
-          "value": "1",
+          "value": "4",
           "evidence": {
-            "document_id": "sample-wrong_total",
+            "document_id": "sample-duplicate_candidates",
             "page_number": 1,
             "line_start": 11,
             "line_end": 11,
-            "quote": "Data preparation service         1       300.00   300.00",
+            "quote": "Slide template design            4   110.00    440.00",
             "status": "verified",
             "note": null
           }
         },
         "unit_price": {
-          "value": "300.00",
+          "value": "110.00",
           "evidence": {
-            "document_id": "sample-wrong_total",
+            "document_id": "sample-duplicate_candidates",
             "page_number": 1,
             "line_start": 11,
             "line_end": 11,
-            "quote": "Data preparation service         1       300.00   300.00",
+            "quote": "Slide template design            4   110.00    440.00",
             "status": "verified",
             "note": null
           }
         },
         "line_total": {
-          "value": "300.00",
+          "value": "440.00",
           "evidence": {
-            "document_id": "sample-wrong_total",
+            "document_id": "sample-duplicate_candidates",
             "page_number": 1,
             "line_start": 11,
             "line_end": 11,
-            "quote": "Data preparation service         1       300.00   300.00",
+            "quote": "Slide template design            4   110.00    440.00",
             "status": "verified",
             "note": null
           }
@@ -155,37 +155,37 @@
       }
     ],
     "subtotal": {
-      "value": "800.00",
+      "value": "1190.00",
       "evidence": {
-        "document_id": "sample-wrong_total",
+        "document_id": "sample-duplicate_candidates",
         "page_number": 1,
         "line_start": 13,
         "line_end": 13,
-        "quote": "Stated subtotal: USD 800.00",
+        "quote": "Subtotal                                       1,190.00",
         "status": "verified",
         "note": null
       }
     },
     "tax": {
-      "value": "80.00",
+      "value": "95.20",
       "evidence": {
-        "document_id": "sample-wrong_total",
+        "document_id": "sample-duplicate_candidates",
         "page_number": 1,
         "line_start": 14,
         "line_end": 14,
-        "quote": "Stated tax amount: USD 80.00",
+        "quote": "Sales tax                                         95.20",
         "status": "verified",
         "note": null
       }
     },
     "total": {
-      "value": "950.00",
+      "value": "1285.20",
       "evidence": {
-        "document_id": "sample-wrong_total",
+        "document_id": "sample-duplicate_candidates",
         "page_number": 1,
         "line_start": 15,
         "line_end": 15,
-        "quote": "Stated total: USD 950.00",
+        "quote": "Amount due                                     1,285.20",
         "status": "verified",
         "note": null
       }
@@ -194,15 +194,16 @@
   },
   "findings": [
     {
-      "code": "TOTAL_MISMATCH",
-      "field": "total",
-      "message": "USD 800.00 + USD 80.00 = USD 880.00; the stated total USD 950.00 is USD 70.00 higher.",
+      "code": "LEDGER_AMBIGUOUS",
+      "field": null,
+      "message": "2 ledger entries match this invoice number and vendor: DEV-1003, DEV-1004. None was selected.",
       "blocking": true,
-      "source": "reconcile_invoice",
+      "source": "ledger",
       "details": {
-        "expected": "880.00",
-        "stated": "950.00",
-        "difference": "70.00"
+        "candidate_ids": [
+          "DEV-1003",
+          "DEV-1004"
+        ]
       }
     }
   ],
@@ -254,8 +255,8 @@
       "status": "pass",
       "reason": null,
       "details": {
-        "expected": "500.00",
-        "stated": "500.00",
+        "expected": "750.00",
+        "stated": "750.00",
         "difference": "0.00"
       }
     },
@@ -264,8 +265,8 @@
       "status": "pass",
       "reason": null,
       "details": {
-        "expected": "300.00",
-        "stated": "300.00",
+        "expected": "440.00",
+        "stated": "440.00",
         "difference": "0.00"
       }
     },
@@ -274,29 +275,29 @@
       "status": "pass",
       "reason": null,
       "details": {
-        "expected": "800.00",
-        "stated": "800.00",
+        "expected": "1190.00",
+        "stated": "1190.00",
         "difference": "0.00",
-        "sum_of_calculated_item_totals": "800.00"
+        "sum_of_calculated_item_totals": "1190.00"
       }
     },
     {
       "name": "total",
-      "status": "fail",
+      "status": "pass",
       "reason": null,
       "details": {
-        "expected": "880.00",
-        "stated": "950.00",
-        "difference": "70.00"
+        "expected": "1285.20",
+        "stated": "1285.20",
+        "difference": "0.00"
       }
     }
   ],
   "checklist": [
     {
-      "finding_code": "TOTAL_MISMATCH",
-      "field": "total",
+      "finding_code": "LEDGER_AMBIGUOUS",
+      "field": null,
       "policy_ref": "TF-POL-203",
-      "action": "Ask the sender to confirm or correct the invoice total; it does not equal subtotal plus stated tax."
+      "action": "Ask the client which ledger entry corresponds to this invoice and whether the other entries are duplicates."
     }
   ],
   "workflow_status": "Complete",
@@ -307,7 +308,7 @@
       "step": 1,
       "tool": "validate_intake",
       "arguments": {
-        "document_id": "sample-wrong_total"
+        "document_id": "sample-duplicate_candidates"
       },
       "status": "success",
       "result_summary": "Findings: none",
@@ -318,50 +319,92 @@
       "step": 2,
       "tool": "reconcile_invoice",
       "arguments": {
-        "document_id": "sample-wrong_total"
+        "document_id": "sample-duplicate_candidates"
       },
       "status": "success",
-      "result_summary": "Findings: TOTAL_MISMATCH",
+      "result_summary": "Arithmetic Consistent; Findings: none",
       "duration_ms": 0,
       "invoked_by": "model function call"
     },
     {
       "step": 3,
-      "tool": "lookup_intake_policy",
+      "tool": "find_ledger_candidates",
       "arguments": {
-        "finding_codes": [
-          "TOTAL_MISMATCH"
-        ]
+        "document_id": "sample-duplicate_candidates"
       },
       "status": "success",
-      "result_summary": "Policy refs: TF-POL-203",
+      "result_summary": "2 candidate(s): DEV-1003, DEV-1004",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 4,
+      "tool": "build_review_checklist",
+      "arguments": {
+        "document_id": "sample-duplicate_candidates"
+      },
+      "status": "success",
+      "result_summary": "Outcome: Ambiguous match; refs: TF-POL-203",
       "duration_ms": 0,
       "invoked_by": "model function call"
     }
   ],
   "model_summary": [
-    "However, the reconciliation check found a TOTAL_MISMATCH: the stated total of USD 950.00 is USD 70.00 higher than the expected total of USD 880.00 (TF-POL-203).",
-    "According to policy TF-POL-203, the total does not reconcile with the subtotal plus tax, so the sender should be asked to confirm or correct the invoice total."
+    "The ledger search found two candidates matching the invoice number and vendor, resulting in an ambiguous ledger match (LEDGER_AMBIGUOUS).",
+    "According to policy TF-POL-203, the client should be asked to clarify which ledger entry corresponds to this invoice and whether the other entries are duplicates."
   ],
   "excluded_summary_sentences": 2,
   "run_metadata": {
     "mode": "live",
     "provider": "Azure OpenAI (v1 API, Chat Completions)",
     "model": "gpt-4.1-mini",
-    "schema_version": "invoice-v1",
-    "prompt_version": "extract-v2+agent-v1",
-    "policy_version": "intake-policy-2026-09-30",
+    "schema_version": "reconciliation-v2",
+    "prompt_version": "extract-v4+agent-v2",
+    "policy_version": "reconciliation-policy-2026-10-01",
     "dataset_version": null,
-    "timestamp": "2026-10-01T06:08:11+00:00",
-    "duration_ms": 10585,
+    "timestamp": "2026-10-01T06:57:00+00:00",
+    "duration_ms": 12003,
     "model_requests": 4,
-    "request_budget": 6,
+    "request_budget": 8,
     "token_usage": {
-      "prompt_tokens": 3976,
-      "completion_tokens": 871,
-      "total_tokens": 4847
+      "prompt_tokens": 4955,
+      "completion_tokens": 860,
+      "total_tokens": 5815
     },
     "recorded_from": null,
+    "ledger_id": "ledger-c91011ab8df7",
+    "ledger_name": "sample_ledger.csv",
+    "currency_data": "pycountry 26.2.16 (ISO 4217)",
     "error": null
-  }
+  },
+  "reconciliation_outcome": "Ambiguous match",
+  "ledger_candidates": [
+    {
+      "ledger_entry_id": "DEV-1003",
+      "row_number": 4,
+      "invoice_number": "BHD-2207",
+      "vendor_name": "Blue Heron Design Studio",
+      "invoice_date": "2026-09-02",
+      "currency": "USD",
+      "gross_amount": "1285.20"
+    },
+    {
+      "ledger_entry_id": "DEV-1004",
+      "row_number": 5,
+      "invoice_number": "BHD-2207",
+      "vendor_name": "Blue Heron Design Studio",
+      "invoice_date": "2026-09-02",
+      "currency": "USD",
+      "gross_amount": "1285.20"
+    }
+  ],
+  "ledger_entry": null,
+  "comparison": [],
+  "arithmetic_status": "Consistent",
+  "required_tools": [
+    "validate_intake",
+    "reconcile_invoice",
+    "find_ledger_candidates",
+    "build_review_checklist"
+  ]
 }

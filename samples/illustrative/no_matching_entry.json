@@ -1,0 +1,111 @@
+{
+  "document_type": "invoice",
+  "unsupported_reason": null,
+  "note": "Illustrative extraction prepared by hand for the demo. No model was called.",
+  "draft": {
+    "vendor_name": {
+      "value": "CORAL BAY MEDIA",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 1,
+        "line_end": 1,
+        "quote": "CORAL BAY MEDIA"
+      }
+    },
+    "invoice_number": {
+      "value": "CBM-0931",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 5,
+        "line_end": 5,
+        "quote": "CBM-0931"
+      }
+    },
+    "invoice_date": {
+      "value": "2026-09-08",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 6,
+        "line_end": 6,
+        "quote": "Invoice Date: September 8, 2026"
+      }
+    },
+    "currency": {
+      "value": "USD",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 7,
+        "line_end": 7,
+        "quote": "Currency: USD"
+      }
+    },
+    "subtotal": {
+      "value": "480.00",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 12,
+        "line_end": 12,
+        "quote": "Subtotal: 480.00"
+      }
+    },
+    "tax": {
+      "value": "38.40",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 13,
+        "line_end": 13,
+        "quote": "Tax: 38.40"
+      }
+    },
+    "total": {
+      "value": "518.40",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 14,
+        "line_end": 14,
+        "quote": "Total: 518.40"
+      }
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Podcast editing",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Podcast editing"
+          }
+        },
+        "quantity": {
+          "value": "4",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Podcast editing 4 120.00 480.00"
+          }
+        },
+        "unit_price": {
+          "value": "120.00",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Podcast editing 4 120.00 480.00"
+          }
+        },
+        "line_total": {
+          "value": "480.00",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Podcast editing 4 120.00 480.00"
+          }
+        }
+      }
+    ],
+    "unsupported_structures": []
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "case_id": "case_11",
+  "category": "arithmetic",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "Basilisk Key Security",
+    "invoice_number": "OKS-3007",
+    "invoice_date": "2026-07-30",
+    "currency": "USD",
+    "subtotal": "1300.00",
+    "tax": "104.00",
+    "total": "1404.00"
+  },
+  "expected_line_items": [
+    {
+      "description": "Penetration test scoping",
+      "quantity": "1",
+      "unit_price": "1200.00",
+      "line_total": "1200.00"
+    },
+    {
+      "description": "Retest",
+      "quantity": "1",
+      "unit_price": "100.00",
+      "line_total": "200.00"
+    }
+  ],
+  "expected_outcome": "Matched",
+  "expected_entry_id": "GL-3027",
+  "expected_candidate_ids": [
+    "GL-3027"
+  ],
+  "expected_findings": [
+    [
+      "ITEM_MISMATCH",
+      "line_items"
+    ],
+    [
+      "SUBTOTAL_MISMATCH",
+      "subtotal"
+    ]
+  ],
+  "expected_arithmetic_status": "Inconsistent",
+  "attack": null
+}

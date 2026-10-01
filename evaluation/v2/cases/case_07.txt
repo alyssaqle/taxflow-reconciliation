@@ -1,0 +1,18 @@
+FERNBROOK LEGAL SUPPORT
+Remittance office, Floor 3
+Invoice: MLS-5031
+Date of invoice: July 21, 2026
+Currency: USD
+Charges are itemized on page 2.
+----- page break -----
+FERNBROOK LEGAL SUPPORT - page 2
+
+Item                           Quantity       Rate      Amount
+Document review hours                 8     110.00      880.00
+Courier                               1      45.00       45.00
+
+Sub-total: 925.00
+Sales tax: 74.00
+Invoice total: 999.00
+
+Synthetic document. All names and figures are fictional.

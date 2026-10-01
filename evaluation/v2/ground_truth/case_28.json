@@ -1,0 +1,33 @@
+{
+  "case_id": "case_28",
+  "category": "no_entry",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "Sequoia Grant Writers",
+    "invoice_number": "RGW-262",
+    "invoice_date": "2026-09-03",
+    "currency": "USD",
+    "subtotal": "1800.00",
+    "tax": "144.00",
+    "total": "1944.00"
+  },
+  "expected_line_items": [
+    {
+      "description": "Grant proposal draft",
+      "quantity": "1",
+      "unit_price": "1800.00",
+      "line_total": "1800.00"
+    }
+  ],
+  "expected_outcome": "No matching entry",
+  "expected_entry_id": null,
+  "expected_candidate_ids": [],
+  "expected_findings": [
+    [
+      "LEDGER_NO_MATCH",
+      null
+    ]
+  ],
+  "expected_arithmetic_status": "Consistent",
+  "attack": null
+}

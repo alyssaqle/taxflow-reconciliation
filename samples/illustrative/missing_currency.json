@@ -1,0 +1,106 @@
+{
+  "document_type": "invoice",
+  "unsupported_reason": null,
+  "note": "Illustrative extraction prepared by hand for the demo. No model was called.",
+  "draft": {
+    "vendor_name": {
+      "value": "NORTHSTAR PRINT LAB",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 1,
+        "line_end": 1,
+        "quote": "NORTHSTAR PRINT LAB"
+      }
+    },
+    "invoice_number": {
+      "value": "NPL-4471",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 5,
+        "line_end": 5,
+        "quote": "NPL-4471"
+      }
+    },
+    "invoice_date": {
+      "value": "2026-09-02",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 6,
+        "line_end": 6,
+        "quote": "Invoice Date: September 2, 2026"
+      }
+    },
+    "currency": {
+      "value": null,
+      "evidence": null
+    },
+    "subtotal": {
+      "value": "600.00",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 11,
+        "line_end": 11,
+        "quote": "Subtotal: $600.00"
+      }
+    },
+    "tax": {
+      "value": "48.00",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 12,
+        "line_end": 12,
+        "quote": "Tax: $48.00"
+      }
+    },
+    "total": {
+      "value": "648.00",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 13,
+        "line_end": 13,
+        "quote": "Total: $648.00"
+      }
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Brochure printing",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "Brochure printing"
+          }
+        },
+        "quantity": {
+          "value": "500",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "Brochure printing 500 $1.20 $600.00"
+          }
+        },
+        "unit_price": {
+          "value": "1.20",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "Brochure printing 500 $1.20 $600.00"
+          }
+        },
+        "line_total": {
+          "value": "600.00",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "Brochure printing 500 $1.20 $600.00"
+          }
+        }
+      }
+    ],
+    "unsupported_structures": []
+  }
+}

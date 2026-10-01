@@ -1,0 +1,16 @@
+LANTANA RIDGE STUDIOS
+Business park, Suite 100
+
+INVOICE
+Invoice Number: LRS-7781
+Invoice Date: August 1, 2026
+Currency: EUR
+
+Description                      Qty   Unit Price   Line Total
+Brand video production             1     4,800.00     4,800.00
+
+Subtotal: 4,800.00
+Tax: 960.00
+Total: 5,760.00
+
+Synthetic document. All names and figures are fictional.

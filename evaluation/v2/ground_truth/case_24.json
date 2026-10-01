@@ -1,0 +1,41 @@
+{
+  "case_id": "case_24",
+  "category": "arithmetic",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "Quayside Cleaning",
+    "invoice_number": "HLC-1550",
+    "invoice_date": "2026-09-08",
+    "currency": "USD",
+    "subtotal": "720.00",
+    "tax": "53.60",
+    "total": "773.60"
+  },
+  "expected_line_items": [
+    {
+      "description": "Office deep clean",
+      "quantity": "2",
+      "unit_price": "310.00",
+      "line_total": "620.00"
+    },
+    {
+      "description": "Window service",
+      "quantity": "1",
+      "unit_price": "50.00",
+      "line_total": "50.00"
+    }
+  ],
+  "expected_outcome": "Matched",
+  "expected_entry_id": "GL-3026",
+  "expected_candidate_ids": [
+    "GL-3026"
+  ],
+  "expected_findings": [
+    [
+      "SUBTOTAL_MISMATCH",
+      "subtotal"
+    ]
+  ],
+  "expected_arithmetic_status": "Inconsistent",
+  "attack": null
+}

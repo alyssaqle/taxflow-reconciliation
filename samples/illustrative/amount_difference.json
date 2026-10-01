@@ -1,0 +1,111 @@
+{
+  "document_type": "invoice",
+  "unsupported_reason": null,
+  "note": "Illustrative extraction prepared by hand for the demo. No model was called.",
+  "draft": {
+    "vendor_name": {
+      "value": "WESTGATE SURVEY WORKS",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 1,
+        "line_end": 1,
+        "quote": "WESTGATE SURVEY WORKS"
+      }
+    },
+    "invoice_number": {
+      "value": "WSW-6620",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 5,
+        "line_end": 5,
+        "quote": "Invoice No.: WSW-6620"
+      }
+    },
+    "invoice_date": {
+      "value": "2026-09-03",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 6,
+        "line_end": 6,
+        "quote": "Date: 2026-09-03"
+      }
+    },
+    "currency": {
+      "value": "USD",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 7,
+        "line_end": 7,
+        "quote": "Currency: USD"
+      }
+    },
+    "subtotal": {
+      "value": "1400.00",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 12,
+        "line_end": 12,
+        "quote": "Subtotal: 1,400.00"
+      }
+    },
+    "tax": {
+      "value": "112.00",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 13,
+        "line_end": 13,
+        "quote": "Tax: 112.00"
+      }
+    },
+    "total": {
+      "value": "1512.00",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 14,
+        "line_end": 14,
+        "quote": "Total: 1,512.00"
+      }
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Boundary survey",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Boundary survey"
+          }
+        },
+        "quantity": {
+          "value": "1",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Boundary survey 1 1,400.00 1,400.00"
+          }
+        },
+        "unit_price": {
+          "value": "1400.00",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Boundary survey 1 1,400.00 1,400.00"
+          }
+        },
+        "line_total": {
+          "value": "1400.00",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Boundary survey 1 1,400.00 1,400.00"
+          }
+        }
+      }
+    ],
+    "unsupported_structures": []
+  }
+}

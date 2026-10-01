@@ -1,0 +1,17 @@
+CLEARWATER EVENTS CO
+Business park, Suite 100
+
+INVOICE
+Invoice Number: BWE-1188
+Invoice Date: August 9, 2026
+Currency: USD
+
+Description                      Qty   Unit Price   Line Total
+Venue coordination                 3       200.00       600.00
+Signage                            3        50.00       150.00
+
+Subtotal: 750.00
+Tax: 60.00
+Total: 810.00
+
+Synthetic document. All names and figures are fictional.

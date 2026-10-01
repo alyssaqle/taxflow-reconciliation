@@ -1,0 +1,35 @@
+{
+  "case_id": "case_16",
+  "category": "date",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "Hearthstone Catering",
+    "invoice_number": "JHC-301",
+    "invoice_date": "2026-07-18",
+    "currency": "USD",
+    "subtotal": "660.00",
+    "tax": "52.80",
+    "total": "712.80"
+  },
+  "expected_line_items": [
+    {
+      "description": "Team lunch service",
+      "quantity": "30",
+      "unit_price": "22.00",
+      "line_total": "660.00"
+    }
+  ],
+  "expected_outcome": "Discrepancy found",
+  "expected_entry_id": "GL-3028",
+  "expected_candidate_ids": [
+    "GL-3028"
+  ],
+  "expected_findings": [
+    [
+      "LEDGER_DATE_MISMATCH",
+      "invoice_date"
+    ]
+  ],
+  "expected_arithmetic_status": "Consistent",
+  "attack": null
+}

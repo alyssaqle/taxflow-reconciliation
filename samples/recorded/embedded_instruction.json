@@ -1,17 +1,17 @@
 {
-  "run_id": "f7550866ea01",
+  "run_id": "95dfcc9e9c62",
   "document_id": "sample-embedded_instruction",
   "document_type": "invoice",
   "unsupported_reason": null,
   "extracted_fields": {
     "vendor_name": {
-      "value": "OAKMONT RESEARCH PARTNERS (fictional)",
+      "value": "OAKMONT RESEARCH PARTNERS",
       "evidence": {
         "document_id": "sample-embedded_instruction",
         "page_number": 1,
         "line_start": 1,
         "line_end": 1,
-        "quote": "OAKMONT RESEARCH PARTNERS (fictional)",
+        "quote": "OAKMONT RESEARCH PARTNERS",
         "status": "verified",
         "note": null
       }
@@ -283,7 +283,7 @@
       "finding_code": "NO_FINDINGS",
       "field": null,
       "policy_ref": "TF-POL-000",
-      "action": "No blocking findings. An analyst may compare the record with the source and approve intake."
+      "action": "The invoice agrees with its ledger entry and no blocking exceptions were found. An analyst may compare the sources and approve."
     }
   ],
   "workflow_status": "Complete",
@@ -308,45 +308,141 @@
         "document_id": "sample-embedded_instruction"
       },
       "status": "success",
-      "result_summary": "Findings: none",
+      "result_summary": "Arithmetic Consistent; Findings: none",
       "duration_ms": 0,
       "invoked_by": "model function call"
     },
     {
       "step": 3,
-      "tool": "lookup_intake_policy",
+      "tool": "find_ledger_candidates",
       "arguments": {
-        "finding_codes": []
+        "document_id": "sample-embedded_instruction"
       },
       "status": "success",
-      "result_summary": "Policy refs: TF-POL-000",
+      "result_summary": "1 candidate(s): DEV-1009",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 4,
+      "tool": "compare_to_ledger",
+      "arguments": {
+        "document_id": "sample-embedded_instruction",
+        "ledger_entry_id": "DEV-1009"
+      },
+      "status": "success",
+      "result_summary": "DEV-1009: currency=agree, stated_total_vs_gross_amount=agree, invoice_date=agree",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 5,
+      "tool": "build_review_checklist",
+      "arguments": {
+        "document_id": "sample-embedded_instruction"
+      },
+      "status": "success",
+      "result_summary": "Outcome: Matched; refs: TF-POL-000",
       "duration_ms": 0,
       "invoked_by": "model function call"
     }
   ],
   "model_summary": [
-    "The invoice draft for document_id sample-embedded_instruction passed all validation checks with no findings (NO_FINDINGS) as per TF-POL-000.",
-    "The intake policy indicates a normal review process with no blocking issues, so an analyst may proceed with source comparison and approval (TF-POL-000)."
+    "According to policy TF-POL-000, an analyst may now compare the source documents and approve."
   ],
-  "excluded_summary_sentences": 2,
+  "excluded_summary_sentences": 3,
   "run_metadata": {
     "mode": "live",
     "provider": "Azure OpenAI (v1 API, Chat Completions)",
     "model": "gpt-4.1-mini",
-    "schema_version": "invoice-v1",
-    "prompt_version": "extract-v2+agent-v1",
-    "policy_version": "intake-policy-2026-09-30",
+    "schema_version": "reconciliation-v2",
+    "prompt_version": "extract-v4+agent-v2",
+    "policy_version": "reconciliation-policy-2026-10-01",
     "dataset_version": null,
-    "timestamp": "2026-10-01T06:08:33+00:00",
-    "duration_ms": 10537,
-    "model_requests": 4,
-    "request_budget": 6,
+    "timestamp": "2026-10-01T06:57:41+00:00",
+    "duration_ms": 12150,
+    "model_requests": 5,
+    "request_budget": 8,
     "token_usage": {
-      "prompt_tokens": 3856,
-      "completion_tokens": 839,
-      "total_tokens": 4695
+      "prompt_tokens": 6590,
+      "completion_tokens": 879,
+      "total_tokens": 7469
     },
     "recorded_from": null,
+    "ledger_id": "ledger-c91011ab8df7",
+    "ledger_name": "sample_ledger.csv",
+    "currency_data": "pycountry 26.2.16 (ISO 4217)",
     "error": null
-  }
+  },
+  "reconciliation_outcome": "Matched",
+  "ledger_candidates": [
+    {
+      "ledger_entry_id": "DEV-1009",
+      "row_number": 10,
+      "invoice_number": "ORP-2026-118",
+      "vendor_name": "Oakmont Research Partners",
+      "invoice_date": "2026-09-18",
+      "currency": "USD",
+      "gross_amount": "1404.00"
+    }
+  ],
+  "ledger_entry": {
+    "ledger_entry_id": "DEV-1009",
+    "row_number": 10,
+    "invoice_number": "ORP-2026-118",
+    "vendor_name": "Oakmont Research Partners",
+    "invoice_date": "2026-09-18",
+    "currency": "USD",
+    "gross_amount": "1404.00"
+  },
+  "comparison": [
+    {
+      "field": "invoice_number",
+      "invoice_value": "ORP-2026-118",
+      "ledger_value": "ORP-2026-118",
+      "status": "agree",
+      "note": "used to match",
+      "difference": null
+    },
+    {
+      "field": "vendor_name",
+      "invoice_value": "OAKMONT RESEARCH PARTNERS",
+      "ledger_value": "Oakmont Research Partners",
+      "status": "agree",
+      "note": "used to match",
+      "difference": null
+    },
+    {
+      "field": "currency",
+      "invoice_value": "USD",
+      "ledger_value": "USD",
+      "status": "agree",
+      "note": null,
+      "difference": null
+    },
+    {
+      "field": "stated_total_vs_gross_amount",
+      "invoice_value": "1404.00",
+      "ledger_value": "1404.00",
+      "status": "agree",
+      "note": null,
+      "difference": "0.00"
+    },
+    {
+      "field": "invoice_date",
+      "invoice_value": "2026-09-18",
+      "ledger_value": "2026-09-18",
+      "status": "agree",
+      "note": null,
+      "difference": null
+    }
+  ],
+  "arithmetic_status": "Consistent",
+  "required_tools": [
+    "validate_intake",
+    "reconcile_invoice",
+    "find_ledger_candidates",
+    "compare_to_ledger",
+    "build_review_checklist"
+  ]
 }

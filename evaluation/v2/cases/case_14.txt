@@ -1,0 +1,15 @@
+TOTALS
+Amount payable: 648.00
+Tax: 48.00
+Subtotal: 600.00
+
+LINE DETAIL
+Brochure printing - qty 500 - unit 1.20 - total 600.00
+
+HEADER
+Vendor: Polaris Print Works
+Invoice ID: NPW-4471
+Invoice date: 2 Aug 2026
+Currency: USD
+
+Synthetic document. All names and figures are fictional.

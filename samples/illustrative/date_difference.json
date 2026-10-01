@@ -40,12 +40,12 @@
       }
     },
     "subtotal": {
-      "value": "540.00",
+      "value": "510.00",
       "evidence": {
         "page_number": 2,
         "line_start": 7,
         "line_end": 7,
-        "quote": "Subtotal: 540.00"
+        "quote": "Subtotal: 510.00"
       }
     },
     "tax": {
@@ -58,12 +58,12 @@
       }
     },
     "total": {
-      "value": "540.00",
+      "value": "510.00",
       "evidence": {
         "page_number": 2,
         "line_start": 9,
         "line_end": 9,
-        "quote": "Total: 540.00"
+        "quote": "Total: 510.00"
       }
     },
     "line_items": [
@@ -83,7 +83,7 @@
             "page_number": 2,
             "line_start": 4,
             "line_end": 4,
-            "quote": "Dashboard build 3 120.00 390.00"
+            "quote": "Dashboard build 3 120.00 360.00"
           }
         },
         "unit_price": {
@@ -92,16 +92,16 @@
             "page_number": 2,
             "line_start": 4,
             "line_end": 4,
-            "quote": "Dashboard build 3 120.00 390.00"
+            "quote": "Dashboard build 3 120.00 360.00"
           }
         },
         "line_total": {
-          "value": "390.00",
+          "value": "360.00",
           "evidence": {
             "page_number": 2,
             "line_start": 4,
             "line_end": 4,
-            "quote": "Dashboard build 3 120.00 390.00"
+            "quote": "Dashboard build 3 120.00 360.00"
           }
         }
       },

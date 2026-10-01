@@ -11,6 +11,7 @@ import datetime as dt
 import re
 from decimal import Decimal, InvalidOperation
 
+from .currency import supported_codes
 from .models import Evidence, ExtractedValue, InvoiceDraft
 from .parsing import ParsedDocument
 
@@ -103,12 +104,13 @@ def _value_consistent(kind: str, value: str, quote: str) -> tuple[bool, str | No
             return False, "date in the source is ambiguous (day/month order)"
         return True, None
     if kind == "currency":
-        if value.upper() == "USD":
-            if _USD_RE.search(quote):
-                return True, None
-            return False, "USD is not stated explicitly (a dollar sign alone is not enough)"
-        ok = value.casefold() in quote.casefold()
-        return ok, None if ok else "currency text not found in quote"
+        code = value.strip().upper()
+        if re.search(rf"\b{re.escape(code)}\b", quote) or (code == "USD" and _USD_RE.search(quote)):
+            return True, None
+        name = supported_codes().get(code)
+        if name and re.search(rf"\b{re.escape(name)}s?\b", quote, re.IGNORECASE):
+            return True, None
+        return False, f"{code} is not stated explicitly in the quote (a currency symbol alone is not enough)"
     ok = norm_ws(value).casefold() in norm_ws(quote).casefold()
     return ok, None if ok else "value text not found in quote"
 

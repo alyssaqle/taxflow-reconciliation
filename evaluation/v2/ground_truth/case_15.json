@@ -1,0 +1,36 @@
+{
+  "case_id": "case_15",
+  "category": "match",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "Basalt Ridge Consulting",
+    "invoice_number": "GPC-1043",
+    "invoice_date": "2026-08-04",
+    "currency": "USD",
+    "subtotal": "1750.00",
+    "tax": "140.00",
+    "total": "1890.00"
+  },
+  "expected_line_items": [
+    {
+      "description": "Process mapping workshop",
+      "quantity": "2",
+      "unit_price": "650.00",
+      "line_total": "1300.00"
+    },
+    {
+      "description": "Follow-up report",
+      "quantity": "1",
+      "unit_price": "450.00",
+      "line_total": "450.00"
+    }
+  ],
+  "expected_outcome": "Matched",
+  "expected_entry_id": "GL-3001",
+  "expected_candidate_ids": [
+    "GL-3001"
+  ],
+  "expected_findings": [],
+  "expected_arithmetic_status": "Consistent",
+  "attack": null
+}

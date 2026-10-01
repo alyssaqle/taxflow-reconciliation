@@ -1,17 +1,17 @@
 {
-  "run_id": "df91ea23d514",
+  "run_id": "214acd2a8ae2",
   "document_id": "sample-missing_invoice_number",
   "document_type": "invoice",
   "unsupported_reason": null,
   "extracted_fields": {
     "vendor_name": {
-      "value": "BLUE HERON DESIGN STUDIO (fictional)",
+      "value": "JUNIPER LANE CATERING",
       "evidence": {
         "document_id": "sample-missing_invoice_number",
         "page_number": 1,
         "line_start": 1,
         "line_end": 1,
-        "quote": "BLUE HERON DESIGN STUDIO (fictional)",
+        "quote": "JUNIPER LANE CATERING",
         "status": "verified",
         "note": null
       }
@@ -21,13 +21,13 @@
       "evidence": null
     },
     "invoice_date": {
-      "value": "2026-09-02",
+      "value": "2026-09-12",
       "evidence": {
         "document_id": "sample-missing_invoice_number",
         "page_number": 1,
         "line_start": 5,
         "line_end": 5,
-        "quote": "Date: 2026-09-02",
+        "quote": "Date: September 12, 2026",
         "status": "verified",
         "note": null
       }
@@ -37,9 +37,9 @@
       "evidence": {
         "document_id": "sample-missing_invoice_number",
         "page_number": 1,
-        "line_start": 7,
-        "line_end": 7,
-        "quote": "All amounts are in USD.",
+        "line_start": 6,
+        "line_end": 6,
+        "quote": "Currency: USD",
         "status": "verified",
         "note": null
       }
@@ -47,99 +47,49 @@
     "line_items": [
       {
         "description": {
-          "value": "Brand workshop facilitation",
+          "value": "Team lunch service",
           "evidence": {
             "document_id": "sample-missing_invoice_number",
             "page_number": 1,
-            "line_start": 10,
-            "line_end": 10,
-            "quote": "Brand workshop facilitation      6   125.00    750.00",
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "Team lunch service        30        22.00       660.00",
             "status": "verified",
             "note": null
           }
         },
         "quantity": {
-          "value": "6",
+          "value": "30",
           "evidence": {
             "document_id": "sample-missing_invoice_number",
             "page_number": 1,
-            "line_start": 10,
-            "line_end": 10,
-            "quote": "Brand workshop facilitation      6   125.00    750.00",
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "Team lunch service        30        22.00       660.00",
             "status": "verified",
             "note": null
           }
         },
         "unit_price": {
-          "value": "125.00",
+          "value": "22.00",
           "evidence": {
             "document_id": "sample-missing_invoice_number",
             "page_number": 1,
-            "line_start": 10,
-            "line_end": 10,
-            "quote": "Brand workshop facilitation      6   125.00    750.00",
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "Team lunch service        30        22.00       660.00",
             "status": "verified",
             "note": null
           }
         },
         "line_total": {
-          "value": "750.00",
+          "value": "660.00",
           "evidence": {
             "document_id": "sample-missing_invoice_number",
             "page_number": 1,
-            "line_start": 10,
-            "line_end": 10,
-            "quote": "Brand workshop facilitation      6   125.00    750.00",
-            "status": "verified",
-            "note": null
-          }
-        }
-      },
-      {
-        "description": {
-          "value": "Slide template design",
-          "evidence": {
-            "document_id": "sample-missing_invoice_number",
-            "page_number": 1,
-            "line_start": 11,
-            "line_end": 11,
-            "quote": "Slide template design            4   110.00    440.00",
-            "status": "verified",
-            "note": null
-          }
-        },
-        "quantity": {
-          "value": "4",
-          "evidence": {
-            "document_id": "sample-missing_invoice_number",
-            "page_number": 1,
-            "line_start": 11,
-            "line_end": 11,
-            "quote": "Slide template design            4   110.00    440.00",
-            "status": "verified",
-            "note": null
-          }
-        },
-        "unit_price": {
-          "value": "110.00",
-          "evidence": {
-            "document_id": "sample-missing_invoice_number",
-            "page_number": 1,
-            "line_start": 11,
-            "line_end": 11,
-            "quote": "Slide template design            4   110.00    440.00",
-            "status": "verified",
-            "note": null
-          }
-        },
-        "line_total": {
-          "value": "440.00",
-          "evidence": {
-            "document_id": "sample-missing_invoice_number",
-            "page_number": 1,
-            "line_start": 11,
-            "line_end": 11,
-            "quote": "Slide template design            4   110.00    440.00",
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "Team lunch service        30        22.00       660.00",
             "status": "verified",
             "note": null
           }
@@ -147,37 +97,37 @@
       }
     ],
     "subtotal": {
-      "value": "1190.00",
+      "value": "660.00",
       "evidence": {
         "document_id": "sample-missing_invoice_number",
         "page_number": 1,
-        "line_start": 13,
-        "line_end": 13,
-        "quote": "Subtotal                                       1,190.00",
+        "line_start": 11,
+        "line_end": 11,
+        "quote": "Subtotal: 660.00",
         "status": "verified",
         "note": null
       }
     },
     "tax": {
-      "value": "95.20",
+      "value": "52.80",
       "evidence": {
         "document_id": "sample-missing_invoice_number",
         "page_number": 1,
-        "line_start": 14,
-        "line_end": 14,
-        "quote": "Sales tax                                         95.20",
+        "line_start": 12,
+        "line_end": 12,
+        "quote": "Tax: 52.80",
         "status": "verified",
         "note": null
       }
     },
     "total": {
-      "value": "1285.20",
+      "value": "712.80",
       "evidence": {
         "document_id": "sample-missing_invoice_number",
         "page_number": 1,
-        "line_start": 15,
-        "line_end": 15,
-        "quote": "Amount due                                     1,285.20",
+        "line_start": 13,
+        "line_end": 13,
+        "quote": "Total: 712.80",
         "status": "verified",
         "note": null
       }
@@ -192,6 +142,18 @@
       "blocking": true,
       "source": "validate_intake",
       "details": {}
+    },
+    {
+      "code": "LEDGER_NOT_SEARCHED",
+      "field": null,
+      "message": "Ledger not searched: the invoice is missing invoice_number.",
+      "blocking": true,
+      "source": "ledger",
+      "details": {
+        "missing": [
+          "invoice_number"
+        ]
+      }
     }
   ],
   "check_results": [
@@ -244,18 +206,8 @@
       "status": "pass",
       "reason": null,
       "details": {
-        "expected": "750.00",
-        "stated": "750.00",
-        "difference": "0.00"
-      }
-    },
-    {
-      "name": "item_total[1]",
-      "status": "pass",
-      "reason": null,
-      "details": {
-        "expected": "440.00",
-        "stated": "440.00",
+        "expected": "660.00",
+        "stated": "660.00",
         "difference": "0.00"
       }
     },
@@ -264,10 +216,10 @@
       "status": "pass",
       "reason": null,
       "details": {
-        "expected": "1190.00",
-        "stated": "1190.00",
+        "expected": "660.00",
+        "stated": "660.00",
         "difference": "0.00",
-        "sum_of_calculated_item_totals": "1190.00"
+        "sum_of_calculated_item_totals": "660.00"
       }
     },
     {
@@ -275,8 +227,8 @@
       "status": "pass",
       "reason": null,
       "details": {
-        "expected": "1285.20",
-        "stated": "1285.20",
+        "expected": "712.80",
+        "stated": "712.80",
         "difference": "0.00"
       }
     }
@@ -286,7 +238,13 @@
       "finding_code": "MISSING_FIELD",
       "field": "invoice_number",
       "policy_ref": "TF-POL-101",
-      "action": "Ask the sender to provide the missing invoice_number and resend or confirm the invoice."
+      "action": "Ask the sender or client to provide the missing invoice_number; it is required to reconcile the invoice."
+    },
+    {
+      "finding_code": "LEDGER_NOT_SEARCHED",
+      "field": null,
+      "policy_ref": "TF-POL-201",
+      "action": "Request the missing invoice number or vendor name from the client before searching the ledger."
     }
   ],
   "workflow_status": "Complete",
@@ -311,47 +269,71 @@
         "document_id": "sample-missing_invoice_number"
       },
       "status": "success",
-      "result_summary": "Findings: none",
+      "result_summary": "Arithmetic Consistent; Findings: none",
       "duration_ms": 0,
       "invoked_by": "model function call"
     },
     {
       "step": 3,
-      "tool": "lookup_intake_policy",
+      "tool": "find_ledger_candidates",
       "arguments": {
-        "finding_codes": [
-          "MISSING_FIELD"
-        ]
+        "document_id": "sample-missing_invoice_number"
       },
       "status": "success",
-      "result_summary": "Policy refs: TF-POL-101",
+      "result_summary": "Not searched: invoice is missing invoice_number",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 4,
+      "tool": "build_review_checklist",
+      "arguments": {
+        "document_id": "sample-missing_invoice_number"
+      },
+      "status": "success",
+      "result_summary": "Outcome: Needs clarification; refs: TF-POL-101, TF-POL-201",
       "duration_ms": 0,
       "invoked_by": "model function call"
     }
   ],
   "model_summary": [
-    "The invoice draft is missing a required field: invoice_number, as indicated by the MISSING_FIELD finding code (TF-POL-101).",
-    "According to policy TF-POL-101, the missing invoice number must be obtained from the sender before proceeding."
+    "The invoice draft is missing the required invoice_number field, which blocks ledger search and reconciliation (MISSING_FIELD, LEDGER_NOT_SEARCHED).",
+    "Because the invoice_number is missing, no ledger candidates were searched or found, so no ledger comparison was done (LEDGER_NOT_SEARCHED).",
+    "Please ask the sender or client to provide the missing invoice_number to proceed with reconciliation (TF-POL-101, TF-POL-201)."
   ],
-  "excluded_summary_sentences": 2,
+  "excluded_summary_sentences": 1,
   "run_metadata": {
     "mode": "live",
     "provider": "Azure OpenAI (v1 API, Chat Completions)",
     "model": "gpt-4.1-mini",
-    "schema_version": "invoice-v1",
-    "prompt_version": "extract-v2+agent-v1",
-    "policy_version": "intake-policy-2026-09-30",
+    "schema_version": "reconciliation-v2",
+    "prompt_version": "extract-v4+agent-v2",
+    "policy_version": "reconciliation-policy-2026-10-01",
     "dataset_version": null,
-    "timestamp": "2026-10-01T06:07:58+00:00",
-    "duration_ms": 12598,
+    "timestamp": "2026-10-01T06:57:22+00:00",
+    "duration_ms": 10010,
     "model_requests": 4,
-    "request_budget": 6,
+    "request_budget": 8,
     "token_usage": {
-      "prompt_tokens": 3879,
-      "completion_tokens": 813,
-      "total_tokens": 4692
+      "prompt_tokens": 4645,
+      "completion_tokens": 649,
+      "total_tokens": 5294
     },
     "recorded_from": null,
+    "ledger_id": "ledger-c91011ab8df7",
+    "ledger_name": "sample_ledger.csv",
+    "currency_data": "pycountry 26.2.16 (ISO 4217)",
     "error": null
-  }
+  },
+  "reconciliation_outcome": "Needs clarification",
+  "ledger_candidates": [],
+  "ledger_entry": null,
+  "comparison": [],
+  "arithmetic_status": "Consistent",
+  "required_tools": [
+    "validate_intake",
+    "reconcile_invoice",
+    "find_ledger_candidates",
+    "build_review_checklist"
+  ]
 }

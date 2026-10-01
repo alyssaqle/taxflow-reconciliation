@@ -4,12 +4,12 @@
   "note": "Illustrative extraction prepared by hand for the demo. No model was called.",
   "draft": {
     "vendor_name": {
-      "value": "BLUE HERON DESIGN STUDIO",
+      "value": "JUNIPER LANE CATERING",
       "evidence": {
         "page_number": 1,
         "line_start": 1,
         "line_end": 1,
-        "quote": "BLUE HERON DESIGN STUDIO"
+        "quote": "JUNIPER LANE CATERING"
       }
     },
     "invoice_number": {
@@ -17,124 +17,86 @@
       "evidence": null
     },
     "invoice_date": {
-      "value": "2026-09-02",
+      "value": "2026-09-12",
       "evidence": {
         "page_number": 1,
         "line_start": 5,
         "line_end": 5,
-        "quote": "Date: 2026-09-02"
+        "quote": "Date: September 12, 2026"
       }
     },
     "currency": {
       "value": "USD",
       "evidence": {
         "page_number": 1,
-        "line_start": 7,
-        "line_end": 7,
-        "quote": "All amounts are in USD."
+        "line_start": 6,
+        "line_end": 6,
+        "quote": "Currency: USD"
       }
     },
     "subtotal": {
-      "value": "1190.00",
+      "value": "660.00",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 11,
+        "line_end": 11,
+        "quote": "Subtotal: 660.00"
+      }
+    },
+    "tax": {
+      "value": "52.80",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 12,
+        "line_end": 12,
+        "quote": "Tax: 52.80"
+      }
+    },
+    "total": {
+      "value": "712.80",
       "evidence": {
         "page_number": 1,
         "line_start": 13,
         "line_end": 13,
-        "quote": "Subtotal 1,190.00"
-      }
-    },
-    "tax": {
-      "value": "95.20",
-      "evidence": {
-        "page_number": 1,
-        "line_start": 14,
-        "line_end": 14,
-        "quote": "Sales tax 95.20"
-      }
-    },
-    "total": {
-      "value": "1285.20",
-      "evidence": {
-        "page_number": 1,
-        "line_start": 15,
-        "line_end": 15,
-        "quote": "Amount due 1,285.20"
+        "quote": "Total: 712.80"
       }
     },
     "line_items": [
       {
         "description": {
-          "value": "Brand workshop facilitation",
+          "value": "Team lunch service",
           "evidence": {
             "page_number": 1,
-            "line_start": 10,
-            "line_end": 10,
-            "quote": "Brand workshop facilitation"
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "Team lunch service"
           }
         },
         "quantity": {
-          "value": "6",
+          "value": "30",
           "evidence": {
             "page_number": 1,
-            "line_start": 10,
-            "line_end": 10,
-            "quote": "Brand workshop facilitation 6 125.00 750.00"
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "Team lunch service 30 22.00 660.00"
           }
         },
         "unit_price": {
-          "value": "125.00",
+          "value": "22.00",
           "evidence": {
             "page_number": 1,
-            "line_start": 10,
-            "line_end": 10,
-            "quote": "Brand workshop facilitation 6 125.00 750.00"
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "Team lunch service 30 22.00 660.00"
           }
         },
         "line_total": {
-          "value": "750.00",
+          "value": "660.00",
           "evidence": {
             "page_number": 1,
-            "line_start": 10,
-            "line_end": 10,
-            "quote": "Brand workshop facilitation 6 125.00 750.00"
-          }
-        }
-      },
-      {
-        "description": {
-          "value": "Slide template design",
-          "evidence": {
-            "page_number": 1,
-            "line_start": 11,
-            "line_end": 11,
-            "quote": "Slide template design"
-          }
-        },
-        "quantity": {
-          "value": "4",
-          "evidence": {
-            "page_number": 1,
-            "line_start": 11,
-            "line_end": 11,
-            "quote": "Slide template design 4 110.00 440.00"
-          }
-        },
-        "unit_price": {
-          "value": "110.00",
-          "evidence": {
-            "page_number": 1,
-            "line_start": 11,
-            "line_end": 11,
-            "quote": "Slide template design 4 110.00 440.00"
-          }
-        },
-        "line_total": {
-          "value": "440.00",
-          "evidence": {
-            "page_number": 1,
-            "line_start": 11,
-            "line_end": 11,
-            "quote": "Slide template design 4 110.00 440.00"
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "Team lunch service 30 22.00 660.00"
           }
         }
       }
