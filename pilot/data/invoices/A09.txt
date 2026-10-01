@@ -1,0 +1,17 @@
+CEDAR REED PRINT
+Synthetic pilot document
+
+INVOICE
+Invoice Number: CER-7114
+Currency: USD
+
+Description                   Qty  Unit Price  Line Total
+Workshop                        3      179.00      537.00
+Workshop                        4      395.00    1,580.00
+Courier runs                    3      137.00      411.00
+
+Subtotal: 2,528.00
+Tax: 106.00
+Total: 2,634.00
+
+All names and figures are fictional.

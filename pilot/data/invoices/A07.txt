@@ -1,0 +1,17 @@
+JADE CEDAR ANALYTICS
+Synthetic pilot document
+
+INVOICE
+Invoice Number: JAC-6153
+Invoice Date: February 16, 2026
+Currency: USD
+
+Description                   Qty  Unit Price  Line Total
+Workshop                        1      186.00      186.00
+Data review                     4      395.00    1,580.00
+
+Subtotal: 1,766.00
+Tax: 45.00
+Total: 1,811.00
+
+All names and figures are fictional.

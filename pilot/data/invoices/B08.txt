@@ -1,0 +1,17 @@
+LAUREL HEATH STAFFING
+Synthetic pilot document
+
+INVOICE
+Invoice Number: LAH-4347
+Invoice Date: July 23, 2026
+Currency: USD
+
+Description                   Qty  Unit Price  Line Total
+Courier runs                    1      162.00      162.00
+Data review                     7      374.00    2,618.00
+
+Subtotal: 2,780.00
+Tax: 15.00
+Total: 2,795.00
+
+All names and figures are fictional.

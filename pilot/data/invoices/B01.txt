@@ -1,0 +1,16 @@
+JADE LAUREL MEDIA
+Synthetic pilot document
+
+INVOICE
+Invoice Number: JAL-4015
+Invoice Date: May 14, 2026
+Currency: USD
+
+Description                   Qty  Unit Price  Line Total
+Workshop                        1      209.00      209.00
+
+Subtotal: 209.00
+Tax: 119.00
+Total: 328.00
+
+All names and figures are fictional.

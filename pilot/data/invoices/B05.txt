@@ -1,0 +1,16 @@
+MOSS ELM LEGAL
+Synthetic pilot document
+
+INVOICE
+Invoice Number: MOE-2766
+Invoice Date: April 17, 2026
+Currency: USD
+
+Description                   Qty  Unit Price  Line Total
+Courier runs                    1      206.00      206.00
+
+Subtotal: 206.00
+Tax: 72.00
+Total: 278.00
+
+All names and figures are fictional.

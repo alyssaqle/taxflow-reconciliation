@@ -14,6 +14,7 @@ import hashlib
 import io
 import re
 from dataclasses import dataclass
+from functools import cached_property
 
 from .currency import is_supported, normalize
 from .models import LedgerEntry
@@ -40,8 +41,14 @@ class Ledger:
     name: str
     entries: tuple[LedgerEntry, ...]
 
+    @cached_property
+    def index(self) -> dict:
+        """Lookup index on the normalized (invoice_number, vendor_name) key, built once per ledger."""
+        from .matching import build_index
+        return build_index(self.entries)
 
-def parse_ledger_csv(text: str, name: str) -> Ledger:
+
+def parse_ledger_csv(text: str, name: str, max_rows: int = MAX_ROWS) -> Ledger:
     reader = csv.DictReader(io.StringIO(text))
     header = [h.strip() for h in (reader.fieldnames or [])]
     errors: list[str] = []
@@ -61,8 +68,8 @@ def parse_ledger_csv(text: str, name: str) -> Ledger:
     entries: list[LedgerEntry] = []
     seen: dict[str, int] = {}
     for idx, raw in enumerate(reader, start=2):
-        if idx - 1 > MAX_ROWS:
-            raise LedgerError([f"more than {MAX_ROWS} rows"])
+        if idx - 1 > max_rows:
+            raise LedgerError([f"more than {max_rows} rows"])
         if None in raw:  # more cells than headers
             errors.append(f"row {idx}: too many cells")
             continue

@@ -1,0 +1,16 @@
+FERN VINE FREIGHT
+Synthetic pilot document
+
+INVOICE
+Invoice Number: FEV-1811
+Invoice Date: September 24, 2026
+Currency: USD
+
+Description                   Qty  Unit Price  Line Total
+Report preparation              4      205.00      820.00
+
+Subtotal: 820.00
+Tax: 47.00
+Total: 917.00
+
+All names and figures are fictional.

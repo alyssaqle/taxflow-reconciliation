@@ -1,0 +1,170 @@
+{
+ "A01": {
+  "kind": "match",
+  "expected_outcome": "Matched",
+  "expected_decision": "Approve",
+  "expected_discrepancies": [],
+  "expected_entry_id": "PL-5001"
+ },
+ "A02": {
+  "kind": "no_entry",
+  "expected_outcome": "No matching entry",
+  "expected_decision": "Needs follow-up",
+  "expected_discrepancies": [
+   "no_entry"
+  ],
+  "expected_entry_id": null
+ },
+ "A03": {
+  "kind": "match",
+  "expected_outcome": "Matched",
+  "expected_decision": "Approve",
+  "expected_discrepancies": [],
+  "expected_entry_id": "PL-5004"
+ },
+ "A04": {
+  "kind": "amount",
+  "expected_outcome": "Discrepancy found",
+  "expected_decision": "Needs follow-up",
+  "expected_discrepancies": [
+   "amount"
+  ],
+  "expected_entry_id": "PL-5006"
+ },
+ "A05": {
+  "kind": "currency",
+  "expected_outcome": "Discrepancy found",
+  "expected_decision": "Needs follow-up",
+  "expected_discrepancies": [
+   "currency"
+  ],
+  "expected_entry_id": "PL-5008"
+ },
+ "A06": {
+  "kind": "arithmetic",
+  "expected_outcome": "Matched",
+  "expected_decision": "Needs follow-up",
+  "expected_discrepancies": [
+   "arithmetic"
+  ],
+  "expected_entry_id": "PL-5010"
+ },
+ "A07": {
+  "kind": "ambiguous",
+  "expected_outcome": "Ambiguous match",
+  "expected_decision": "Needs follow-up",
+  "expected_discrepancies": [
+   "ambiguous"
+  ],
+  "expected_entry_id": null
+ },
+ "A08": {
+  "kind": "date",
+  "expected_outcome": "Discrepancy found",
+  "expected_decision": "Needs follow-up",
+  "expected_discrepancies": [
+   "date"
+  ],
+  "expected_entry_id": "PL-5015"
+ },
+ "A09": {
+  "kind": "missing_date",
+  "expected_outcome": "Needs clarification",
+  "expected_decision": "Needs follow-up",
+  "expected_discrepancies": [
+   "missing_field"
+  ],
+  "expected_entry_id": "PL-5017"
+ },
+ "A10": {
+  "kind": "match",
+  "expected_outcome": "Matched",
+  "expected_decision": "Approve",
+  "expected_discrepancies": [],
+  "expected_entry_id": "PL-5019"
+ },
+ "B01": {
+  "kind": "ambiguous",
+  "expected_outcome": "Ambiguous match",
+  "expected_decision": "Needs follow-up",
+  "expected_discrepancies": [
+   "ambiguous"
+  ],
+  "expected_entry_id": null
+ },
+ "B02": {
+  "kind": "match",
+  "expected_outcome": "Matched",
+  "expected_decision": "Approve",
+  "expected_discrepancies": [],
+  "expected_entry_id": "PL-5024"
+ },
+ "B03": {
+  "kind": "no_entry",
+  "expected_outcome": "No matching entry",
+  "expected_decision": "Needs follow-up",
+  "expected_discrepancies": [
+   "no_entry"
+  ],
+  "expected_entry_id": null
+ },
+ "B04": {
+  "kind": "missing_date",
+  "expected_outcome": "Needs clarification",
+  "expected_decision": "Needs follow-up",
+  "expected_discrepancies": [
+   "missing_field"
+  ],
+  "expected_entry_id": "PL-5027"
+ },
+ "B05": {
+  "kind": "match",
+  "expected_outcome": "Matched",
+  "expected_decision": "Approve",
+  "expected_discrepancies": [],
+  "expected_entry_id": "PL-5029"
+ },
+ "B06": {
+  "kind": "match",
+  "expected_outcome": "Matched",
+  "expected_decision": "Approve",
+  "expected_discrepancies": [],
+  "expected_entry_id": "PL-5031"
+ },
+ "B07": {
+  "kind": "currency",
+  "expected_outcome": "Discrepancy found",
+  "expected_decision": "Needs follow-up",
+  "expected_discrepancies": [
+   "currency"
+  ],
+  "expected_entry_id": "PL-5033"
+ },
+ "B08": {
+  "kind": "date",
+  "expected_outcome": "Discrepancy found",
+  "expected_decision": "Needs follow-up",
+  "expected_discrepancies": [
+   "date"
+  ],
+  "expected_entry_id": "PL-5035"
+ },
+ "B09": {
+  "kind": "amount",
+  "expected_outcome": "Discrepancy found",
+  "expected_decision": "Needs follow-up",
+  "expected_discrepancies": [
+   "amount"
+  ],
+  "expected_entry_id": "PL-5037"
+ },
+ "B10": {
+  "kind": "arithmetic",
+  "expected_outcome": "Matched",
+  "expected_decision": "Needs follow-up",
+  "expected_discrepancies": [
+   "arithmetic"
+  ],
+  "expected_entry_id": "PL-5039"
+ }
+}

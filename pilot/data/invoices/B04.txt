@@ -1,0 +1,17 @@
+WREN GLEN SOFTWARE
+Synthetic pilot document
+
+INVOICE
+Invoice Number: WRG-5524
+Currency: USD
+
+Description                   Qty  Unit Price  Line Total
+Report preparation              8       82.00      656.00
+Workshop                        7      111.00      777.00
+Data review                     2       87.00      174.00
+
+Subtotal: 1,607.00
+Tax: 16.00
+Total: 1,623.00
+
+All names and figures are fictional.

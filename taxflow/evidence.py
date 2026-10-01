@@ -64,7 +64,7 @@ def dates_in(text: str) -> list[tuple[str, bool]]:
     for mon, d, y in re.findall(_MONTH_RE + r"\s+(\d{1,2}),?\s+(\d{4})", text, re.IGNORECASE):
         if iso := _safe_date(int(y), _MONTHS[mon.lower()], int(d)):
             found.append((iso, False))
-    for d, mon, y in re.findall(r"\b(\d{1,2})\s+" + _MONTH_RE + r",?\s+(\d{4})", text, re.IGNORECASE):
+    for d, mon, y in re.findall(r"\b(\d{1,2})[\s\-./]+" + _MONTH_RE + r"[\s\-./,]+(\d{4})", text, re.IGNORECASE):
         if iso := _safe_date(int(y), _MONTHS[mon.lower()], int(d)):
             found.append((iso, False))
     for a, b, y in re.findall(r"\b(\d{1,2})/(\d{1,2})/(\d{4})\b", text):

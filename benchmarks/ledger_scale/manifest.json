@@ -1,0 +1,38 @@
+{
+  "seed": 20261001,
+  "query_mix": {
+    "match_exact": 250,
+    "match_normalized": 80,
+    "match_within_tolerance": 40,
+    "amount_diff": 120,
+    "currency_diff": 80,
+    "date_diff": 80,
+    "duplicate": 120,
+    "missing_near_miss": 100,
+    "missing_wrong_vendor": 50,
+    "missing_identifier": 80
+  },
+  "files": {
+    "1000": {
+      "rows": 1000,
+      "queries": 1000,
+      "ledger_sha256": "a7ea8c85f869e7cc153aed435529ceff2fe0381311bf566de202a3ed214da803",
+      "queries_sha256": "0c0ef113b147cd9a0d922008b63f5d90af1a98392be491e5791610da8172ec79",
+      "labels_sha256": "cb8a420b2a69b2a98edc74b60c12fc8c50e67ec82dcdba780ee1295f69b51493"
+    },
+    "10000": {
+      "rows": 10000,
+      "queries": 1000,
+      "ledger_sha256": "eb201849b5e4969fb73975944374618b424937bbc07f968c9f0d3207ce60b56c",
+      "queries_sha256": "e3a29f9562146c9eeeb4a6218b4e09b18374fcb92eed0866304f6ae5b1002f73",
+      "labels_sha256": "a3c412b1b1d9690f35614c2e064deb336880f1956cd1b2a231e71e143fdcc9cc"
+    },
+    "100000": {
+      "rows": 100000,
+      "queries": 1000,
+      "ledger_sha256": "3c34a89f25fe799a407ee56a9af6bfa1d1c1ecce05c88f6871e7916a8a0b96ce",
+      "queries_sha256": "f5307c1be5b014c68f3a86ab2029c0a97d073b8392d63193ceb252e985e6cc94",
+      "labels_sha256": "0758c03755687fa2fd31c1834c3fed39ddb8e7032985be8ede3b76aca8201393"
+    }
+  }
+}

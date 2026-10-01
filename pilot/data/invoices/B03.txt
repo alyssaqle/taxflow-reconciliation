@@ -1,0 +1,17 @@
+THORN REED SOFTWARE
+Synthetic pilot document
+
+INVOICE
+Invoice Number: THR-8042
+Invoice Date: April 17, 2026
+Currency: USD
+
+Description                   Qty  Unit Price  Line Total
+Workshop                        2      187.00      374.00
+Courier runs                    4      151.00      604.00
+
+Subtotal: 978.00
+Tax: 94.00
+Total: 1,072.00
+
+All names and figures are fictional.

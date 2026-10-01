@@ -1,0 +1,16 @@
+PINE NETTLE ANALYTICS
+Synthetic pilot document
+
+INVOICE
+Invoice Number: PIN-9826
+Invoice Date: August 22, 2026
+Currency: USD
+
+Description                   Qty  Unit Price  Line Total
+Workshop                        2       96.00      192.00
+
+Subtotal: 192.00
+Tax: 104.00
+Total: 296.00
+
+All names and figures are fictional.

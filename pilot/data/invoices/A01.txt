@@ -1,0 +1,17 @@
+JADE SAGE SOFTWARE
+Synthetic pilot document
+
+INVOICE
+Invoice Number: JAS-4671
+Invoice Date: February 24, 2026
+Currency: USD
+
+Description                   Qty  Unit Price  Line Total
+Courier runs                    7      153.00    1,071.00
+Report preparation              6      150.00      900.00
+
+Subtotal: 1,971.00
+Tax: 67.00
+Total: 2,038.00
+
+All names and figures are fictional.

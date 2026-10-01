@@ -99,7 +99,7 @@ def _entry_dict(e: LedgerEntry) -> dict:
 def _find_ledger_candidates(ctx: ToolContext, args: dict) -> dict:
     ctx._check_doc(args.get("document_id"))
     missing = matching.identifiers_missing(ctx.draft)
-    ctx.candidates = [] if missing else matching.find_candidates(ctx.ledger.entries, ctx.draft)
+    ctx.candidates = [] if missing else matching.find_candidates_indexed(ctx.ledger.index, ctx.draft)
     ctx.search_findings = matching.search_findings(ctx.draft, ctx.candidates)
     if missing:
         return {"searched": False, "reason": "invoice is missing " + " and ".join(missing), "candidates": [],

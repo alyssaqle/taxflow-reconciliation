@@ -1,0 +1,17 @@
+FERN VINE STAFFING
+Synthetic pilot document
+
+INVOICE
+Invoice Number: FEV-9120
+Invoice Date: January 23, 2026
+Currency: USD
+
+Description                   Qty  Unit Price  Line Total
+Report preparation              5      310.00    1,550.00
+Consulting hours                8      386.00    3,088.00
+
+Subtotal: 4,638.00
+Tax: 65.00
+Total: 4,703.00
+
+All names and figures are fictional.

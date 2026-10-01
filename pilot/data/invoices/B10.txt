@@ -1,0 +1,17 @@
+NETTLE WREN RESEARCH
+Synthetic pilot document
+
+INVOICE
+Invoice Number: NEW-6172
+Invoice Date: August 21, 2026
+Currency: USD
+
+Description                   Qty  Unit Price  Line Total
+Data review                     3      130.00      390.00
+Consulting hours                5      329.00    1,645.00
+
+Subtotal: 2,035.00
+Tax: 105.00
+Total: 2,210.00
+
+All names and figures are fictional.

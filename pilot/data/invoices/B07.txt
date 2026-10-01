@@ -1,0 +1,16 @@
+KELP THORN PRINT
+Synthetic pilot document
+
+INVOICE
+Invoice Number: KET-8589
+Invoice Date: February 11, 2026
+Currency: USD
+
+Description                   Qty  Unit Price  Line Total
+Workshop                        4      197.00      788.00
+
+Subtotal: 788.00
+Tax: 33.00
+Total: 821.00
+
+All names and figures are fictional.

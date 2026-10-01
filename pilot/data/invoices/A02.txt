@@ -1,0 +1,16 @@
+REED ALDER SOFTWARE
+Synthetic pilot document
+
+INVOICE
+Invoice Number: REA-7270
+Invoice Date: February 19, 2026
+Currency: USD
+
+Description                   Qty  Unit Price  Line Total
+Courier runs                    4       91.00      364.00
+
+Subtotal: 364.00
+Tax: 54.00
+Total: 418.00
+
+All names and figures are fictional.

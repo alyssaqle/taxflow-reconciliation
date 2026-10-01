@@ -13,3 +13,7 @@ uploads/
 tmp/
 .cache/
 .DS_Store
+
+# Restricted / external datasets and pilot logs (never commit)
+data_private/
+pilot_logs/

@@ -36,10 +36,27 @@ def identifiers_missing(draft: InvoiceDraft) -> list[str]:
 
 
 def find_candidates(entries, draft: InvoiceDraft) -> list[LedgerEntry]:
+    """Reference implementation: linear scan over all entries (kept for equivalence checks)."""
     num, vendor = norm_key(draft.invoice_number.value), norm_key(draft.vendor_name.value)
     if num is None or vendor is None:
         return []
     return [e for e in entries if norm_key(e.invoice_number) == num and norm_key(e.vendor_name) == vendor]
+
+
+def build_index(entries) -> dict[tuple[str, str], list[LedgerEntry]]:
+    """Map the same normalized (invoice_number, vendor_name) key to entries, preserving row order."""
+    index: dict[tuple[str, str], list[LedgerEntry]] = {}
+    for e in entries:
+        index.setdefault((norm_key(e.invoice_number), norm_key(e.vendor_name)), []).append(e)
+    return index
+
+
+def find_candidates_indexed(index: dict, draft: InvoiceDraft) -> list[LedgerEntry]:
+    """Same rule and result order as find_candidates, using a prebuilt index (O(1) per lookup)."""
+    num, vendor = norm_key(draft.invoice_number.value), norm_key(draft.vendor_name.value)
+    if num is None or vendor is None:
+        return []
+    return list(index.get((num, vendor), []))
 
 
 def _f(code: str, message: str, field: str | None = None, **details) -> Finding:

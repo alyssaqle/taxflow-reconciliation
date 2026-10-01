@@ -1,0 +1,16 @@
+QUILL WREN ANALYTICS
+Synthetic pilot document
+
+INVOICE
+Invoice Number: QUW-2568
+Invoice Date: March 28, 2026
+Currency: USD
+
+Description                   Qty  Unit Price  Line Total
+Report preparation              2      118.00      236.00
+
+Subtotal: 236.00
+Tax: 9.00
+Total: 245.00
+
+All names and figures are fictional.

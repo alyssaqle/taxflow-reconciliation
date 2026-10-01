@@ -1,0 +1,16 @@
+REED ELM ANALYTICS
+Synthetic pilot document
+
+INVOICE
+Invoice Number: REE-8594
+Invoice Date: September 22, 2026
+Currency: USD
+
+Description                   Qty  Unit Price  Line Total
+Report preparation              3      205.00      615.00
+
+Subtotal: 615.00
+Tax: 116.00
+Total: 731.00
+
+All names and figures are fictional.

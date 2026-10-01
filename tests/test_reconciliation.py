@@ -168,3 +168,17 @@ def test_dev_samples_outcomes():
         r = run_illustrative(load_sample(sid), sid, led)
         assert r.reconciliation_outcome == out, sid
         assert (r.ledger_entry.ledger_entry_id if r.ledger_entry else None) == eid, sid
+
+
+def test_indexed_lookup_equals_linear_scan():
+    """The index is an optimization only: same matching rule, same candidates, same order."""
+    led = L("A,INV-1,Acme Ltd,2026-09-01,USD,100.00", "B, inv-1 ,ACME  LTD,2026-09-01,USD,100.00",
+            "C,INV-1,Acme Ltd.,2026-09-01,USD,100.00", "D,INV-2,Acme Ltd,2026-09-01,USD,100.00")
+    for d in (inv(), inv(number=" INV-1"), inv(vendor="acme ltd."), inv(number="INV-9"), inv(number=None)):
+        if matching.identifiers_missing(d):
+            continue
+        assert matching.find_candidates_indexed(led.index, d) == matching.find_candidates(led.entries, d)
+    sample = load_sample_ledger()
+    for e in sample.entries:
+        d = inv(number=e.invoice_number, vendor=e.vendor_name)
+        assert matching.find_candidates_indexed(sample.index, d) == matching.find_candidates(sample.entries, d)

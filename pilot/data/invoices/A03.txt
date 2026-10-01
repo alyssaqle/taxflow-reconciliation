@@ -1,0 +1,17 @@
+JADE WREN RESEARCH
+Synthetic pilot document
+
+INVOICE
+Invoice Number: JAW-1141
+Invoice Date: January 27, 2026
+Currency: USD
+
+Description                   Qty  Unit Price  Line Total
+Courier runs                    4      169.00      676.00
+Workshop                        8      151.00    1,208.00
+
+Subtotal: 1,884.00
+Tax: 118.00
+Total: 2,002.00
+
+All names and figures are fictional.

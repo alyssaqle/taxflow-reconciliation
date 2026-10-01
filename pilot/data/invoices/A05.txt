@@ -1,0 +1,17 @@
+WREN OAK CATERING
+Synthetic pilot document
+
+INVOICE
+Invoice Number: WRO-2824
+Invoice Date: August 17, 2026
+Currency: USD
+
+Description                   Qty  Unit Price  Line Total
+Data review                     5       96.00      480.00
+Courier runs                    3       52.00      156.00
+
+Subtotal: 636.00
+Tax: 3.00
+Total: 639.00
+
+All names and figures are fictional.

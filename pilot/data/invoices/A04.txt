@@ -1,0 +1,16 @@
+FERN THORN PRINT
+Synthetic pilot document
+
+INVOICE
+Invoice Number: FET-7925
+Invoice Date: June 17, 2026
+Currency: USD
+
+Description                   Qty  Unit Price  Line Total
+Workshop                        1      298.00      298.00
+
+Subtotal: 298.00
+Tax: 119.00
+Total: 417.00
+
+All names and figures are fictional.

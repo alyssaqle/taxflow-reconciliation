@@ -1,0 +1,17 @@
+OAK GLEN MEDIA
+Synthetic pilot document
+
+INVOICE
+Invoice Number: OAG-8705
+Invoice Date: August 10, 2026
+Currency: USD
+
+Description                   Qty  Unit Price  Line Total
+Consulting hours                5      178.00      890.00
+Report preparation              6      264.00    1,584.00
+
+Subtotal: 2,474.00
+Tax: 57.00
+Total: 2,531.00
+
+All names and figures are fictional.
