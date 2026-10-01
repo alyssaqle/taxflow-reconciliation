@@ -1,0 +1,15 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local secrets — never commit
+.streamlit/secrets.toml
+.env
+
+# Temporary uploads and caches
+uploads/
+tmp/
+.cache/
+.DS_Store

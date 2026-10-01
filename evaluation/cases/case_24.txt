@@ -1,0 +1,12 @@
+BRIGHTWATER EVENTS (fictional)
+Invoice Number: BWE-1188
+Invoice Date: August 9, 2026
+Currency: USD
+
+Description             Qty   Unit Price   Line Total
+Venue coordination        3       200.00       650.00
+Signage                   2        50.00       100.00
+
+Subtotal: 750.00
+Tax: 60.00
+Total: 810.00

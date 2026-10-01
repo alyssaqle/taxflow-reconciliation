@@ -1,0 +1,13 @@
+ARCLIGHT FACILITIES GROUP (fictional)
+Invoice: AFG-20260815
+Invoice date: August 15, 2026
+Currency: USD
+
+Description                     Qty   Unit price    Line total
+Quarterly HVAC inspection        3      1,150.00      3,450.00
+Air filter replacement          24         18.50        444.00
+Emergency call-out               1        375.00        375.00
+
+Subtotal                                            4,269.00
+Tax                                                   341.52
+Total                                               4,610.52

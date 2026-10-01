@@ -1,0 +1,29 @@
+{
+  "case_id": "case_23",
+  "category": "missing",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "EMBER & ASH ADVISORY",
+    "invoice_number": "EAA-090",
+    "invoice_date": "2026-06-12",
+    "currency": "USD",
+    "subtotal": "2500.00",
+    "tax": "200.00",
+    "total": "2700.00"
+  },
+  "expected_line_items": [
+    {
+      "description": "Strategy advisory, June",
+      "quantity": null,
+      "unit_price": null,
+      "line_total": "2500.00"
+    }
+  ],
+  "expected_findings": [
+    [
+      "MISSING_FIELD",
+      "line_items"
+    ]
+  ],
+  "attack": null
+}

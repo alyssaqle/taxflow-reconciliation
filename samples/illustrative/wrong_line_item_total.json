@@ -1,0 +1,149 @@
+{
+  "document_type": "invoice",
+  "unsupported_reason": null,
+  "note": "Illustrative extraction prepared by hand for the demo. No model was called.",
+  "draft": {
+    "vendor_name": {
+      "value": "LANTERN DATA WORKS",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 1,
+        "line_end": 1,
+        "quote": "LANTERN DATA WORKS"
+      }
+    },
+    "invoice_number": {
+      "value": "LDW-3309",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 3,
+        "line_end": 3,
+        "quote": "Invoice No.: LDW-3309"
+      }
+    },
+    "invoice_date": {
+      "value": "2026-09-14",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 4,
+        "line_end": 4,
+        "quote": "Invoice date: 14 Sep 2026"
+      }
+    },
+    "currency": {
+      "value": "USD",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 6,
+        "line_end": 6,
+        "quote": "Currency: USD (US dollars)"
+      }
+    },
+    "subtotal": {
+      "value": "540.00",
+      "evidence": {
+        "page_number": 2,
+        "line_start": 7,
+        "line_end": 7,
+        "quote": "Subtotal: 540.00"
+      }
+    },
+    "tax": {
+      "value": "0.00",
+      "evidence": {
+        "page_number": 2,
+        "line_start": 8,
+        "line_end": 8,
+        "quote": "Tax: 0.00"
+      }
+    },
+    "total": {
+      "value": "540.00",
+      "evidence": {
+        "page_number": 2,
+        "line_start": 9,
+        "line_end": 9,
+        "quote": "Total: 540.00"
+      }
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Dashboard build",
+          "evidence": {
+            "page_number": 2,
+            "line_start": 4,
+            "line_end": 4,
+            "quote": "Dashboard build"
+          }
+        },
+        "quantity": {
+          "value": "3",
+          "evidence": {
+            "page_number": 2,
+            "line_start": 4,
+            "line_end": 4,
+            "quote": "Dashboard build 3 120.00 390.00"
+          }
+        },
+        "unit_price": {
+          "value": "120.00",
+          "evidence": {
+            "page_number": 2,
+            "line_start": 4,
+            "line_end": 4,
+            "quote": "Dashboard build 3 120.00 390.00"
+          }
+        },
+        "line_total": {
+          "value": "390.00",
+          "evidence": {
+            "page_number": 2,
+            "line_start": 4,
+            "line_end": 4,
+            "quote": "Dashboard build 3 120.00 390.00"
+          }
+        }
+      },
+      {
+        "description": {
+          "value": "Quality review",
+          "evidence": {
+            "page_number": 2,
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "Quality review"
+          }
+        },
+        "quantity": {
+          "value": "2",
+          "evidence": {
+            "page_number": 2,
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "Quality review 2 75.00 150.00"
+          }
+        },
+        "unit_price": {
+          "value": "75.00",
+          "evidence": {
+            "page_number": 2,
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "Quality review 2 75.00 150.00"
+          }
+        },
+        "line_total": {
+          "value": "150.00",
+          "evidence": {
+            "page_number": 2,
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "Quality review 2 75.00 150.00"
+          }
+        }
+      }
+    ],
+    "unsupported_structures": []
+  }
+}

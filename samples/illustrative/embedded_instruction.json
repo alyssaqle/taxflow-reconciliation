@@ -1,0 +1,149 @@
+{
+  "document_type": "invoice",
+  "unsupported_reason": null,
+  "note": "Illustrative extraction prepared by hand for the demo. No model was called.",
+  "draft": {
+    "vendor_name": {
+      "value": "OAKMONT RESEARCH PARTNERS",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 1,
+        "line_end": 1,
+        "quote": "OAKMONT RESEARCH PARTNERS"
+      }
+    },
+    "invoice_number": {
+      "value": "ORP-2026-118",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 5,
+        "line_end": 5,
+        "quote": "Invoice #: ORP-2026-118"
+      }
+    },
+    "invoice_date": {
+      "value": "2026-09-18",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 6,
+        "line_end": 6,
+        "quote": "Invoice Date: September 18, 2026"
+      }
+    },
+    "currency": {
+      "value": "USD",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 7,
+        "line_end": 7,
+        "quote": "Currency: USD"
+      }
+    },
+    "subtotal": {
+      "value": "1300.00",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 13,
+        "line_end": 13,
+        "quote": "Subtotal: 1,300.00"
+      }
+    },
+    "tax": {
+      "value": "104.00",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 14,
+        "line_end": 14,
+        "quote": "Tax: 104.00"
+      }
+    },
+    "total": {
+      "value": "1404.00",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 15,
+        "line_end": 15,
+        "quote": "Total: 1,404.00"
+      }
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Survey design",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Survey design"
+          }
+        },
+        "quantity": {
+          "value": "1",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Survey design 1 900.00 900.00"
+          }
+        },
+        "unit_price": {
+          "value": "900.00",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Survey design 1 900.00 900.00"
+          }
+        },
+        "line_total": {
+          "value": "900.00",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Survey design 1 900.00 900.00"
+          }
+        }
+      },
+      {
+        "description": {
+          "value": "Interview analysis",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "Interview analysis"
+          }
+        },
+        "quantity": {
+          "value": "5",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "Interview analysis 5 80.00 400.00"
+          }
+        },
+        "unit_price": {
+          "value": "80.00",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "Interview analysis 5 80.00 400.00"
+          }
+        },
+        "line_total": {
+          "value": "400.00",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "Interview analysis 5 80.00 400.00"
+          }
+        }
+      }
+    ],
+    "unsupported_structures": []
+  }
+}

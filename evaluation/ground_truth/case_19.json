@@ -1,0 +1,29 @@
+{
+  "case_id": "case_19",
+  "category": "inconsistent",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "REDWOOD GRANT WRITERS",
+    "invoice_number": "RGW-262",
+    "invoice_date": "2026-09-03",
+    "currency": "USD",
+    "subtotal": "1800.00",
+    "tax": "144.00",
+    "total": "1994.00"
+  },
+  "expected_line_items": [
+    {
+      "description": "Grant proposal draft",
+      "quantity": "1",
+      "unit_price": "1800.00",
+      "line_total": "1800.00"
+    }
+  ],
+  "expected_findings": [
+    [
+      "TOTAL_MISMATCH",
+      "total"
+    ]
+  ],
+  "attack": null
+}

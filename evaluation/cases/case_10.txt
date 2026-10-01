@@ -1,0 +1,10 @@
+COASTAL COMMUNITY BANK - ACCOUNT STATEMENT (fictional)
+Account: ****4410        Statement period: July 1 - July 31, 2026
+Currency: USD
+
+Date        Description                 Amount       Balance
+07/02       Deposit                     3,000.00     8,250.00
+07/15       Card purchase - office      -142.37      8,107.63
+07/28       Transfer out                -1,000.00    7,107.63
+
+Closing balance: 7,107.63

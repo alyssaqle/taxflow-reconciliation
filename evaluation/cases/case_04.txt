@@ -1,0 +1,10 @@
+QUILLON EDITORIAL SERVICES (fictional)
+Invoice #QES-414 | Date: September 1, 2026 | Currency: USD
+
+Service                    Hours    Rate     Amount
+Copy editing               12.5   140.00   1,750.00
+Fact-check micro-tasks      2.5    19.99      49.98
+
+Subtotal  1,799.98
+Tax          144.00
+Total      1,943.98

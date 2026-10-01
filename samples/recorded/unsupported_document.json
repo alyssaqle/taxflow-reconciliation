@@ -1,0 +1,52 @@
+{
+  "run_id": "461064aa909c",
+  "document_id": "sample-unsupported_document",
+  "document_type": "unsupported",
+  "unsupported_reason": "Document is a purchase order, not a vendor invoice requesting payment.",
+  "extracted_fields": null,
+  "findings": [
+    {
+      "code": "UNSUPPORTED_DOCUMENT",
+      "field": null,
+      "message": "Not a supported invoice: Document is a purchase order, not a vendor invoice requesting payment.",
+      "blocking": true,
+      "source": "pipeline",
+      "details": {}
+    }
+  ],
+  "check_results": [],
+  "checklist": [
+    {
+      "finding_code": "UNSUPPORTED_DOCUMENT",
+      "field": null,
+      "policy_ref": "TF-POL-303",
+      "action": "Return the document to the requester. Only invoices are accepted for intake in version 1."
+    }
+  ],
+  "workflow_status": "Complete",
+  "review_status": "Unreviewed",
+  "review_note": "",
+  "tool_trace": [],
+  "model_summary": [],
+  "excluded_summary_sentences": 0,
+  "run_metadata": {
+    "mode": "live",
+    "provider": "Azure OpenAI (v1 API, Chat Completions)",
+    "model": "gpt-4.1-mini",
+    "schema_version": "invoice-v1",
+    "prompt_version": "extract-v2+agent-v1",
+    "policy_version": "intake-policy-2026-09-30",
+    "dataset_version": null,
+    "timestamp": "2026-10-01T06:08:43+00:00",
+    "duration_ms": 1525,
+    "model_requests": 1,
+    "request_budget": 6,
+    "token_usage": {
+      "prompt_tokens": 1729,
+      "completion_tokens": 115,
+      "total_tokens": 1844
+    },
+    "recorded_from": null,
+    "error": null
+  }
+}

@@ -1,0 +1,4 @@
+# Tested with Python 3.12 (local 3.12.2). Select Python 3.12 on Streamlit Community Cloud.
+streamlit==1.64.0
+pydantic==2.13.5
+openai==3.22.1

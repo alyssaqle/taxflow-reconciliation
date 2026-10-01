@@ -1,0 +1,149 @@
+{
+  "document_type": "invoice",
+  "unsupported_reason": null,
+  "note": "Illustrative extraction prepared by hand for the demo. No model was called.",
+  "draft": {
+    "vendor_name": {
+      "value": "SUMMIT LEDGER SERVICES",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 1,
+        "line_end": 1,
+        "quote": "SUMMIT LEDGER SERVICES"
+      }
+    },
+    "invoice_number": {
+      "value": "SLS-7781",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 4,
+        "line_end": 4,
+        "quote": "INVOICE #SLS-7781"
+      }
+    },
+    "invoice_date": {
+      "value": "2026-09-20",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 5,
+        "line_end": 5,
+        "quote": "Issued: September 20, 2026"
+      }
+    },
+    "currency": {
+      "value": "USD",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 7,
+        "line_end": 7,
+        "quote": "Currency: USD"
+      }
+    },
+    "subtotal": {
+      "value": "800.00",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 13,
+        "line_end": 13,
+        "quote": "Stated subtotal: USD 800.00"
+      }
+    },
+    "tax": {
+      "value": "80.00",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 14,
+        "line_end": 14,
+        "quote": "Stated tax amount: USD 80.00"
+      }
+    },
+    "total": {
+      "value": "950.00",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 15,
+        "line_end": 15,
+        "quote": "Stated total: USD 950.00"
+      }
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Research service",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Research service"
+          }
+        },
+        "quantity": {
+          "value": "1",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Research service 1 500.00 500.00"
+          }
+        },
+        "unit_price": {
+          "value": "500.00",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Research service 1 500.00 500.00"
+          }
+        },
+        "line_total": {
+          "value": "500.00",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Research service 1 500.00 500.00"
+          }
+        }
+      },
+      {
+        "description": {
+          "value": "Data preparation service",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "Data preparation service"
+          }
+        },
+        "quantity": {
+          "value": "1",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "Data preparation service 1 300.00 300.00"
+          }
+        },
+        "unit_price": {
+          "value": "300.00",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "Data preparation service 1 300.00 300.00"
+          }
+        },
+        "line_total": {
+          "value": "300.00",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "Data preparation service 1 300.00 300.00"
+          }
+        }
+      }
+    ],
+    "unsupported_structures": []
+  }
+}

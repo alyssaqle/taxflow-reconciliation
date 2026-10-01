@@ -1,0 +1,12 @@
+TOTALS
+Amount payable (USD): 990.00
+Tax (USD): 90.00
+Subtotal (USD): 900.00
+
+LINE DETAIL
+Bookkeeping cleanup - qty 5 - unit 180.00 - total 900.00
+
+HEADER
+Vendor: Fernhill Ledger Studio (fictional)
+Invoice ID: FLS-2207
+Invoice date: July 7, 2026

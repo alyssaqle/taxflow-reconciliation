@@ -1,0 +1,144 @@
+{
+  "document_type": "invoice",
+  "unsupported_reason": null,
+  "note": "Illustrative extraction prepared by hand for the demo. No model was called.",
+  "draft": {
+    "vendor_name": {
+      "value": "BLUE HERON DESIGN STUDIO",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 1,
+        "line_end": 1,
+        "quote": "BLUE HERON DESIGN STUDIO"
+      }
+    },
+    "invoice_number": {
+      "value": null,
+      "evidence": null
+    },
+    "invoice_date": {
+      "value": "2026-09-02",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 5,
+        "line_end": 5,
+        "quote": "Date: 2026-09-02"
+      }
+    },
+    "currency": {
+      "value": "USD",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 7,
+        "line_end": 7,
+        "quote": "All amounts are in USD."
+      }
+    },
+    "subtotal": {
+      "value": "1190.00",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 13,
+        "line_end": 13,
+        "quote": "Subtotal 1,190.00"
+      }
+    },
+    "tax": {
+      "value": "95.20",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 14,
+        "line_end": 14,
+        "quote": "Sales tax 95.20"
+      }
+    },
+    "total": {
+      "value": "1285.20",
+      "evidence": {
+        "page_number": 1,
+        "line_start": 15,
+        "line_end": 15,
+        "quote": "Amount due 1,285.20"
+      }
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Brand workshop facilitation",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Brand workshop facilitation"
+          }
+        },
+        "quantity": {
+          "value": "6",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Brand workshop facilitation 6 125.00 750.00"
+          }
+        },
+        "unit_price": {
+          "value": "125.00",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Brand workshop facilitation 6 125.00 750.00"
+          }
+        },
+        "line_total": {
+          "value": "750.00",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Brand workshop facilitation 6 125.00 750.00"
+          }
+        }
+      },
+      {
+        "description": {
+          "value": "Slide template design",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "Slide template design"
+          }
+        },
+        "quantity": {
+          "value": "4",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "Slide template design 4 110.00 440.00"
+          }
+        },
+        "unit_price": {
+          "value": "110.00",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "Slide template design 4 110.00 440.00"
+          }
+        },
+        "line_total": {
+          "value": "440.00",
+          "evidence": {
+            "page_number": 1,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "Slide template design 4 110.00 440.00"
+          }
+        }
+      }
+    ],
+    "unsupported_structures": []
+  }
+}

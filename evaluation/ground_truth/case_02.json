@@ -1,0 +1,35 @@
+{
+  "case_id": "case_02",
+  "category": "inconsistent",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "MOSSGROVE LEGAL SUPPORT",
+    "invoice_number": "MLS-5031",
+    "invoice_date": "2026-07-21",
+    "currency": "USD",
+    "subtotal": "952.00",
+    "tax": "76.16",
+    "total": "1028.16"
+  },
+  "expected_line_items": [
+    {
+      "description": "Document review hours",
+      "quantity": "8",
+      "unit_price": "110.00",
+      "line_total": "880.00"
+    },
+    {
+      "description": "Courier",
+      "quantity": "1",
+      "unit_price": "45.00",
+      "line_total": "45.00"
+    }
+  ],
+  "expected_findings": [
+    [
+      "SUBTOTAL_MISMATCH",
+      "subtotal"
+    ]
+  ],
+  "attack": null
+}

@@ -1,0 +1,15 @@
+HOLLOW OAK SOFTWARE GUILD (fictional)
+Invoice HOS-5512
+Dated 12 Aug 2026
+Prepared for: Lakeshore Holdings (fictional)
+Currency of invoice: USD
+Itemized charges appear on the next page.
+----- page break -----
+HOLLOW OAK SOFTWARE GUILD - HOS-5512 - page 2
+Item                          Quantity   Rate      Amount
+Code review session                  4   180.00    720.00
+Deployment support hours           3    95.00    285.00
+
+Sub-total: 1,005.00
+Sales tax: 80.40
+Invoice total: 1,085.40

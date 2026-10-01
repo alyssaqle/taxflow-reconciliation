@@ -1,0 +1,12 @@
+CINDERPATH LOGISTICS (fictional)
+Invoice Number: CPL-9902
+Invoice Date: August 11, 2026
+Currency: USD
+
+Description               Qty   Unit Price   Line Total
+Pallet storage (weeks)      4       125.00       525.00
+Handling fee                1        80.00        80.00
+
+Subtotal: 605.00
+Tax: 48.40
+Total: 700.00

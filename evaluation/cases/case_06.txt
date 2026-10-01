@@ -1,0 +1,10 @@
+JUNIPER LANE CATERING (fictional)
+Invoice # JLC-301
+Date: July 18, 2026
+
+Description             Qty   Unit Price   Line Total
+Team lunch service        30      $22.00      $660.00
+
+Subtotal: $660.00
+Tax: $52.80
+Total: $712.80

@@ -1,0 +1,29 @@
+{
+  "case_id": "case_06",
+  "category": "missing",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "JUNIPER LANE CATERING",
+    "invoice_number": "JLC-301",
+    "invoice_date": "2026-07-18",
+    "currency": null,
+    "subtotal": "660.00",
+    "tax": "52.80",
+    "total": "712.80"
+  },
+  "expected_line_items": [
+    {
+      "description": "Team lunch service",
+      "quantity": "30",
+      "unit_price": "22.00",
+      "line_total": "660.00"
+    }
+  ],
+  "expected_findings": [
+    [
+      "MISSING_FIELD",
+      "currency"
+    ]
+  ],
+  "attack": null
+}

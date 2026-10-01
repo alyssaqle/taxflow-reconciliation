@@ -1,0 +1,36 @@
+{
+  "case_id": "case_09",
+  "category": "complete",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "ARCLIGHT FACILITIES GROUP",
+    "invoice_number": "AFG-20260815",
+    "invoice_date": "2026-08-15",
+    "currency": "USD",
+    "subtotal": "4269.00",
+    "tax": "341.52",
+    "total": "4610.52"
+  },
+  "expected_line_items": [
+    {
+      "description": "Quarterly HVAC inspection",
+      "quantity": "3",
+      "unit_price": "1150.00",
+      "line_total": "3450.00"
+    },
+    {
+      "description": "Air filter replacement",
+      "quantity": "24",
+      "unit_price": "18.50",
+      "line_total": "444.00"
+    },
+    {
+      "description": "Emergency call-out",
+      "quantity": "1",
+      "unit_price": "375.00",
+      "line_total": "375.00"
+    }
+  ],
+  "expected_findings": [],
+  "attack": null
+}

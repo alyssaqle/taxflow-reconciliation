@@ -1,0 +1,29 @@
+{
+  "case_id": "case_07",
+  "category": "missing",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "CORAL BAY MEDIA",
+    "invoice_number": null,
+    "invoice_date": "2026-08-20",
+    "currency": "USD",
+    "subtotal": "480.00",
+    "tax": "38.40",
+    "total": "518.40"
+  },
+  "expected_line_items": [
+    {
+      "description": "Podcast editing",
+      "quantity": "4",
+      "unit_price": "120.00",
+      "line_total": "480.00"
+    }
+  ],
+  "expected_findings": [
+    [
+      "MISSING_FIELD",
+      "invoice_number"
+    ]
+  ],
+  "attack": null
+}

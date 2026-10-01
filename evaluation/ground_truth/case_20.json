@@ -1,0 +1,29 @@
+{
+  "case_id": "case_20",
+  "category": "missing",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "WESTGATE SURVEY WORKS",
+    "invoice_number": "WSW-6620",
+    "invoice_date": null,
+    "currency": "USD",
+    "subtotal": "1400.00",
+    "tax": "112.00",
+    "total": "1512.00"
+  },
+  "expected_line_items": [
+    {
+      "description": "Boundary survey",
+      "quantity": "1",
+      "unit_price": "1400.00",
+      "line_total": "1400.00"
+    }
+  ],
+  "expected_findings": [
+    [
+      "MISSING_FIELD",
+      "invoice_date"
+    ]
+  ],
+  "attack": null
+}

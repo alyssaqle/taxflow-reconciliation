@@ -1,0 +1,11 @@
+REDWOOD GRANT WRITERS (fictional)
+Invoice Number: RGW-262
+Invoice Date: September 3, 2026
+Currency: USD
+
+Description               Qty   Unit Price   Line Total
+Grant proposal draft        1     1,800.00     1,800.00
+
+Subtotal: 1,800.00
+Tax: 144.00
+Total: 1,994.00

@@ -1,0 +1,24 @@
+{
+  "case_id": "case_21",
+  "category": "complete",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "Fernhill Ledger Studio",
+    "invoice_number": "FLS-2207",
+    "invoice_date": "2026-07-07",
+    "currency": "USD",
+    "subtotal": "900.00",
+    "tax": "90.00",
+    "total": "990.00"
+  },
+  "expected_line_items": [
+    {
+      "description": "Bookkeeping cleanup",
+      "quantity": "5",
+      "unit_price": "180.00",
+      "line_total": "900.00"
+    }
+  ],
+  "expected_findings": [],
+  "attack": null
+}

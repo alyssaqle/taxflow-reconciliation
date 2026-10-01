@@ -1,0 +1,29 @@
+{
+  "case_id": "case_14",
+  "category": "missing",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "NORTHSTAR PRINT LAB",
+    "invoice_number": "NPL-4471",
+    "invoice_date": "2026-08-02",
+    "currency": "USD",
+    "subtotal": "600.00",
+    "tax": null,
+    "total": "648.00"
+  },
+  "expected_line_items": [
+    {
+      "description": "Brochure printing",
+      "quantity": "500",
+      "unit_price": "1.20",
+      "line_total": "600.00"
+    }
+  ],
+  "expected_findings": [
+    [
+      "MISSING_FIELD",
+      "tax"
+    ]
+  ],
+  "attack": null
+}

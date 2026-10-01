@@ -1,0 +1,9 @@
+{
+  "case_id": "case_10",
+  "category": "unsupported",
+  "document_type": "unsupported",
+  "expected_fields": null,
+  "expected_line_items": null,
+  "expected_findings": [],
+  "attack": null
+}

@@ -1,0 +1,10 @@
+NORTHSTAR PRINT LAB (fictional)
+Invoice Number: NPL-4471
+Invoice Date: August 2, 2026
+Currency: USD
+
+Description             Qty   Unit Price   Line Total
+Brochure printing       500         1.20       600.00
+
+Subtotal: 600.00
+Total: 648.00

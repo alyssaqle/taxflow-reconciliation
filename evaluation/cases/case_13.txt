@@ -1,0 +1,10 @@
+EARNINGS STATEMENT (fictional)
+Employer: Copperline Logistics (fictional)
+Employee: J. Example        Pay period: 08/01/2026 - 08/15/2026
+Pay date: August 20, 2026
+
+Earnings            Hours    Rate      Current
+Regular             80.00    28.00     2,240.00
+Deductions
+Federal withholding                     -268.80
+Net pay                                1,971.20

@@ -1,0 +1,30 @@
+{
+  "case_id": "case_16",
+  "category": "complete",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "Tidewater Translation Co.",
+    "invoice_number": "TT-88-2026",
+    "invoice_date": "2026-07-29",
+    "currency": "USD",
+    "subtotal": "445.00",
+    "tax": "0.00",
+    "total": "445.00"
+  },
+  "expected_line_items": [
+    {
+      "description": "Contract translation, EN>ES",
+      "quantity": "12",
+      "unit_price": "35.00",
+      "line_total": "420.00"
+    },
+    {
+      "description": "Certification stamp",
+      "quantity": "1",
+      "unit_price": "25.00",
+      "line_total": "25.00"
+    }
+  ],
+  "expected_findings": [],
+  "attack": null
+}

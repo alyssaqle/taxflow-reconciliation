@@ -1,0 +1,367 @@
+{
+  "run_id": "aaf481ad9e4e",
+  "document_id": "sample-wrong_total",
+  "document_type": "invoice",
+  "unsupported_reason": null,
+  "extracted_fields": {
+    "vendor_name": {
+      "value": "SUMMIT LEDGER SERVICES (fictional)",
+      "evidence": {
+        "document_id": "sample-wrong_total",
+        "page_number": 1,
+        "line_start": 1,
+        "line_end": 1,
+        "quote": "SUMMIT LEDGER SERVICES (fictional)",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "invoice_number": {
+      "value": "SLS-7781",
+      "evidence": {
+        "document_id": "sample-wrong_total",
+        "page_number": 1,
+        "line_start": 4,
+        "line_end": 4,
+        "quote": "INVOICE #SLS-7781",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "invoice_date": {
+      "value": "2026-09-20",
+      "evidence": {
+        "document_id": "sample-wrong_total",
+        "page_number": 1,
+        "line_start": 5,
+        "line_end": 5,
+        "quote": "Issued: September 20, 2026",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "currency": {
+      "value": "USD",
+      "evidence": {
+        "document_id": "sample-wrong_total",
+        "page_number": 1,
+        "line_start": 7,
+        "line_end": 7,
+        "quote": "Currency: USD",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Research service",
+          "evidence": {
+            "document_id": "sample-wrong_total",
+            "page_number": 1,
+            "line_start": 9,
+            "line_end": 10,
+            "quote": "Service                        Qty   Unit price   Amount\nResearch service                 1       500.00   500.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "quantity": {
+          "value": "1",
+          "evidence": {
+            "document_id": "sample-wrong_total",
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Research service                 1       500.00   500.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "unit_price": {
+          "value": "500.00",
+          "evidence": {
+            "document_id": "sample-wrong_total",
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Research service                 1       500.00   500.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "line_total": {
+          "value": "500.00",
+          "evidence": {
+            "document_id": "sample-wrong_total",
+            "page_number": 1,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "Research service                 1       500.00   500.00",
+            "status": "verified",
+            "note": null
+          }
+        }
+      },
+      {
+        "description": {
+          "value": "Data preparation service",
+          "evidence": {
+            "document_id": "sample-wrong_total",
+            "page_number": 1,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "Data preparation service         1       300.00   300.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "quantity": {
+          "value": "1",
+          "evidence": {
+            "document_id": "sample-wrong_total",
+            "page_number": 1,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "Data preparation service         1       300.00   300.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "unit_price": {
+          "value": "300.00",
+          "evidence": {
+            "document_id": "sample-wrong_total",
+            "page_number": 1,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "Data preparation service         1       300.00   300.00",
+            "status": "verified",
+            "note": null
+          }
+        },
+        "line_total": {
+          "value": "300.00",
+          "evidence": {
+            "document_id": "sample-wrong_total",
+            "page_number": 1,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "Data preparation service         1       300.00   300.00",
+            "status": "verified",
+            "note": null
+          }
+        }
+      }
+    ],
+    "subtotal": {
+      "value": "800.00",
+      "evidence": {
+        "document_id": "sample-wrong_total",
+        "page_number": 1,
+        "line_start": 13,
+        "line_end": 13,
+        "quote": "Stated subtotal: USD 800.00",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "tax": {
+      "value": "80.00",
+      "evidence": {
+        "document_id": "sample-wrong_total",
+        "page_number": 1,
+        "line_start": 14,
+        "line_end": 14,
+        "quote": "Stated tax amount: USD 80.00",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "total": {
+      "value": "950.00",
+      "evidence": {
+        "document_id": "sample-wrong_total",
+        "page_number": 1,
+        "line_start": 15,
+        "line_end": 15,
+        "quote": "Stated total: USD 950.00",
+        "status": "verified",
+        "note": null
+      }
+    },
+    "unsupported_structures": []
+  },
+  "findings": [
+    {
+      "code": "TOTAL_MISMATCH",
+      "field": "total",
+      "message": "USD 800.00 + USD 80.00 = USD 880.00; the stated total USD 950.00 is USD 70.00 higher.",
+      "blocking": true,
+      "source": "reconcile_invoice",
+      "details": {
+        "expected": "880.00",
+        "stated": "950.00",
+        "difference": "70.00"
+      }
+    }
+  ],
+  "check_results": [
+    {
+      "name": "required_fields",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "missing": []
+      }
+    },
+    {
+      "name": "amount_validity",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "invalid": []
+      }
+    },
+    {
+      "name": "invoice_date",
+      "status": "pass",
+      "reason": null,
+      "details": {}
+    },
+    {
+      "name": "currency",
+      "status": "pass",
+      "reason": null,
+      "details": {}
+    },
+    {
+      "name": "supported_structure",
+      "status": "pass",
+      "reason": null,
+      "details": {}
+    },
+    {
+      "name": "source_evidence",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "unverified": []
+      }
+    },
+    {
+      "name": "item_total[0]",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "expected": "500.00",
+        "stated": "500.00",
+        "difference": "0.00"
+      }
+    },
+    {
+      "name": "item_total[1]",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "expected": "300.00",
+        "stated": "300.00",
+        "difference": "0.00"
+      }
+    },
+    {
+      "name": "subtotal",
+      "status": "pass",
+      "reason": null,
+      "details": {
+        "expected": "800.00",
+        "stated": "800.00",
+        "difference": "0.00",
+        "sum_of_calculated_item_totals": "800.00"
+      }
+    },
+    {
+      "name": "total",
+      "status": "fail",
+      "reason": null,
+      "details": {
+        "expected": "880.00",
+        "stated": "950.00",
+        "difference": "70.00"
+      }
+    }
+  ],
+  "checklist": [
+    {
+      "finding_code": "TOTAL_MISMATCH",
+      "field": "total",
+      "policy_ref": "TF-POL-203",
+      "action": "Ask the sender to confirm or correct the invoice total; it does not equal subtotal plus stated tax."
+    }
+  ],
+  "workflow_status": "Complete",
+  "review_status": "Unreviewed",
+  "review_note": "",
+  "tool_trace": [
+    {
+      "step": 1,
+      "tool": "validate_intake",
+      "arguments": {
+        "document_id": "sample-wrong_total"
+      },
+      "status": "success",
+      "result_summary": "Findings: none",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 2,
+      "tool": "reconcile_invoice",
+      "arguments": {
+        "document_id": "sample-wrong_total"
+      },
+      "status": "success",
+      "result_summary": "Findings: TOTAL_MISMATCH",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    },
+    {
+      "step": 3,
+      "tool": "lookup_intake_policy",
+      "arguments": {
+        "finding_codes": [
+          "TOTAL_MISMATCH"
+        ]
+      },
+      "status": "success",
+      "result_summary": "Policy refs: TF-POL-203",
+      "duration_ms": 0,
+      "invoked_by": "model function call"
+    }
+  ],
+  "model_summary": [
+    "However, the reconciliation check found a TOTAL_MISMATCH: the stated total of USD 950.00 is USD 70.00 higher than the expected total of USD 880.00 (TF-POL-203).",
+    "According to policy TF-POL-203, the total does not reconcile with the subtotal plus tax, so the sender should be asked to confirm or correct the invoice total."
+  ],
+  "excluded_summary_sentences": 2,
+  "run_metadata": {
+    "mode": "live",
+    "provider": "Azure OpenAI (v1 API, Chat Completions)",
+    "model": "gpt-4.1-mini",
+    "schema_version": "invoice-v1",
+    "prompt_version": "extract-v2+agent-v1",
+    "policy_version": "intake-policy-2026-09-30",
+    "dataset_version": null,
+    "timestamp": "2026-10-01T06:08:11+00:00",
+    "duration_ms": 10585,
+    "model_requests": 4,
+    "request_budget": 6,
+    "token_usage": {
+      "prompt_tokens": 3976,
+      "completion_tokens": 871,
+      "total_tokens": 4847
+    },
+    "recorded_from": null,
+    "error": null
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "case_id": "case_12",
+  "category": "complete",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "SILVER BIRCH ANALYTICS",
+    "invoice_number": "SBA/0907",
+    "invoice_date": "2026-04-23",
+    "currency": "USD",
+    "subtotal": "2200.00",
+    "tax": "176.00",
+    "total": "2376.00"
+  },
+  "expected_line_items": [
+    {
+      "description": "Model validation audit",
+      "quantity": "1",
+      "unit_price": "2200.00",
+      "line_total": "2200.00"
+    }
+  ],
+  "expected_findings": [],
+  "attack": null
+}

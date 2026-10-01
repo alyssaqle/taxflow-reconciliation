@@ -1,0 +1,12 @@
+MOSSGROVE LEGAL SUPPORT (fictional)
+Invoice: MLS-5031
+Date: July 21, 2026
+Currency: USD
+
+Description               Qty   Unit Price   Line Total
+Document review hours       8       110.00       880.00
+Courier                     1        45.00        45.00
+
+Subtotal: 952.00
+Tax: 76.16
+Total: 1,028.16

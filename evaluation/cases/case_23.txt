@@ -1,0 +1,11 @@
+EMBER & ASH ADVISORY (fictional)
+Invoice Number: EAA-090
+Invoice Date: June 12, 2026
+Currency: USD
+
+Services
+Strategy advisory, June                         2,500.00
+
+Subtotal: 2,500.00
+Tax: 200.00
+Total: 2,700.00

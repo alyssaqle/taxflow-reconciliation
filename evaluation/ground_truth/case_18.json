@@ -1,0 +1,29 @@
+{
+  "case_id": "case_18",
+  "category": "missing",
+  "document_type": "invoice",
+  "expected_fields": {
+    "vendor_name": "SLATE RIVER IT SUPPORT",
+    "invoice_number": "SRI-7745",
+    "invoice_date": "2026-08-28",
+    "currency": "USD",
+    "subtotal": "510.00",
+    "tax": "40.80",
+    "total": null
+  },
+  "expected_line_items": [
+    {
+      "description": "Laptop setup",
+      "quantity": "6",
+      "unit_price": "85.00",
+      "line_total": "510.00"
+    }
+  ],
+  "expected_findings": [
+    [
+      "MISSING_FIELD",
+      "total"
+    ]
+  ],
+  "attack": null
+}

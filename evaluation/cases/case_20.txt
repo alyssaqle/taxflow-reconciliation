@@ -1,0 +1,10 @@
+WESTGATE SURVEY WORKS (fictional)
+Invoice No. WSW-6620
+Currency: USD
+
+Description              Qty   Unit Price   Line Total
+Boundary survey            1     1,400.00     1,400.00
+
+Subtotal: 1,400.00
+Tax: 112.00
+Total: 1,512.00

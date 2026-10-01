@@ -1,0 +1,11 @@
+CORAL BAY MEDIA (fictional)
+INVOICE
+Invoice Date: August 20, 2026
+Currency: USD
+
+Description            Qty   Unit Price   Line Total
+Podcast editing          4       120.00       480.00
+
+Subtotal: 480.00
+Tax: 38.40
+Total: 518.40

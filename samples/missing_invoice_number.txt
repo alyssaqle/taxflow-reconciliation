@@ -1,0 +1,17 @@
+BLUE HERON DESIGN STUDIO (fictional)
+88 Willow Lane, Asheville, NC 28801
+
+Invoice
+Date: 2026-09-02
+Client: Cedar Ridge Consulting (fictional)
+All amounts are in USD.
+
+Item                         Hours   Rate      Amount
+Brand workshop facilitation      6   125.00    750.00
+Slide template design            4   110.00    440.00
+
+Subtotal                                       1,190.00
+Sales tax                                         95.20
+Amount due                                     1,285.20
+
+Thank you for your business.

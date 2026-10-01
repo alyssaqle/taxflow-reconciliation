@@ -1,0 +1,12 @@
+SILVER BIRCH ANALYTICS (fictional)
+INVOICE
+No.: SBA/0907
+Invoice date: 04/23/2026
+Amounts in US dollars
+
+Qty | Description            | Unit price | Total
+1   | Model validation audit | 2,200.00   | 2,200.00
+
+Subtotal: 2,200.00
+Tax: 176.00
+Total: 2,376.00

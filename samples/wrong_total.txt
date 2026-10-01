@@ -1,0 +1,17 @@
+SUMMIT LEDGER SERVICES (fictional)
+1200 Pine Avenue, Denver, CO 80202
+
+INVOICE #SLS-7781
+Issued: September 20, 2026
+Customer: Cedar Ridge Consulting (fictional)
+Currency: USD
+
+Service                        Qty   Unit price   Amount
+Research service                 1       500.00   500.00
+Data preparation service         1       300.00   300.00
+
+Stated subtotal: USD 800.00
+Stated tax amount: USD 80.00
+Stated total: USD 950.00
+
+Please remit within 30 days.
