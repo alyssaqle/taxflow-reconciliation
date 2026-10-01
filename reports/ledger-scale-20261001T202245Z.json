@@ -1,0 +1,246 @@
+{
+ "meta": {
+  "timestamp": "20261001T202245Z",
+  "python": "3.12.2",
+  "machine": "arm64",
+  "platform": "macOS-14.3-arm64-arm-64bit",
+  "manifest": {
+   "seed": 20261001,
+   "query_mix": {
+    "match_exact": 250,
+    "match_normalized": 80,
+    "match_within_tolerance": 40,
+    "amount_diff": 120,
+    "currency_diff": 80,
+    "date_diff": 80,
+    "duplicate": 120,
+    "missing_near_miss": 100,
+    "missing_wrong_vendor": 50,
+    "missing_identifier": 80
+   },
+   "files": {
+    "1000": {
+     "rows": 1000,
+     "queries": 1000,
+     "ledger_sha256": "a7ea8c85f869e7cc153aed435529ceff2fe0381311bf566de202a3ed214da803",
+     "queries_sha256": "0c0ef113b147cd9a0d922008b63f5d90af1a98392be491e5791610da8172ec79",
+     "labels_sha256": "cb8a420b2a69b2a98edc74b60c12fc8c50e67ec82dcdba780ee1295f69b51493"
+    },
+    "10000": {
+     "rows": 10000,
+     "queries": 1000,
+     "ledger_sha256": "eb201849b5e4969fb73975944374618b424937bbc07f968c9f0d3207ce60b56c",
+     "queries_sha256": "e3a29f9562146c9eeeb4a6218b4e09b18374fcb92eed0866304f6ae5b1002f73",
+     "labels_sha256": "a3c412b1b1d9690f35614c2e064deb336880f1956cd1b2a231e71e143fdcc9cc"
+    },
+    "100000": {
+     "rows": 100000,
+     "queries": 1000,
+     "ledger_sha256": "3c34a89f25fe799a407ee56a9af6bfa1d1c1ecce05c88f6871e7916a8a0b96ce",
+     "queries_sha256": "f5307c1be5b014c68f3a86ab2029c0a97d073b8392d63193ceb252e985e6cc94",
+     "labels_sha256": "0758c03755687fa2fd31c1834c3fed39ddb8e7032985be8ede3b76aca8201393"
+    }
+   }
+  }
+ },
+ "results": {
+  "1000": {
+   "rows": 1000,
+   "csv_load_and_validate_s": 0.005,
+   "index_build_s": 0.0,
+   "scan": {
+    "lookup_ms_median": 0.0839,
+    "lookup_ms_p95": 0.0931,
+    "lookup_compare_ms_median": 0.093,
+    "lookup_compare_ms_p95": 0.1029,
+    "queries_wall_s": 0.092,
+    "accuracy": {
+     "queries": 1000,
+     "true_matches": 650,
+     "false_matches": 0,
+     "missed_matches": 0,
+     "match_precision": 1.0,
+     "match_recall": 1.0,
+     "routing_correct": 1000,
+     "candidate_sets_correct": 1000,
+     "by_kind": {
+      "amount_diff": "120/120",
+      "currency_diff": "80/80",
+      "date_diff": "80/80",
+      "duplicate": "120/120",
+      "match_exact": "250/250",
+      "match_normalized": "80/80",
+      "match_within_tolerance": "40/40",
+      "missing_identifier": "80/80",
+      "missing_near_miss": "100/100",
+      "missing_wrong_vendor": "50/50"
+     },
+     "errors": []
+    }
+   },
+   "indexed": {
+    "lookup_ms_median": 0.0012,
+    "lookup_ms_p95": 0.0016,
+    "lookup_compare_ms_median": 0.0099,
+    "lookup_compare_ms_p95": 0.0123,
+    "queries_wall_s": 0.014,
+    "accuracy": {
+     "queries": 1000,
+     "true_matches": 650,
+     "false_matches": 0,
+     "missed_matches": 0,
+     "match_precision": 1.0,
+     "match_recall": 1.0,
+     "routing_correct": 1000,
+     "candidate_sets_correct": 1000,
+     "by_kind": {
+      "amount_diff": "120/120",
+      "currency_diff": "80/80",
+      "date_diff": "80/80",
+      "duplicate": "120/120",
+      "match_exact": "250/250",
+      "match_normalized": "80/80",
+      "match_within_tolerance": "40/40",
+      "missing_identifier": "80/80",
+      "missing_near_miss": "100/100",
+      "missing_wrong_vendor": "50/50"
+     },
+     "errors": []
+    }
+   },
+   "scan_and_indexed_identical": true
+  },
+  "10000": {
+   "rows": 10000,
+   "csv_load_and_validate_s": 0.038,
+   "index_build_s": 0.011,
+   "scan": {
+    "lookup_ms_median": 0.838,
+    "lookup_ms_p95": 0.883,
+    "lookup_compare_ms_median": 0.8469,
+    "lookup_compare_ms_p95": 0.893,
+    "queries_wall_s": 0.79,
+    "accuracy": {
+     "queries": 1000,
+     "true_matches": 650,
+     "false_matches": 0,
+     "missed_matches": 0,
+     "match_precision": 1.0,
+     "match_recall": 1.0,
+     "routing_correct": 1000,
+     "candidate_sets_correct": 1000,
+     "by_kind": {
+      "amount_diff": "120/120",
+      "currency_diff": "80/80",
+      "date_diff": "80/80",
+      "duplicate": "120/120",
+      "match_exact": "250/250",
+      "match_normalized": "80/80",
+      "match_within_tolerance": "40/40",
+      "missing_identifier": "80/80",
+      "missing_near_miss": "100/100",
+      "missing_wrong_vendor": "50/50"
+     },
+     "errors": []
+    }
+   },
+   "indexed": {
+    "lookup_ms_median": 0.0015,
+    "lookup_ms_p95": 0.0019,
+    "lookup_compare_ms_median": 0.0098,
+    "lookup_compare_ms_p95": 0.0123,
+    "queries_wall_s": 0.014,
+    "accuracy": {
+     "queries": 1000,
+     "true_matches": 650,
+     "false_matches": 0,
+     "missed_matches": 0,
+     "match_precision": 1.0,
+     "match_recall": 1.0,
+     "routing_correct": 1000,
+     "candidate_sets_correct": 1000,
+     "by_kind": {
+      "amount_diff": "120/120",
+      "currency_diff": "80/80",
+      "date_diff": "80/80",
+      "duplicate": "120/120",
+      "match_exact": "250/250",
+      "match_normalized": "80/80",
+      "match_within_tolerance": "40/40",
+      "missing_identifier": "80/80",
+      "missing_near_miss": "100/100",
+      "missing_wrong_vendor": "50/50"
+     },
+     "errors": []
+    }
+   },
+   "scan_and_indexed_identical": true
+  },
+  "100000": {
+   "rows": 100000,
+   "csv_load_and_validate_s": 0.482,
+   "index_build_s": 0.137,
+   "scan": {
+    "lookup_ms_median": 8.4555,
+    "lookup_ms_p95": 9.1348,
+    "lookup_compare_ms_median": 8.474,
+    "lookup_compare_ms_p95": 9.171,
+    "queries_wall_s": 8.018,
+    "accuracy": {
+     "queries": 1000,
+     "true_matches": 650,
+     "false_matches": 0,
+     "missed_matches": 0,
+     "match_precision": 1.0,
+     "match_recall": 1.0,
+     "routing_correct": 1000,
+     "candidate_sets_correct": 1000,
+     "by_kind": {
+      "amount_diff": "120/120",
+      "currency_diff": "80/80",
+      "date_diff": "80/80",
+      "duplicate": "120/120",
+      "match_exact": "250/250",
+      "match_normalized": "80/80",
+      "match_within_tolerance": "40/40",
+      "missing_identifier": "80/80",
+      "missing_near_miss": "100/100",
+      "missing_wrong_vendor": "50/50"
+     },
+     "errors": []
+    }
+   },
+   "indexed": {
+    "lookup_ms_median": 0.0021,
+    "lookup_ms_p95": 0.0044,
+    "lookup_compare_ms_median": 0.0112,
+    "lookup_compare_ms_p95": 0.0145,
+    "queries_wall_s": 0.015,
+    "accuracy": {
+     "queries": 1000,
+     "true_matches": 650,
+     "false_matches": 0,
+     "missed_matches": 0,
+     "match_precision": 1.0,
+     "match_recall": 1.0,
+     "routing_correct": 1000,
+     "candidate_sets_correct": 1000,
+     "by_kind": {
+      "amount_diff": "120/120",
+      "currency_diff": "80/80",
+      "date_diff": "80/80",
+      "duplicate": "120/120",
+      "match_exact": "250/250",
+      "match_normalized": "80/80",
+      "match_within_tolerance": "40/40",
+      "missing_identifier": "80/80",
+      "missing_near_miss": "100/100",
+      "missing_wrong_vendor": "50/50"
+     },
+     "errors": []
+    }
+   },
+   "scan_and_indexed_identical": true
+  }
+ }
+}

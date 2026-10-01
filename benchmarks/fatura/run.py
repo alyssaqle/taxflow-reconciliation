@@ -136,6 +136,7 @@ def main(argv=None) -> int:
     ap.add_argument("--max-docs", type=int, default=None)
     ap.add_argument("--token-budget", type=int, default=3_000_000, help="stop starting new documents past this")
     ap.add_argument("--workers", type=int, default=3)
+    ap.add_argument("--resume", default=None, help="run_id to resume: completed doc_ids in its checkpoint are skipped")
     args = ap.parse_args(argv)
 
     rows = manifest(args.split)[: args.max_docs]
@@ -149,10 +150,18 @@ def main(argv=None) -> int:
             print(f"Cannot run live: {exc}", file=sys.stderr)
             return 2
 
-    run_id = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ") + f"-{args.split}-{args.mode}"
+    run_id = args.resume or (dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ") + f"-{args.split}-{args.mode}")
     run_dir = DATA / "runs" / run_id
     run_dir.mkdir(parents=True, exist_ok=True)
-    tokens, lock, preds, skipped = [0], Lock(), [], []
+    ckpt = run_dir / "predictions.jsonl"  # checkpoint: one line appended per completed document
+    preds = [json.loads(l) for l in ckpt.read_text().splitlines()] if ckpt.exists() else []
+    done = {p["doc_id"] for p in preds}
+    todo = [r for r in rows if r["doc_id"] not in done]
+    tokens = [sum(p.get("token_usage", {}).get("total_tokens", 0) for p in preds)]
+    lock, skipped = Lock(), []
+    if done:
+        print(f"Resuming {run_id}: {len(done)} completed documents kept, {len(todo)} to run", flush=True)
+    start = time.perf_counter()
 
     def work(row):
         with lock:
@@ -162,21 +171,21 @@ def main(argv=None) -> int:
         res = run_doc(row, args.mode, provider)
         with lock:
             tokens[0] += res["token_usage"].get("total_tokens", 0)
-            n = len(preds) + 1
-        if n % 25 == 0:
-            print(f"  {n}/{len(rows)} · tokens {tokens[0]:,}", flush=True)
+            preds.append(res)
+            with ckpt.open("a") as f:
+                f.write(json.dumps(res, default=list) + "\n")
+            n, fails = len(preds), sum(p["status"] != "ok" for p in preds)
+        rate = (n - len(done)) / max(time.perf_counter() - start, 1e-9)
+        eta = (len(rows) - n) / rate / 60 if rate else float("nan")
+        print(f"  {n}/{len(rows)} done · failed {fails} · tokens {tokens[0]:,} · {res['doc_id']} {res['status']} "
+              f"{res['extract_seconds']}s req {res['model_requests']} · ETA {eta:.1f} min", flush=True)
         return res
 
-    start = time.perf_counter()
     with ThreadPoolExecutor(max_workers=1 if args.mode == "baseline" else args.workers) as ex:
-        for res in ex.map(work, rows):
-            if res is not None:
-                preds.append(res)
+        list(ex.map(work, todo))
     wall = time.perf_counter() - start
-    with (run_dir / "predictions.jsonl").open("w") as f:
-        for p in preds:
-            f.write(json.dumps(p, default=list) + "\n")
     meta = {"run_id": run_id, "split": args.split, "mode": args.mode, "documents_selected": len(rows),
+            "resumed_with_completed": len(done),
             "documents_attempted": len(preds), "documents_skipped_budget": skipped, "token_budget": args.token_budget,
             "tokens_used": tokens[0], "wall_seconds": round(wall, 1), "workers": args.workers,
             "provider": provider.name if provider else "none (regex baseline)",

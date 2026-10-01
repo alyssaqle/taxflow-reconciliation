@@ -1,0 +1,7926 @@
+{
+ "meta": {
+  "run_id": "20261001T200818Z-eval-baseline",
+  "split": "eval",
+  "mode": "baseline",
+  "documents_selected": 500,
+  "documents_attempted": 500,
+  "documents_skipped_budget": [],
+  "token_budget": 3000000,
+  "tokens_used": 0,
+  "wall_seconds": 0.1,
+  "workers": 3,
+  "provider": "none (regex baseline)",
+  "model": null,
+  "prompt_version": null,
+  "schema_version": "reconciliation-v2"
+ },
+ "metrics": {
+  "per_field": {
+   "vendor_name": {
+    "accuracy": {
+     "numerator": 151,
+     "denominator": 328,
+     "value": 0.4604
+    },
+    "missing": 0,
+    "wrong": 177,
+    "expected_null": 0,
+    "correct_null": 0,
+    "invented": 0,
+    "unknown_not_scored": 172,
+    "ocr_ceiling": {
+     "numerator": 320,
+     "denominator": 328,
+     "value": 0.9756
+    },
+    "evidence_valid": {
+     "numerator": 0,
+     "denominator": 328,
+     "value": 0.0
+    }
+   },
+   "invoice_number": {
+    "accuracy": {
+     "numerator": 414,
+     "denominator": 438,
+     "value": 0.9452
+    },
+    "missing": 7,
+    "wrong": 17,
+    "expected_null": 49,
+    "correct_null": 49,
+    "invented": 0,
+    "unknown_not_scored": 13,
+    "ocr_ceiling": {
+     "numerator": 423,
+     "denominator": 438,
+     "value": 0.9658
+    },
+    "evidence_valid": {
+     "numerator": 0,
+     "denominator": 431,
+     "value": 0.0
+    }
+   },
+   "invoice_date": {
+    "accuracy": {
+     "numerator": 437,
+     "denominator": 487,
+     "value": 0.8973
+    },
+    "missing": 50,
+    "wrong": 0,
+    "expected_null": 13,
+    "correct_null": 13,
+    "invented": 0,
+    "unknown_not_scored": 0,
+    "ocr_ceiling": {
+     "numerator": 479,
+     "denominator": 487,
+     "value": 0.9836
+    },
+    "evidence_valid": {
+     "numerator": 0,
+     "denominator": 437,
+     "value": 0.0
+    }
+   },
+   "currency": {
+    "accuracy": {
+     "numerator": 266,
+     "denominator": 266,
+     "value": 1.0
+    },
+    "missing": 0,
+    "wrong": 0,
+    "expected_null": 135,
+    "correct_null": 135,
+    "invented": 0,
+    "unknown_not_scored": 99,
+    "ocr_ceiling": {
+     "numerator": 266,
+     "denominator": 266,
+     "value": 1.0
+    },
+    "evidence_valid": {
+     "numerator": 0,
+     "denominator": 266,
+     "value": 0.0
+    }
+   },
+   "total": {
+    "accuracy": {
+     "numerator": 401,
+     "denominator": 401,
+     "value": 1.0
+    },
+    "missing": 0,
+    "wrong": 0,
+    "expected_null": 0,
+    "correct_null": 0,
+    "invented": 0,
+    "unknown_not_scored": 99,
+    "ocr_ceiling": {
+     "numerator": 401,
+     "denominator": 401,
+     "value": 1.0
+    },
+    "evidence_valid": {
+     "numerator": 0,
+     "denominator": 401,
+     "value": 0.0
+    }
+   },
+   "subtotal": {
+    "accuracy": {
+     "numerator": 343,
+     "denominator": 348,
+     "value": 0.9856
+    },
+    "missing": 4,
+    "wrong": 1,
+    "expected_null": 0,
+    "correct_null": 0,
+    "invented": 0,
+    "unknown_not_scored": 152,
+    "ocr_ceiling": {
+     "numerator": 343,
+     "denominator": 348,
+     "value": 0.9856
+    },
+    "evidence_valid": {
+     "numerator": 0,
+     "denominator": 344,
+     "value": 0.0
+    }
+   },
+   "tax": {
+    "accuracy": {
+     "numerator": 179,
+     "denominator": 213,
+     "value": 0.8404
+    },
+    "missing": 34,
+    "wrong": 0,
+    "expected_null": 0,
+    "correct_null": 0,
+    "invented": 0,
+    "unknown_not_scored": 287,
+    "ocr_ceiling": {
+     "numerator": 206,
+     "denominator": 213,
+     "value": 0.9671
+    },
+    "evidence_valid": {
+     "numerator": 0,
+     "denominator": 179,
+     "value": 0.0
+    }
+   }
+  },
+  "aggregate_accuracy": {
+   "numerator": 2191,
+   "denominator": 2481,
+   "value": 0.8831
+  },
+  "missing_predictions": 95,
+  "wrong_values": 195,
+  "invented_values": {
+   "numerator": 0,
+   "denominator": 197,
+   "value": 0.0
+  },
+  "docs_all_scorable_required_correct": {
+   "numerator": 293,
+   "denominator": 500,
+   "value": 0.586
+  },
+  "docs_strict_all_five_required_correct": {
+   "numerator": 133,
+   "denominator": 277,
+   "value": 0.4801
+  },
+  "evidence_validity_all_predicted": {
+   "numerator": 0,
+   "denominator": 2571,
+   "value": 0.0
+  },
+  "routed_as_invoice": {
+   "numerator": 500,
+   "denominator": 500,
+   "value": 1.0
+  },
+  "missing_required_routed_to_follow_up": {
+   "numerator": 197,
+   "denominator": 197,
+   "value": 1.0
+  },
+  "unsupported_structure_flagged": {
+   "numerator": 0,
+   "denominator": 164,
+   "value": 0.0
+  },
+  "unsupported_structure_false_flags": {
+   "numerator": 0,
+   "denominator": 336,
+   "value": 0.0
+  },
+  "failed_requests": {
+   "numerator": 0,
+   "denominator": 500,
+   "value": 0.0
+  },
+  "latency_seconds": {
+   "extraction_median": 0.0,
+   "extraction_p95": 0.0,
+   "ocr_plus_extraction_median": 0.5,
+   "ocr_plus_extraction_p95": 0.859
+  },
+  "tokens": {
+   "total": 0,
+   "per_doc_median": 0.0
+  }
+ },
+ "failures": [],
+ "documents": [
+  {
+   "doc_id": "fdoc_0001",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0003",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0004",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0005",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0006",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0007",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": false
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0008",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0009",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0010",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0011",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0012",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0013",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0014",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0015",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0016",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0017",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0018",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_date": false,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0019",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0020",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0021",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0022",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0023",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0024",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0025",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0026",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0027",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0028",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0029",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0031",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0032",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0034",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0035",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0038",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0039",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0040",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0041",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0042",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0043",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0045",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0046",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0047",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0048",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0049",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0050",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0051",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0052",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0053",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0054",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0055",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0056",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0057",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": false,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0059",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0060",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": false
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0061",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0062",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0063",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0064",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0065",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0066",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0067",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0068",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0069",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": false
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0070",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0071",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0072",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0073",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0074",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0075",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0076",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0077",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0078",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0079",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0080",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0081",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0082",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0083",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": false,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0084",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0085",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0087",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0088",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0089",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0090",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": false,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0091",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": false,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0093",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0094",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0095",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0096",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0097",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0099",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0100",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": false
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0101",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0102",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0103",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0104",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0105",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0107",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0108",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0109",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": false,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0110",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0111",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0112",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0113",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0114",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0115",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0116",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0117",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0118",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0119",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0120",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0121",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0122",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0123",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0124",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0125",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0126",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0127",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0128",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0129",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0130",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0131",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0132",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0133",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0134",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0135",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0136",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0138",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0139",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0140",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0141",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": false,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0142",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": false,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0144",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0145",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0147",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0148",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0149",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0150",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0151",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0152",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0153",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0154",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0155",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0156",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0157",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": false,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0158",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": false,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0159",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0160",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0161",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0162",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0164",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0165",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0166",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0167",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0168",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0169",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0171",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": false,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0172",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0173",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0174",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0175",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0176",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0178",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0179",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": false,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0180",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0181",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0182",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0183",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0184",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0185",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0186",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0187",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0188",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0189",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0190",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0191",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0192",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0193",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0194",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0195",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0196",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0197",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0198",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": false,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0199",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0200",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0201",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0202",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": false,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0203",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_date": false,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0204",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0205",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": false,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0206",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": false,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0207",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0208",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": false,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0209",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0210",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0211",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0212",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0213",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_date": false,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0214",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0215",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0216",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0217",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0218",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0220",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": false,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0221",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0222",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0223",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0224",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0225",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": false,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0226",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0227",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0228",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0229",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0230",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0231",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0232",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0233",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0234",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0235",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0236",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0237",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0238",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0239",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0240",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0241",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0242",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0243",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0244",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0245",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0246",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0247",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0248",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0249",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0250",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0251",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_date": false,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0252",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": false,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0253",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0254",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0255",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0256",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0257",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0260",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0261",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0262",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0264",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0265",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0266",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0268",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0269",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0270",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0271",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0272",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0273",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0274",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_date": false,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0275",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0277",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": false,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0278",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0279",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0280",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0281",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0282",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0283",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0284",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0285",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0286",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": false,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0287",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0289",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0290",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0291",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0293",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0294",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0295",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0296",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": false,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0297",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0298",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0299",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0300",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0301",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0302",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0303",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0304",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0305",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0306",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_date": false,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0307",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": false
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0308",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0309",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0310",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0311",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0312",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0313",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0314",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0316",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0317",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0318",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0319",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0320",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0321",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0322",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0323",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0324",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0325",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0326",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0327",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0328",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0329",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0330",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0331",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0332",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0333",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0334",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0335",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0336",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0337",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0338",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0339",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0340",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0341",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0342",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0343",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0344",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0345",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0346",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": false,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0347",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0350",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0351",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0352",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0353",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0354",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0355",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0356",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0357",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0358",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0359",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0360",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0362",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0363",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0366",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0367",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0368",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0369",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0370",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0371",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": false,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0372",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0373",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0374",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0375",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0376",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0377",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0379",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": false,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0380",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": false,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0381",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0382",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0383",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0384",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0385",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0386",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0387",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0388",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0389",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0390",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": false,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0391",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0392",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0393",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0394",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0395",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0396",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": false
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0398",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0399",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": false
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0401",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0402",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0403",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0404",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": false
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0405",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "subtotal": false,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0406",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0407",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0408",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0409",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0410",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0411",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0412",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0413",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0414",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0415",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0416",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0417",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0418",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0420",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0421",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0422",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0423",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0424",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0425",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0426",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": false,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0427",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0428",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0429",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_date": false,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0430",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0431",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0432",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": false,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0433",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0434",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0435",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0436",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0437",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0438",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0439",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0440",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": false,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0441",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0442",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0443",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0444",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0445",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0446",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": false,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0447",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0448",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0449",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0450",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0451",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0454",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": false,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0455",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0456",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0457",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_date": false,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0458",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0459",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0460",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0461",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0462",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0464",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0465",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0467",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0468",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0469",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0470",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": false
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0471",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": false,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0472",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0474",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0475",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0476",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0477",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0478",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0479",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0480",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0481",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0482",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0483",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0485",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0486",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0487",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0488",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0491",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0492",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0493",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0495",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": false,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0499",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0500",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0501",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0502",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0503",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0504",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": false,
+    "tax": false
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0505",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0507",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0508",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0509",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0510",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": false,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0511",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0512",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0513",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0514",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0515",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0516",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0517",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": false,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0518",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0519",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0520",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0521",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0522",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0523",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0524",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": false,
+    "currency": true,
+    "total": true,
+    "tax": false
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0525",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0526",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0527",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0528",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": false,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0529",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0530",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0531",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0532",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": false,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0533",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0534",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0535",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0536",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0538",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0539",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0540",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 2
+  },
+  {
+   "doc_id": "fdoc_0541",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0542",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 3
+  },
+  {
+   "doc_id": "fdoc_0543",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": false,
+   "n_scorable_required": 4
+  },
+  {
+   "doc_id": "fdoc_0544",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": false,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0545",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true,
+    "tax": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0547",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": false,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": false,
+   "strict_all_required": false,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0548",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0549",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  },
+  {
+   "doc_id": "fdoc_0550",
+   "status": "ok",
+   "routed_invoice": true,
+   "field_correct": {
+    "vendor_name": true,
+    "invoice_number": true,
+    "invoice_date": true,
+    "currency": true,
+    "total": true,
+    "subtotal": true
+   },
+   "all_required_correct": true,
+   "strict_all_required": true,
+   "n_scorable_required": 5
+  }
+ ]
+}
