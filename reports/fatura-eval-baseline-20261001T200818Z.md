@@ -1,6 +1,6 @@
 # FATURA extraction benchmark · eval · baseline · 20261001T200818Z-eval-baseline
 
-**Data:** FATURA (Limam, Dhiaf & Kessentini 2023, Zenodo doi:10.5281/zenodo.8261508, CC BY 4.0): **synthetic** invoice images generated from 50 templates by the dataset authors. Dev and eval use disjoint templates. Input to TaxFlow is our own Tesseract 5 OCR of each image (psm 6); the images are processed by our pipeline, but OCR is Tesseract, not a TaxFlow model.
+**Data:** FATURA (Limam, Dhiaf & Kessentini 2023, Zenodo doi:10.5281/zenodo.8261508, CC BY 4.0): **synthetic** invoice images generated from 50 templates by the dataset authors. Dev and eval use disjoint templates. Input to TaxFlow is our own Tesseract 5 OCR of each image (2x Lanczos upscale, psm 3; settings chosen on dev only); the images are processed by our pipeline, but OCR is Tesseract, not a TaxFlow model.
 **System:** none (regex baseline) · model `None` · prompt None · schema reconciliation-v2
 **Documents:** selected 500, attempted 500, skipped by token budget 0 (budget 3,000,000; used 0) · wall time 0.1 s
 

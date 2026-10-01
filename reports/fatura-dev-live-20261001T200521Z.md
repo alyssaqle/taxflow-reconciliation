@@ -1,6 +1,6 @@
 # FATURA extraction benchmark · dev · live · 20261001T200521Z-dev-live
 
-**Data:** FATURA (Limam, Dhiaf & Kessentini 2023, Zenodo doi:10.5281/zenodo.8261508, CC BY 4.0): **synthetic** invoice images generated from 50 templates by the dataset authors. Dev and eval use disjoint templates. Input to TaxFlow is our own Tesseract 5 OCR of each image (psm 6); the images are processed by our pipeline, but OCR is Tesseract, not a TaxFlow model.
+**Data:** FATURA (Limam, Dhiaf & Kessentini 2023, Zenodo doi:10.5281/zenodo.8261508, CC BY 4.0): **synthetic** invoice images generated from 50 templates by the dataset authors. Dev and eval use disjoint templates. Input to TaxFlow is our own Tesseract 5 OCR of each image (2x Lanczos upscale, psm 3; settings chosen on dev only); the images are processed by our pipeline, but OCR is Tesseract, not a TaxFlow model.
 **System:** Azure OpenAI (v1 API, Chat Completions) · model `gpt-4.1-mini` · prompt extract-v6+agent-v2 · schema reconciliation-v2
 **Documents:** selected 50, attempted 50, skipped by token budget 0 (budget 3,000,000; used 152,595) · wall time 157.4 s
 

@@ -193,7 +193,7 @@ def _markdown(meta, m, failures) -> str:
     L = [f"# FATURA extraction benchmark · {meta['split']} · {meta['mode']} · {meta['run_id']}", "",
          "**Data:** FATURA (Limam, Dhiaf & Kessentini 2023, Zenodo doi:10.5281/zenodo.8261508, CC BY 4.0): "
          "**synthetic** invoice images generated from 50 templates by the dataset authors. Dev and eval use "
-         "disjoint templates. Input to TaxFlow is our own Tesseract 5 OCR of each image (psm 6); the images are "
+         "disjoint templates. Input to TaxFlow is our own Tesseract 5 OCR of each image (2x Lanczos upscale, psm 3; settings chosen on dev only); the images are "
          "processed by our pipeline, but OCR is Tesseract, not a TaxFlow model.",
          f"**System:** {meta['provider']} · model `{meta['model']}` · prompt {meta['prompt_version']} · "
          f"schema {meta['schema_version']}",
