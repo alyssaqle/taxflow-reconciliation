@@ -90,3 +90,35 @@ def test_failures_stay_in_denominator(tmp_path):
     assert m["exception_detection"]["precision"]["value"] is None  # 0/0 reported as undefined
     assert m["exception_detection"]["recall"]["denominator"] > 0
     assert path.with_suffix(".md").exists()
+
+
+def test_scorer_catches_errors():
+    """A correct prediction scores as success; each single corruption must be caught."""
+    import copy
+
+    from evaluation.scoring import score_case
+    from taxflow.pipeline import run_illustrative
+    from taxflow.samples import load_sample, load_sample_ledger
+
+    pred = run_illustrative(load_sample("matched_clean"), "matched_clean", load_sample_ledger()).model_dump(mode="json")
+    pred["tool_trace"] = [{**t, "invoked_by": "model function call"} for t in pred["tool_trace"]]
+    gt = {"case_id": "dev", "category": "match", "document_type": "invoice",
+          "expected_fields": {"vendor_name": "Northwind Analytics LLC", "invoice_number": "NWA-2026-0412",
+                              "invoice_date": "2026-09-15", "currency": "USD", "subtotal": "800.00", "tax": "80.00",
+                              "total": "880.00"},
+          "expected_outcome": "Matched", "expected_entry_id": "DEV-1001", "expected_candidate_ids": ["DEV-1001"],
+          "expected_findings": [], "expected_arithmetic_status": "Consistent", "attack": None}
+    assert score_case(gt, pred, [])["workflow_success"]
+    mutations = [
+        lambda p: p["ledger_entry"].update(ledger_entry_id="DEV-1004"),
+        lambda p: p["extracted_fields"]["total"].update(value="1.00"),
+        lambda p: p["findings"].append({"code": "LEDGER_DATE_MISMATCH", "field": "invoice_date", "blocking": True}),
+        lambda p: p["extracted_fields"]["vendor_name"]["evidence"].update(status="unsupported"),
+        lambda p: p.update(tool_trace=[t for t in p["tool_trace"] if t["tool"] != "compare_to_ledger"]),
+        lambda p: p.update(workflow_status="Incomplete"),
+        lambda p: p.update(reconciliation_outcome="Ambiguous match"),
+    ]
+    for m in mutations:
+        bad = copy.deepcopy(pred)
+        m(bad)
+        assert not score_case(gt, bad, [])["workflow_success"]
