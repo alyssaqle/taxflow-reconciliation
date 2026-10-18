@@ -28,6 +28,77 @@ of 950.00. TaxFlow reports two separate results:
 TaxFlow never replaces the stated total with the calculated one. Approval stays disabled and the recommended
 decision is *Needs follow-up*.
 
+## Why I built this
+
+### The problem
+
+Before a client's invoices feed into tax work, someone has to confirm that each invoice agrees with how the
+client recorded it. That means finding the right ledger entry, comparing the vendor, number, date, currency,
+and amount, checking that the invoice's own math adds up, and writing down anything that needs follow-up. The
+work is repetitive, but a mistake is expensive: approving a mismatched invoice puts a wrong number into
+everything downstream.
+
+Two things make it harder than it looks. The same invoice can be wrong in two independent ways (it can
+disagree with the ledger, or disagree with itself), and a reviewer has to show where each number came from, not
+just state it.
+
+### What the problem statement is based on
+
+I built TaxFlow for my application to a Tax Technology and Transformation analyst role. I wanted to work on a
+problem close to that job's daily work instead of a generic chatbot.
+
+I have not interviewed analysts or used client data, so the problem statement is a hypothesis drawn from how
+invoice and ledger review generally works. What I can show is evidence about the parts of the problem that can
+be tested without clients:
+
+- Extraction is hard enough to need care. On FATURA's synthetic invoice images, a regex baseline got every
+  required field right on only 58.6% of invoices. The first version of my own pipeline scored 49.4% on the
+  development set before the OCR and prompt fixes.
+- Matching has traps that a quick look misses: entries with the same amount but a different invoice number,
+  the same number under another vendor, and duplicate postings. The ledger benchmark includes all three.
+
+Whether TaxFlow saves reviewers time is still unknown. The timing pilot in [pilot/](pilot/) is built but has not
+been run.
+
+### How I prioritized
+
+I ranked risks by the cost of being wrong for a reviewer: approving something incorrect is worst, missing an
+issue is next, and slow review is last. That ordering drove most decisions.
+
+- Python makes every comparison, and the model never decides a match. Arithmetic and matching need to be exact
+  and repeatable, so they're deterministic code. The model's job is reading the document and choosing which
+  checks to run.
+- Matching is exact on invoice number and vendor, with no fuzzy matching, and an equal amount never selects an
+  entry. A wrong match is worse than an "Ambiguous match" that asks a person to decide.
+- Every value cites its source line, and Python verifies the quote. A reviewer can check a claim in one click
+  instead of trusting it.
+- A person approves, and blocking exceptions disable approval. The tool prepares the decision; it doesn't make
+  it.
+- I narrowed the scope twice. The first plan covered invoices, W-2s, and 1099s at once; I cut it to invoices.
+  Then I changed the product from single-invoice intake to invoice-to-ledger reconciliation, because comparing
+  two sources is closer to what the review actually needs. PDF input, field editing, fuzzy matching, and
+  currency conversion are deliberately left out until the core review is proven.
+- Evaluation came early. Each stage had a frozen held-out set before I looked at results, so the numbers in
+  this README weren't tuned on the data they report.
+
+### Why these tools
+
+| Tool | Why |
+|---|---|
+| Python, `Decimal`, Pydantic | Exact money arithmetic and typed records that reject malformed model output |
+| Azure OpenAI (`gpt-4.1-mini`) | Function calling and strict JSON output in a cloud that enterprise teams commonly use; the small model kept a 500-document benchmark at about 1.4M tokens |
+| Streamlit | A working review screen in Python, with free hosting for a public demo |
+| `pycountry` | A maintained ISO 4217 currency list instead of a hand-typed one |
+| Tesseract, FATURA | A free, local OCR engine and an openly licensed (CC BY 4.0) invoice dataset, so extraction could be tested on documents I didn't write |
+
+### How TaxFlow addresses it
+
+TaxFlow does the lookup and comparison work and leaves the judgment to the reviewer. For each invoice it shows
+the extracted fields with their source lines, the ledger entry it compared against, a side-by-side table, and a
+short list of exceptions with the follow-up each one needs. The ledger result and the invoice's own arithmetic
+are reported separately, so the 950 vs 880 case above surfaces both problems instead of one. If the review is
+incomplete, approval stays off.
+
 ## Status
 
 | Requirement | Implemented | Offline tests | Live verified | Deployed |
