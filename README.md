@@ -9,9 +9,8 @@ On 500 held-out synthetic invoice images, TaxFlow extracted 95.6% of labeled fie
 88.3% for a regex baseline on the same OCR text. On generated ledgers of up to 100,000 rows, the matching
 engine routed 3,000 of 3,000 labeled queries correctly. Details and limits are in [Benchmarks](#benchmarks).
 
-TaxFlow is a portfolio prototype built for a Tax Technology and Transformation analyst application. It is
-independent and implies no affiliation with any firm. All data is synthetic. It does not file taxes, calculate
-tax liability, pay invoices, post journal entries, certify compliance, or send messages.
+TaxFlow is an independent prototype and implies no affiliation with any firm. All data is synthetic. It does
+not file taxes, calculate tax liability, pay invoices, post journal entries, certify compliance, or send messages.
 
 - Repository: https://github.com/alyssaqle/taxflow-reconciliation
 - Public demo: not yet confirmed (see [Deployment](#deployment))
@@ -28,11 +27,25 @@ of 950.00. TaxFlow reports two separate results:
 TaxFlow never replaces the stated total with the calculated one. Approval stays disabled and the recommended
 decision is *Needs follow-up*.
 
-## Why I built this
+## Who it's for
+
+### Persona
+
+Jordan is a hypothetical user, described from how invoice review generally works rather than from interviews.
+
+| | |
+|---|---|
+| Role | Finance or accounting operations analyst at a mid-size company or an accounting firm |
+| Works with | Batches of vendor invoices (PDFs and scans) and a ledger export from the client's accounting system |
+| Job to be done | When a batch of invoices arrives with the ledger export, Jordan wants to know which invoices agree with their entries and exactly what is wrong with the rest, so they can close the review and send precise questions to the client or vendor. |
+| Today | Searches the spreadsheet for each invoice number, compares fields by eye, recalculates totals with a calculator, and writes notes by hand |
+| Pains | Look-alike entries (same amount, one digit off in the number), duplicate postings, invoices whose own math is wrong, and having to show where every number came from |
+| Good outcome | Every exception is caught, each note points to a source line and a ledger row, and clean invoices take little time |
+| Deal-breaker | A tool that approves a wrong match, invents a value, or hides why it reached a conclusion |
 
 ### The problem
 
-Before a client's invoices feed into tax work, someone has to confirm that each invoice agrees with how the
+Before invoices feed into month-end close, tax work, or an audit, someone has to confirm that each invoice agrees with how the
 client recorded it. That means finding the right ledger entry, comparing the vendor, number, date, currency,
 and amount, checking that the invoice's own math adds up, and writing down anything that needs follow-up. The
 work is repetitive, but a mistake is expensive: approving a mismatched invoice puts a wrong number into
@@ -42,14 +55,10 @@ Two things make it harder than it looks. The same invoice can be wrong in two in
 disagree with the ledger, or disagree with itself), and a reviewer has to show where each number came from, not
 just state it.
 
-### What the problem statement is based on
+### What this is based on
 
-I built TaxFlow for my application to a Tax Technology and Transformation analyst role. I wanted to work on a
-problem close to that job's daily work instead of a generic chatbot.
-
-I have not interviewed analysts or used client data, so the problem statement is a hypothesis drawn from how
-invoice and ledger review generally works. What I can show is evidence about the parts of the problem that can
-be tested without clients:
+I haven't interviewed analysts or used client data, so the persona and the problem statement are hypotheses.
+What I can show is evidence about the parts of the problem that can be tested without clients:
 
 - Extraction is hard enough to need care. On FATURA's synthetic invoice images, a regex baseline got every
   required field right on only 58.6% of invoices. The first version of my own pipeline scored 49.4% on the
@@ -59,6 +68,8 @@ be tested without clients:
 
 Whether TaxFlow saves reviewers time is still unknown. The timing pilot in [pilot/](pilot/) is built but has not
 been run.
+
+## Product decisions
 
 ### How I prioritized
 
