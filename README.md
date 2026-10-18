@@ -27,21 +27,7 @@ of 950.00. TaxFlow reports two separate results:
 TaxFlow never replaces the stated total with the calculated one. Approval stays disabled and the recommended
 decision is *Needs follow-up*.
 
-## Who it's for
-
-### Persona
-
-Jordan is a hypothetical user, described from how invoice review generally works rather than from interviews.
-
-| | |
-|---|---|
-| Role | Finance or accounting operations analyst at a mid-size company or an accounting firm |
-| Works with | Batches of vendor invoices (PDFs and scans) and a ledger export from the client's accounting system |
-| Job to be done | When a batch of invoices arrives with the ledger export, Jordan wants to know which invoices agree with their entries and exactly what is wrong with the rest, so they can close the review and send precise questions to the client or vendor. |
-| Today | Searches the spreadsheet for each invoice number, compares fields by eye, recalculates totals with a calculator, and writes notes by hand |
-| Pains | Look-alike entries (same amount, one digit off in the number), duplicate postings, invoices whose own math is wrong, and having to show where every number came from |
-| Good outcome | Every exception is caught, each note points to a source line and a ledger row, and clean invoices take little time |
-| Deal-breaker | A tool that approves a wrong match, invents a value, or hides why it reached a conclusion |
+## The user and the problem
 
 ### The problem
 
@@ -54,6 +40,89 @@ everything downstream.
 Two things make it harder than it looks. The same invoice can be wrong in two independent ways (it can
 disagree with the ledger, or disagree with itself), and a reviewer has to show where each number came from, not
 just state it.
+
+### Persona
+
+Jordan is a hypothetical user, described from how invoice review generally works rather than from interviews.
+
+| | |
+|---|---|
+| Role | Finance or accounting operations analyst at a mid-size company or an accounting firm |
+| Works with | Batches of vendor invoices (PDFs and scans) and a ledger export from the client's accounting system |
+| Today | Searches the spreadsheet for each invoice number, compares fields by eye, recalculates totals with a calculator, and writes notes by hand |
+| Pains | Look-alike entries (same amount, one digit off in the number), duplicate postings, invoices whose own math is wrong, and having to show where every number came from |
+| Good outcome | Every exception is caught, each note points to a source line and a ledger row, and clean invoices take little time |
+| Deal-breaker | A tool that approves a wrong match, invents a value, or hides why it reached a conclusion |
+
+### Jobs to be done
+
+Main job: when a batch of invoices arrives with the ledger export, Jordan wants to know which invoices agree with
+their entries and exactly what is wrong with the rest, so they can close the review and send precise questions
+to the client or vendor.
+
+Smaller jobs inside it:
+
+- Find the ledger entry that belongs to this invoice, or learn that there isn't exactly one.
+- Confirm that the vendor, number, date, currency, and amount agree.
+- Check that the invoice's own totals add up.
+- Record what is wrong and what to ask, in words a client can act on.
+- Be able to defend the decision later to a manager, an auditor, or the client.
+
+The last job matters as much as the others. Jordan's work is reviewed, so a correct answer without a trail is
+not enough.
+
+### What Jordan needs from a tool
+
+| Need | How TaxFlow meets it | Status |
+|---|---|---|
+| Never approve a wrong match | Exact matching on invoice number and vendor; any blocking exception disables Approve; a person makes the decision | Built |
+| See where every number came from | Each extracted value cites a source line that Python verifies; the compared ledger row is shown by ID and CSV row | Built |
+| Catch both kinds of error | Ledger reconciliation and invoice arithmetic are separate results | Built |
+| Know what to ask next | Each exception comes with follow-up text tied to a policy rule | Built |
+| Leave a record | Review note, decision, and JSON or CSV export with every finding | Built |
+| Move fast on clean invoices | Approve is one click when nothing blocks | Built; time savings not measured |
+| Work from PDFs and whole batches | The app takes one TXT invoice at a time | Not built |
+
+### User flows
+
+Today, without a tool:
+
+1. Open the invoice and the ledger spreadsheet side by side.
+2. Search the spreadsheet for the invoice number, then check that the vendor matches.
+3. Compare the date, currency, and amount by eye.
+4. Add up the invoice's lines and tax with a calculator.
+5. Write a note and decide, then repeat for the next invoice.
+
+With TaxFlow:
+
+```mermaid
+flowchart TD
+    A["Choose an invoice and a ledger"] --> B["Analyze invoice"]
+    B --> C{"Processing complete?"}
+    C -- "No" --> R["Retry or reset"]
+    C -- "Yes" --> D{"Ledger outcome"}
+    D -- "Matched" --> E{"Any blocking exception?"}
+    E -- "No" --> F["Check the cited sources and approve"]
+    E -- "Yes, e.g. wrong arithmetic" --> G["Needs follow-up"]
+    D -- "Discrepancy found" --> G
+    D -- "Ambiguous match" --> G
+    D -- "No matching entry" --> G
+    D -- "Needs clarification" --> G
+    G --> H["Write a note, download the report, send questions"]
+    F --> I["Download the report"]
+```
+
+What Jordan sees and does for each outcome:
+
+| Outcome | What Jordan sees | What Jordan does next |
+|---|---|---|
+| Matched, nothing blocking | Fields with sources, the ledger row, every comparison agreeing | Spot-check a source line and approve |
+| Matched, arithmetic wrong | The ledger agrees, but the invoice's own total doesn't add up | Ask the vendor to confirm or correct the invoice |
+| Discrepancy found | Which field differs (amount, currency, or date) and by how much | Ask the client to confirm the recorded value |
+| Ambiguous match | Every candidate entry; none is chosen for Jordan | Ask the client which entry is right, or whether one is a duplicate |
+| No matching entry | That no entry has this number and vendor | Ask whether the invoice was recorded |
+| Needs clarification | Which required field is missing | Request the missing information |
+| Processing failed | An error, never a made-up result | Retry, or review the invoice manually |
 
 ### What this is based on
 
